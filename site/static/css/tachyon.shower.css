@@ -1,18 +1,21 @@
 /*! TACHYONSHOWER | demo: https://codepen.io/inspiredlabs/pen/LYPZVQK */
 /*! Utility classes for duplication-free layout expression  */
 /*! HTML {{ .Site "partial" . }} components abstraction layer */
+/*! THIS {{ .Site "partial" . | minified }} using: uncss-online.com/ */
 
-/* 16.04.19	.dim 							transform:translateZ(0)	bug fix 	*/
-/* 17.04.19	.grow 						background-clip					bug fix 	*/
-/* 01.05.19	.ts 							shadow									addition 	*/
-/* 30.05.19	.f8 							0.6rem									addition 	*/
-/* 14.08.19	.debug *					display colours					media query addition 		*/
-/* 13.10.19	.b--transparent		border top highlight		moved cascade override	*/
-/* 04.11.19	.ma-auto					mr-auto ml-auto					+ missing top & bottom	*/
-/* 04.11.19 .backface-hidden	-webkit hide (flickity)	addition								*/
-/* 04.11.19 .no-focus-ring 		<button> + button-reset	addition								*/
-/* 06.11.19 .transition 			give up subpixel render -webkit-font-smoothing	*/
-/* 08.11.19 .smooth-scroll		scroll-behavior:smooth  addition								*/
+
+/* 16.04.19	.dim 								transform:translateZ(0)			bug fix 	*/
+/* 17.04.19	.grow 							background-clip							bug fix 	*/
+/* 01.05.19	.ts 								shadow											addition 	*/
+/* 30.05.19	.f8 								0.6rem											addition 	*/
+/* 14.08.19	.debug *						display colours							media query addition 		*/
+/* 13.10.19	.b--transparent			border top highlight				moved cascade override	*/
+/* 04.11.19	.ma-auto						mr-auto ml-auto							+ missing top & bottom	*/
+/* 04.11.19 .backface-hidden		-webkit hide (flickity)			addition								*/
+/* 04.11.19 .no-focus-ring 			<button> + button-reset			addition								*/
+/* 06.11.19 .transition 				give up subpixel render 		-webkit-font-smoothing	*/
+/* 08.11.19 .smooth-scroll			scroll-behavior:smooth  		addition								*/
+/* 26.11.19 .touch-manipulation	touch-action:manipulation   addition								*/
 
 /* SORT ME */
 /* Integrate: https://uncss-online.com/ */
@@ -23,8 +26,6 @@
 /* tracked-none: https://github.com/tachyons-css/tachyons/issues/507 */
 /* shadow-none: https://github.com/tachyons-css/tachyons/issues/535 */
 /* https://github.com/tachyons-css/tachyons/issues/566 */
-
-
 
 /* Genarator: https://github.com/tachyons-css/tachyons/issues/459 */
 /*! TACHYONS v4.9.1 | http://tachyons.io */
@@ -9309,8 +9310,10 @@ details[open] summary~* {
 
 
 :root {
-  --dark-beige: rgba(234, 219, 160, var(--privateOpacity)); /* #eadba0; */
-  --beige: rgba(244, 237, 207, var(--privateOpacity)); /* #f4edcf; */
+  --dark-beige: rgba(234, 219, 160, var(--ten));
+  /* #eadba0; */
+  --beige: rgba(244, 237, 207, var(--ten));
+  /* #f4edcf; */
 
   --plum: #7f3c84;
   --tyrian: #57005d;
@@ -9342,7 +9345,26 @@ details[open] summary~* {
   /*#4a4a4a*/
   --lit-cta: gainsboro;
   /*gray*/
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+  --one: 0.1;
+  --two: 0.2;
+  --three: 0.3;
+
+  --four: 0.4;
+  --five: 0.5;
+  --six: 0.6;
+
+  --seven: 0.7;
+  --eight: 0.8;
+  --nine: 0.9;
+
+  --ten: 1.0;
+
 }
+
+
 
 .tint-bg {
   background-color: var(--tint-bg)
@@ -9387,6 +9409,53 @@ input:-webkit-autofill {
 
 /*</style>*/
 /*<style>*/
+
+/*------------------- Generic ---------------------*/
+.beige {
+  color: var(--beige);
+}
+
+.bg-beige {
+  background-color: var(--beige);
+}
+
+.b--beige {
+  border-color: var(--beige);
+}
+
+.hover-beige:hover,
+.hover-beige:focus {
+  color: var(--beige);
+}
+
+.hover-bg-beige:hover,
+.hover-bg-beige:focus {
+  background-color: var(--beige);
+}
+
+
+/*------------------- Dirty beige ---------------------*/
+.dark-beige {
+  color: var(--dark-beige);
+}
+
+.bg-dark-beige {
+  background-color: var(--dark-beige);
+}
+
+.b--dark-beige {
+  border-color: var(--dark-beige);
+}
+
+.hover-dark-beige:hover,
+.hover-dark-beige:focus {
+  color: var(--dark-beige);
+}
+
+.hover-bg-dark-beige:hover,
+.hover-bg-dark-beige:focus {
+  background-color: var(--dark-beige);
+}
 
 /*------------------- Dim Gray! ---------------------*/
 .dim-gray {
@@ -9662,25 +9731,50 @@ input:-webkit-autofill {
 
 /*</style>*/
 /*<style>*/
-.beige { color: var(--beige); }
-.bg-beige { background-color: var(--beige); }
-.b--beige { border-color: var(--beige); }
+.beige {
+  color: var(--beige);
+}
+
+.bg-beige {
+  background-color: var(--beige);
+}
+
+.b--beige {
+  border-color: var(--beige);
+}
 
 .hover-beige:hover,
-.hover-beige:focus { color: var(--beige); }
+.hover-beige:focus {
+  color: var(--beige);
+}
 
 .hover-bg-beige:hover,
-.hover-bg-beige:focus { background-color: var(--beige); }
+.hover-bg-beige:focus {
+  background-color: var(--beige);
+}
 
-.dark-beige { color: var(--dark-beige); }
-.bg-dark-beige { background-color: var(--dark-beige); }
-.b--dark-beige { border-color: var(--dark-beige); }
+.dark-beige {
+  color: var(--dark-beige);
+}
+
+.bg-dark-beige {
+  background-color: var(--dark-beige);
+}
+
+.b--dark-beige {
+  border-color: var(--dark-beige);
+}
 
 .hover-dark-beige:hover,
-.hover-dark-beige:focus { color: var(--dark-beige); }
+.hover-dark-beige:focus {
+  color: var(--dark-beige);
+}
 
 .hover-bg-dark-beige:hover,
-.hover-bg-dark-beige:focus { background-color: var(--dark-beige); }
+.hover-bg-dark-beige:focus {
+  background-color: var(--dark-beige);
+}
+
 /*</style>*/
 /*<style>*/
 /*--------------------- Dark Lime ----------------------*/
@@ -10161,7 +10255,7 @@ blockquote a {
 /* .scrollspy: gumshoe.min.js */
 html {
   overflow-y: auto;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   /*-webkit-text-size-adjust: 100%;*/
 }
 
@@ -10217,7 +10311,7 @@ html {
 
 
 
-/* no-tap-highlight AND no-select might be merged */
+/* rework: `highlight`, `no-select` & `no-clutter`? */
 * {
   /*outline: none;*/
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -10242,11 +10336,10 @@ textarea {
   /*font-size: 16px;*/
 }
 
+/* iOS subpixel jank */
 svg {
   -webkit-transform: translate3d(0, 0, 0);
 }
-
-/* iOS subpixel jank */
 
 .system {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif
@@ -10254,17 +10347,16 @@ svg {
 
 .no-select {
   pointer-events: none;
+  -ms-touch-action: none;
+  -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -ms-touch-action: none;
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; */
+  /* -webkit-text-size-adjust: none; */
 }
 
 /* Atomic utility class */
@@ -10278,7 +10370,8 @@ svg {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-text-size-adjust: none;
-  /*-webkit-user-select:none;-ms-touch-action:none;*/
+  /*-webkit-user-select:none;
+  -ms-touch-action:none;*/
 }
 
 .no-focus-ring:focus {
@@ -10306,6 +10399,11 @@ svg {
   /* overflow-scrolling: scroll !overflow: auto; */
   -webkit-overflow-scrolling: touch;
   /* stackoverflow.com/questions/26176288/webkit-overflow-scrolling-touch-breaks-in-apples-ios8 */
+}
+
+.touch-manipulation {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 *,
