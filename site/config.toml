@@ -1,6 +1,6 @@
-baseurl = "./" #
-languageCode = "en-gb"
-languageLang = "en"
+baseurl = "https://instantwebapp.it/" #`./`
+languageCode = "en-gb" #lang="it-IT" #format numbers, dates and semantics
+languageLang = "en" #lang="it"
 title = "InstantWebapp"
 
 # RSS, categories and tags disabled for an easy start
