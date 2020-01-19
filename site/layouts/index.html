@@ -18,339 +18,105 @@ buy
 
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--link rel="stylesheet" type="text/css" href="./css/tmp.css"-->
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/tachyon.shower.css">
-
-  <style type="text/css">
-
-    #scrollSpy a,
-    li {
-      position: relative
-    }
-
-    li {
-      display: table-cell
-    }
-
-    #scrollSpy a {
-      color: #000;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: .15em;
-      display: inline-block;
-      /*padding:0.5rem;*/
-      width: 100%;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-    }
-
-    #scrollSpy a:after {
-      bottom: 0;
-      content: "";
-      display: block;
-      height: 2px;
-      left: 0;
-      position: absolute;
-      background: #000;
-      transition: width .3s ease 0s, left .3s ease 0s;
-      width: 0
-    }
-
-    #scrollSpy a:hover:after {
-      width: 100%;
-      left: 0;
-    }
-
-
-    #scrollSpy li.active {
-      background-color: gainsboro;
-    }
-
-    #scrollSpy li.active a {
-      /*color: white;*/
-    }
-
-    /*light
-  .whatsapp { color: #60d66a; }
-  .bg-whatsapp { background-color: #60d66a; }
-  .b--whatsapp { border-color: #60d66a; }
-
-  .hover-whatsapp:hover,
-  .hover-whatsapp:focus { color: #60d66a; }
-
-  .hover-bg-whatsapp:hover,
-  .hover-bg-whatsapp:focus { background-color: #60d66a; }*/
-
-    /*mid*/
-    .whatsapp {
-      color: #45d354;
-    }
-
-    .bg-whatsapp {
-      background-color: #45d354;
-    }
-
-    .b--whatsapp {
-      border-color: #45d354;
-    }
-
-    .hover-whatsapp:hover,
-    .hover-whatsapp:focus {
-      color: #45d354;
-    }
-
-    .hover-bg-whatsapp:hover,
-    .hover-bg-whatsapp:focus {
-      background-color: #45d354;
-    }
-
-    /*dark
-  .whatsapp { color: #20b038; }
-  .bg-whatsapp { background-color: #20b038; }
-  .b--whatsapp { border-color: #20b038; }
-
-  .hover-whatsapp:hover,
-  .hover-whatsapp:focus { color: #20b038; }
-
-  .hover-bg-whatsapp:hover,
-  .hover-bg-whatsapp:focus { background-color: #20b038; }*/
-
-    /* https://www.tripadvisor.com/Widgets */
-    .tripadvisor {
-      color: #00a680;
-    }
-
-    .bg-tripadvisor {
-      background-color: #00a680;
-    }
-
-    .b--tripadvisor {
-      border-color: #00a680;
-    }
-
-    .hover-tripadvisor:hover,
-    .hover-tripadvisor:focus {
-      color: #00a680;
-    }
-
-    .hover-bg-tripadvisor:hover,
-    .hover-bg-tripadvisor:focus {
-      background-color: #00a680;
-    }
-
-    /* https://vimeo.com/311885154 */
-    .vimeo {
-      color: #1eb8eb;
-    }
-
-    .bg-vimeo {
-      background-color: #1eb8eb;
-    }
-
-    .b--vimeo {
-      border-color: #1eb8eb;
-    }
-
-    .hover-vimeo:hover,
-    .hover-vimeo:focus {
-      color: #1eb8eb;
-    }
-
-    .hover-bg-vimeo:hover,
-    .hover-bg-vimeo:focus {
-      background-color: #1eb8eb;
-    }
-
-    /* https://protonmail.com/support/knowledge-base/is-protonmail-gdpr-compliant/ */
-    /* https://github.com/edent/SuperTinyIcons */
-    .protonmail {
-      color: #8A90C7;
-    }
-
-    .bg-protonmail {
-      background-color: #8A90C7;
-    }
-
-    .b--protonmail {
-      border-color: #8A90C7;
-    }
-
-    .hover-protonmail:hover,
-    .hover-protonmail:focus {
-      color: #8A90C7;
-    }
-
-    .hover-bg-protonmail:hover,
-    .hover-bg-protonmail:focus {
-      background-color: #8A90C7;
-    }
-
-    /* New blue: https://en.facebookbrand.com/facebookapp/ */
-    .facebook {
-      color: #1877f2;
-    }
-
-    .bg-facebook {
-      background-color: #1877f2;
-    }
-
-    .b--facebook {
-      border-color: #1877f2;
-    }
-
-    .hover-facebook:hover,
-    .hover-facebook:focus {
-      color: #1877f2;
-    }
-
-    .hover-bg-facebook:hover,
-    .hover-bg-facebook:focus {
-      background-color: #1877f2;
-    }
-
-    /* https://brand.linkedin.com/downloads */
-    .linkedin {
-      color: #0073b2;
-    }
-
-    .bg-linkedin {
-      background-color: #0073b2;
-    }
-
-    .b--linkedin {
-      border-color: #0073b2;
-    }
-
-    .hover-linkedin:hover,
-    .hover-linkedin:focus {
-      color: #0073b2;
-    }
-
-    .hover-bg-linkedin:hover,
-    .hover-bg-linkedin:focus {
-      background-color: #0073b2;
-    }
-
-    /* https://about.twitter.com/en_us/company/brand-resources.html */
-    .twitter {
-      color: #1da1f2;
-    }
-
-    .bg-twitter {
-      background-color: #1da1f2;
-    }
-
-    .b--twitter {
-      border-color: #1da1f2;
-    }
-
-    .hover-twitter:hover,
-    .hover-twitter:focus {
-      color: #1da1f2;
-    }
-
-    .hover-bg-twitter:hover,
-    .hover-bg-twitter:focus {
-      background-color: #1da1f2;
-    }
-
-    /* https://business.pinterest.com/en/pinterest-brand-guidelines */
-    .pinterest {
-      color: #E60023;
-    }
-
-    .bg-pinterest {
-      background-color: #E60023;
-    }
-
-    .b--pinterest {
-      border-color: #E60023;
-    }
-
-    .hover-pinterest:hover,
-    .hover-pinterest:focus {
-      color: #E60023;
-    }
-
-    .hover-bg-pinterest:hover,
-    .hover-bg-pinterest:focus {
-      background-color: #E60023;
-    }
-
-    /* https://brandpalettes.com/skype-color-codes/ */
-    .skype { color: #00aff0; }
-    .bg-skype { background-color: #00aff0; }
-    .b--skype { border-color: #00aff0; }
-
-    .hover-skype:hover,
-    .hover-skype:focus { color: #00aff0; }
-
-    .hover-bg-skype:hover,
-    .hover-bg-skype:focus { background-color: #00aff0; }
-
-
-
-    #home {
-      background-color: #0088cc;
-    }
-
-    #design {
-      background-color: rebeccapurple;
-    }
-
-    #feedback {
-      background-color: #272727;
-    }
-
-    #contact {
-      background-color: #f42b37;
-    }
-
-    #design:active~hr {
-      margin-left: 25%;
-    }
-
-    #feedback:active~hr {
-      margin-left: 50%;
-    }
-
-    #contact:active~hr {
-      margin-left: 75%;
-    }
-
-    /* hr {
-      height: .25rem;
-      width: 25%;
-      margin: 0;
-      background: tomato;
-      border: none;
-      transition: .3s ease-in-out;
-      position: relative;
-      z-index: 99999;
-     */}
-  </style>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--link rel="stylesheet" type="text/css" href="./css/tmp.css"-->
+<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/tachyon.shower.css">
+
+<style type="text/css">
+
+#scrollSpy a,
+li {
+position: relative
+}
+
+li {
+display: table-cell
+}
+
+
+#scrollSpy a:after {
+bottom:0;
+background:black;
+content: "";
+display: block;
+height: 4px;
+height: 0.2rem;
+left: 0;
+position: absolute;
+transition: width .3s ease 0s, left .3s ease 0s;
+width: 0
+}
+
+#scrollSpy a:hover:after {
+width: 100%;
+left: 0;
+}
+
+
+#scrollSpy li.active {
+/* background-color: gainsboro; */
+}
+
+#scrollSpy li.active a:after {
+  width: 100%;
+}
+
+#home {
+background-color: #0088cc;
+}
+
+#design {
+background-color: rebeccapurple;
+}
+
+#feedback {
+background-color: #272727;
+}
+
+#contact {
+background-color: #f42b37;
+}
+
+#design:active~hr {
+margin-left: 25%;
+}
+
+#feedback:active~hr {
+margin-left: 50%;
+}
+
+#contact:active~hr {
+margin-left: 75%;
+}
+
+</style>
 
 </head>
 
 <body class="pa0 ma0" id="top">
-  <nav class="w-100 f7 f6-ns f5-m f5-l"><!--  -->
-    <ul id="scrollSpy" class="list ttu tracked flex justify-around w-100 debug pa0 ma0">
-      <li class="pl0">
-        <a class="link o-80 glow no-underline" href="#home">
-          <span class="dib dib-ns dn-m dn-l">Home</span>
-          <span class="dn dn-ns dib-m dib-l ttn tracked-none">InstantWebapp</span>
-        </a>
-      </li>
-      <li class="">
-        <li><a class="link dib white o-80 glow" href="#design">Design</a></li>
-        <li><a class="link dib white o-80 glow" href="#feedback">Feedback</a></li>
-        <li><a class="link dib white o-80 glow" href="#contact">Contact</a></li><!-- "enquire" "buy" "learn more" -->
-      </li>
+  <nav class="z-999 fixed bg-white w-100 f7 f6-ns f5-m f5-l"><!--  -->
+    <ul id="scrollSpy" class="list ttu tracked flex justify-around w-100 pa0 ma0 ">
+      <!-- <li class="pl0 left-0 relative"><a class="link dib dib-ns dn-m dn-l pt3 pb3 o-50 glow black pt3 pb3"
+          href="#home">Home</a></li>
+      <li class="pl0 left-0 relative"><a class="link dn dn-ns dib-m dib-l black pt3 pb3" href="#home">InstantWebapp</a></li> -->
+      
+      <li class="pl0 ">
+        <a class="link no-underline black " href="#home">
+          <span class="dib dib-ns dn-m dn-l pt3 pb3 o-50 glow">Home</span>
+          <span class="dn dn-ns dib-m dib-l ttn tracked-none pt3 pb3 pr0">InstantWebapp</span></a></li>
+      
+          <span class="">
+        <li class="pl3"><a class="link dib o-50 glow black pt3 pb3" href="#design">Design</a></li>
+        <li class="pl3"><a class="link dib o-50 glow black pt3 pb3" href="#feedback">Feedback</a></li>
+        <li class="pl3"><a class="link dib o-50 glow black pt3 pb3" href="#contact">Contact</a></li><!-- "enquire" "buy" "learn more" -->
+      </span>
     </ul>
   </nav>
+
+  bottom: -3px;
+  bottom: -0.18rem;
 
   <div class="fixed bottom-0 pa3">
     <p><a data-scroll href="#top" class="b no-underline o-30 glow">Top</a></p>
@@ -403,7 +169,7 @@ buy
     <script src="{{ .Site.BaseURL }}js/smooth-scroll.min.js"></script>
     <script src="{{ .Site.BaseURL }}js/gumshoe.js"></script>
     <script>
-      var scroll = new ScontactothScroll('a[href*="#"]');
+      var scroll = new SmoothScroll('a[href*="#"]');
       /* */
       var spy = new Gumshoe('#scrollSpy a');
     </script>
