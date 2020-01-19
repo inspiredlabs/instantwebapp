@@ -9310,6 +9310,33 @@ details[open] summary~* {
 
 
 :root {
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+  --one: 0.1;
+  --two: 0.2;
+  --three: 0.3;
+
+  --four: 0.4;
+  --five: 0.5;
+  --six: 0.6;
+
+  --seven: 0.7;
+  --eight: 0.8;
+  --nine: 0.9;
+
+  --ten: 1.0;
+
+  /* Call-to-action tint */
+  --tint-fg: darkgrey;
+  /*#4a4a4a*//* Colour */
+  --tint-bg: white;
+  --dim-cta: darkgrey;
+  /*#4a4a4a*/
+  --lit-cta: gainsboro;
+  /*gray*/
+
+  /* Colour */
+  --charcoal: #4a4a4a;
   --dark-beige: rgba(234, 219, 160, var(--ten));
   /* #eadba0; */
   --beige: rgba(244, 237, 207, var(--ten));
@@ -9336,36 +9363,221 @@ details[open] summary~* {
   --institution: #9df5d2;
   --community: #59ce89;
 
-  --charcoal: #4a4a4a;
+  /* Social Media colour */
 
-  --tint-fg: darkgrey;
-  /*#4a4a4a*/
-  --tint-bg: white;
-  --dim-cta: darkgrey;
-  /*#4a4a4a*/
-  --lit-cta: gainsboro;
-  /*gray*/
+  --skype: #00aff0; /* https://brandpalettes.com/skype-color-codes/ */
+  --pinterest: #E60023; /* https://business.pinterest.com/en/pinterest-brand-guidelines */
+  --twitter: #1da1f2; /* https://about.twitter.com/en_us/company/brand-resources.html */
+  --linkedin: #0073b2; /* https://brand.linkedin.com/downloads */
+  --protonmail: #8A90C7; /* https://protonmail.com/support/knowledge-base/is-protonmail-gdpr-compliant/ *//* https://github.com/edent/SuperTinyIcons */
+  --protonmail: #8A90C7; /* https://protonmail.com/support/knowledge-base/is-protonmail-gdpr-compliant/ */
+  --vimeo: #1eb8eb; /* https://vimeo.com/311885154 */
+  --tripadvisor: #00a680; /* https://www.tripadvisor.com/Widgets */
+  --facebook: #1877f2; /* New blue: https://en.facebookbrand.com/facebookapp/ */
+  --whatsapp: #25D366; /* https://whatsappbrand.com/ */
 
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
-  --one: 0.1;
-  --two: 0.2;
-  --three: 0.3;
-
-  --four: 0.4;
-  --five: 0.5;
-  --six: 0.6;
-
-  --seven: 0.7;
-  --eight: 0.8;
-  --nine: 0.9;
-
-  --ten: 1.0;
 
 }
 
+/*------------------- Social Media colour ---------------------*/
 
 
+.skype { color: var(--skype); }
+.bg-skype { background-color: var(--skype); }
+.b--skype { border-color: var(--skype); }
+
+.hover-skype:hover,
+.hover-skype:focus { color: var(--skype); }
+
+.hover-bg-skype:hover,
+.hover-bg-skype:focus { background-color: var(--skype); }
+
+
+
+
+ .pinterest {
+   color: var(--pinterest);
+ }
+
+ .bg-pinterest {
+   background-color: var(--pinterest);
+ }
+
+ .b--pinterest {
+   border-color: var(--pinterest);
+ }
+
+ .hover-pinterest:hover,
+ .hover-pinterest:focus {
+   color: var(--pinterest);
+ }
+
+ .hover-bg-pinterest:hover,
+ .hover-bg-pinterest:focus {
+   background-color: var(--pinterest);
+ }
+
+  .twitter {
+    color: var(--twitter);
+  }
+
+  .bg-twitter {
+    background-color: var(--twitter);
+  }
+
+  .b--twitter {
+    border-color: var(--twitter);
+  }
+
+  .hover-twitter:hover,
+  .hover-twitter:focus {
+    color: var(--twitter);
+  }
+
+  .hover-bg-twitter:hover,
+  .hover-bg-twitter:focus {
+    background-color: var(--twitter);
+  }
+
+.linkedin {
+  color: var(--linkedin);
+}
+
+.bg-linkedin {
+  background-color: var(--linkedin);
+}
+
+.b--linkedin {
+  border-color: var(--linkedin);
+}
+
+.hover-linkedin:hover,
+.hover-linkedin:focus {
+  color: var(--linkedin);
+}
+
+.hover-bg-linkedin:hover,
+.hover-bg-linkedin:focus {
+  background-color: var(--linkedin);
+}
+
+.facebook {
+  color: var(--facebook);
+}
+
+.bg-facebook {
+  background-color: var(--facebook);
+}
+
+.b--facebook {
+  border-color: var(--facebook);
+}
+
+.hover-facebook:hover,
+.hover-facebook:focus {
+  color: var(--facebook);
+}
+
+.hover-bg-facebook:hover,
+.hover-bg-facebook:focus {
+  background-color: var(--facebook);
+}
+
+
+ .protonmail {
+   color: var(--protonmail);
+ }
+
+ .bg-protonmail {
+   background-color: var(--protonmail);
+ }
+
+ .b--protonmail {
+   border-color: var(--protonmail);
+ }
+
+ .hover-protonmail:hover,
+ .hover-protonmail:focus {
+   color: var(--protonmail);
+ }
+
+ .hover-bg-protonmail:hover,
+ .hover-bg-protonmail:focus {
+   background-color: var(--protonmail);
+ }
+
+.vimeo {
+  color: var(--vimeo);
+}
+
+.bg-vimeo {
+  background-color: var(--vimeo);
+}
+
+.b--vimeo {
+  border-color: var(--vimeo);
+}
+
+.hover-vimeo:hover,
+.hover-vimeo:focus {
+  color: var(--vimeo);
+}
+
+.hover-bg-vimeo:hover,
+.hover-bg-vimeo:focus {
+  background-color: var(--vimeo);
+}
+
+
+.tripadvisor {
+  color: var(--tripadvisor);
+}
+
+.bg-tripadvisor {
+  background-color: var(--tripadvisor);
+}
+
+.b--tripadvisor {
+  border-color: var(--tripadvisor);
+}
+
+.hover-tripadvisor:hover,
+.hover-tripadvisor:focus {
+  color: var(--tripadvisor);
+}
+
+.hover-bg-tripadvisor:hover,
+.hover-bg-tripadvisor:focus {
+  background-color: var(--tripadvisor);
+}
+
+.whatsapp {
+  color: var(--whatsapp);
+}
+
+.bg-whatsapp {
+  background-color: var(--whatsapp);
+}
+
+.b--whatsapp {
+  border-color: var(--whatsapp);
+}
+
+.hover-whatsapp:hover,
+.hover-whatsapp:focus {
+  color: var(--whatsapp);
+}
+
+.hover-bg-whatsapp:hover,
+.hover-bg-whatsapp:focus {
+  background-color: var(--whatsapp);
+}
+
+/*</style>*/
+/*<style>*/
+
+/*------------------- Tint ---------------------*/
 .tint-bg {
   background-color: var(--tint-bg)
 }

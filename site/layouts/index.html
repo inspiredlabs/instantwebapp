@@ -4,15 +4,17 @@ TODO LIST:
 
 Sections:
 overview
-Details: Our design, your advantage.  benefits to customer. Features/selling points.
-  - GDPR = Privacy matters. Period. GDPR is the law. That's why we prefer Protonmail, Matocontact and avoid services that are know to have abused  personal data.
+Design: Our design, your advantage.
+  - Features/selling points /benefits to customer...
+  - GDPR = Privacy matters. Period. GDPR is the law. That's why we prefer Protonmail, Matomo and avoid services that appear to abuse your personal data.
   - x
-feedback: ratings. He's like a friend of a friend. Take these references, see how happy they are.
+feedback:
+  - ratings. He's like a friend of a friend. Take these references, see how happy they are.
 contact
 social
 buy
 -->
-<html lang=en class="system">
+<html lang=en class="system overflow-y-auto smooth-scroll">
 
 
 <head>
@@ -23,12 +25,6 @@ buy
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/tachyon.shower.css">
 
   <style type="text/css">
-    html {
-      overflow-y: auto;
-      scroll-behavior: scontactoth;
-    }
-
-
 
     #scrollSpy a,
     li {
@@ -68,21 +64,6 @@ buy
       left: 0;
     }
 
-
-
-    /**
-	 * Grid
-
-	.grid {
-		display: grid;
-		grid-gap: 2em;
-		grid-template-columns: 30% 70%;
-	}
-	*/
-
-    /* #scrollSpy {
-		position: fixed;
-	} */
 
     #scrollSpy li.active {
       background-color: gainsboro;
@@ -137,26 +118,27 @@ buy
   .hover-bg-whatsapp:hover,
   .hover-bg-whatsapp:focus { background-color: #20b038; }*/
 
+    /* https://www.tripadvisor.com/Widgets */
     .tripadvisor {
-      color: #568203;
+      color: #00a680;
     }
 
     .bg-tripadvisor {
-      background-color: #568203;
+      background-color: #00a680;
     }
 
     .b--tripadvisor {
-      border-color: #568203;
+      border-color: #00a680;
     }
 
     .hover-tripadvisor:hover,
     .hover-tripadvisor:focus {
-      color: #568203;
+      color: #00a680;
     }
 
     .hover-bg-tripadvisor:hover,
     .hover-bg-tripadvisor:focus {
-      background-color: #568203;
+      background-color: #00a680;
     }
 
     /* https://vimeo.com/311885154 */
@@ -206,27 +188,27 @@ buy
       background-color: #8A90C7;
     }
 
-    /* 53bded */
+    /* New blue: https://en.facebookbrand.com/facebookapp/ */
     .facebook {
-      color: #3b5998;
+      color: #1877f2;
     }
 
     .bg-facebook {
-      background-color: #3b5998;
+      background-color: #1877f2;
     }
 
     .b--facebook {
-      border-color: #3b5998;
+      border-color: #1877f2;
     }
 
     .hover-facebook:hover,
     .hover-facebook:focus {
-      color: #3b5998;
+      color: #1877f2;
     }
 
     .hover-bg-facebook:hover,
     .hover-bg-facebook:focus {
-      background-color: #3b5998;
+      background-color: #1877f2;
     }
 
     /* https://brand.linkedin.com/downloads */
@@ -298,9 +280,16 @@ buy
       background-color: #E60023;
     }
 
+    /* https://brandpalettes.com/skype-color-codes/ */
+    .skype { color: #00aff0; }
+    .bg-skype { background-color: #00aff0; }
+    .b--skype { border-color: #00aff0; }
 
+    .hover-skype:hover,
+    .hover-skype:focus { color: #00aff0; }
 
-    /* #0078D7 */
+    .hover-bg-skype:hover,
+    .hover-bg-skype:focus { background-color: #00aff0; }
 
 
 
@@ -332,7 +321,7 @@ buy
       margin-left: 75%;
     }
 
-    hr {
+    /* hr {
       height: .25rem;
       width: 25%;
       margin: 0;
@@ -341,28 +330,30 @@ buy
       transition: .3s ease-in-out;
       position: relative;
       z-index: 99999;
-    }
+     */}
   </style>
 
 </head>
 
 <body class="pa0 ma0" id="top">
-
-  <nav class="ttu fixed bg-white w-100 f7 f6-ns f5-m f5-l">
-
-    <ul id="scrollSpy" class="dt list tc ml-auto mr-auto mt0 mb0 pa0 w-100">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#design">Design</a></li>
-      <li><a href="#feedback">Feedback</a></li>
-      <li><a href="#contact">Contact</a></li><!-- "enquire" "buy" "learn more" -->
-      <hr />
+  <nav class="w-100 f7 f6-ns f5-m f5-l"><!--  -->
+    <ul id="scrollSpy" class="list ttu tracked flex justify-around w-100 debug pa0 ma0">
+      <li class="pl0">
+        <a class="link o-80 glow no-underline" href="#home">
+          <span class="dib dib-ns dn-m dn-l">Home</span>
+          <span class="dn dn-ns dib-m dib-l ttn tracked-none">InstantWebapp</span>
+        </a>
+      </li>
+      <li class="">
+        <li><a class="link dib white o-80 glow" href="#design">Design</a></li>
+        <li><a class="link dib white o-80 glow" href="#feedback">Feedback</a></li>
+        <li><a class="link dib white o-80 glow" href="#contact">Contact</a></li><!-- "enquire" "buy" "learn more" -->
+      </li>
     </ul>
   </nav>
 
-
-
-  <div class="fixed  bottom-0 ">
-    <p><a data-scroll href="#top">Top</a></p>
+  <div class="fixed bottom-0 pa3">
+    <p><a data-scroll href="#top" class="b no-underline o-30 glow">Top</a></p>
   </div>
 
   <div class="mr-auto ml-auto w-100">
