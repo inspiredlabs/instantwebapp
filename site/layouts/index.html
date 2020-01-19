@@ -20,7 +20,7 @@ buy
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" type="text/css" href="css/tmp.css">
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/tmp.css">
 
   <style type="text/css">
     html {
@@ -409,8 +409,8 @@ buy
     </div>
 
     <!-- Javascript -->
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/gumshoe.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/smooth-scroll.min.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/gumshoe.js"></script>
     <script>
       var scroll = new ScontactothScroll('a[href*="#"]');
       /* */
