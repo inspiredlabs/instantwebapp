@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Meta -->
+<meta name="description" content="A simple platform for tailoring online business.">
+<meta name="author" content="Scott Phillips, Inspired Labs, Bootstrap contributors, Google PageInsights, GTMetrix, AMP, HUGO">
+
+<link rel="icon" href="favicon.ico">
+
+<title>InstantWebapp | Bespoke websites for boutique businesses</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+* {
+    -webkit-highlight: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+}
+.no-select {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+/* https://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/narrow-jumbotron.css */
+/* Space out content a bit */
+body {
+  /*
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;*/
+  background-color: #f8f8f8;
+	color: #383838;
+	/*font-size: 1.2rem;*/
+	font-size: 0.9rem;/* YYY */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  color: #666;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* Custom page header */
+.header {
+  /*padding-bottom: 1rem;
+  border-bottom: .05rem solid #e5e5e5;*/
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  /*line-height: 3rem;*/
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: .05rem solid transparent; /*#e5e5e5;*/
+}
+
+/* Customize container */
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: .05rem solid transparent; /*#e5e5e5;*/
+  /*margin-top:2rem;*/
+  background-color: transparent;
+  color: white;
+}
+.jumbotron .btn {
+  padding: .75rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.display-3 {
+	font-weight: 200;
+	font-size: 3.2rem;
+}
+.display-3 span {
+	font-size: 2.45rem;
+}
+.bolder {
+	font-weight: 500;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 3rem 0;
+}
+.marketing p + h4 {
+  margin-top: 1.5rem;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 48em) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    /*margin-bottom: 2rem;*/
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+.icon {
+	max-height: 3rem;/* YYY */
+}
+</style>
+<style>
+.arrow {
+	font-size: 0.4em;
+	vertical-align: middle;
+}
+
+.bd-navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/*@media (min-width: 768px){ }*/
+
+.bd-navbar {
+  /*min-height: 4rem;*/
+  background-color: #383838;
+  /*box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);*/
+}
+.header a {
+	color: white;
+	text-decoration: none;
+}
+</style>
+<style>
+	#reveal
+	{
+		/*background-color: silver;*/
+	}
+
+	#reveal DIV, #reveal img
+	{
+    /*background-color:lightgreen;*/
+    -webkit-transition: all 0.6s ease;
+  	-moz-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+
+
+	.hideme
+	{
+    opacity:0.2;
+    -webkit-transform: scale(0.94);
+    /*background-color: wheat;*/
+	}
+
+	.showme {
+	  opacity:1;
+	  -webkit-transform: scale(0.999999);
+	  /*background-color: wheat;*/
+	}
+	.keyword{
+		font-size: 3.5rem; /* 5rem; YYY */
+		font-weight: 100;
+		color: black;
+		/*letter-spacing: -0.0625rem;*/
+		/*text-transform: uppercase;*/
+	}
+	h2,h3,h4,h5,h6 {
+
+	}
+	.question {
+		font-weight: 200;
+		color: #383838;
+	}
+	/*.list-unstyled li:before {
+		content: '•';
+		left: -0.1rem;
+		position: absolute;
+	}*/
+	.list-unstyled {
+		color: gray;
+	}
+	code {
+		word-break: break-all; 
+	}
+	.nav-pills .call-to-action {
+		background-color: #148dfe;
+		margin-left: 0.4rem;
+	}
+	.nav-pills .nav-link.active {
+		background-color: black;		
+	}
+	/*.img-rounded {border-radius: 0.8rem;}*/
+	.figure-img {
+		min-width: 6rem;
+		max-height: 6rem;
+	}
+	.btn-block {
+		overflow: hidden;
+	}
+	.kindwords{
+		font-size: 2.0rem; /* 5rem; YYY */
+		font-weight: 100;
+		color: black;
+		/*letter-spacing: -0.0625rem;*/
+		/*text-transform: uppercase;*/
+	}
+	.kindwords-cite {
+		font-weight: 200;
+		font-style: normal;
+		font-size: 1.0rem; /* 5rem; YYY */
+	}
+</style>
+</head>
+
+<body class="" id="home">
+<header class="navbar bd-navbar">
+	<div class="container header clearfix">
+		<nav data-gumshoe-header data-scroll-header><!-- class="fixed-header" -->
+			<ul data-gumshoe class="nav nav-pills float-right">
+				<li class="nav-item"><a ondragstart="return false" data-scroll class="nav-link" href="#home"><span class="arrow">▶</span><b><span class="bolder">In</span></b><span class="sr-only">(current)</span></a></li>
+				<li class="nav-item"><a ondragstart="return false" data-scroll class="nav-link" href="#benefits">benefits</a></li>
+				<li class="nav-item"><a ondragstart="return false" data-scroll class="nav-link" href="#ratings">ratings</a></li>
+				<li class="nav-item"><a ondragstart="return false" data-scroll class="nav-link call-to-action" href="#buy">buy</a></li>
+			</ul>
+		</nav>
+	</div><!-- /header -->
+</header>
+
+<div class="nero" style="background-color: black; width: 100%;">
+	<div class="container">
+	  <div class="jumbotron">
+	    <h1 class="display-3">My small business?<br /><span class="">&mdash;There's an app for&nbsp;that</span></h1>
+	    <p class="lead"><span class="arrow">▶</span><b><span class="bolder">Instant</span>Webapp</b> is the choice for entrepreneurs, artists &amp; boutiques</p>
+	    <!--p>
+	    <a ondragstart="return false" class="btn btn-lg btn-success" role="button" href="tel:+447515686177">
+	    Call us</a>
+	    <a ondragstart="return false" class="btn btn-lg btn-primary" role="button" href="mailto:scott@inspiredlabs.co.uk?subject=InstantWebapp%20enquiry
+	    &body=I'd%20like%20to%20discuss%20a%20bespoke%20webapp%20for%20our%20needs.">
+	    Email us</a></p-->
+	  </div>
+	</div><!-- /container -->	
+</div><!-- /nero -->
+	
+<div class="container" id="reveal">
+	<div class="row marketing hideme showme" id="benefits" style="padding-top: 3.2rem;">
+    <div class="text-center col-md-3 col-lg-6">
+      <img src="images/149226.svg" class="icon img-fluid" alt="thumbnail">
+    </div><!-- /icon -->
+    <div class="col-md-9 col-lg-6">
+      <h2 class="keyword">Simple</h2>
+      <h3 class="question">Wish you could better meet customer&nbsp;needs?</h3>
+      <p>Whatever your day-to-day business, we help you <b>build&nbsp;trust</b>, so customers can find what they&nbsp;need.</p>
+      <ul class="list-unstyled">
+        <li>We offer guidance organising your&nbsp;priorities.</li>
+      </ul>
+    </div><!-- /col-md-9 -->
+  </div><!-- /row marketing -->
+
+  <div class="row marketing hideme"> 
+	  <div class="text-center col-md-3 push-md-9">
+	  	<img src="images/149384.svg" class="icon img-fluid" alt="thumbnail">
+    </div><!-- /icon -->
+
+	  <div class="col-md-9 pull-md-3 col-lg-6 text-md-right">
+		  <h2 class="keyword">Focused</h2>
+		  <h3 class="question">Need joined&nbsp;up business&nbsp;objectives?</h3>
+		  <p>We help both you and your customer by developing a strong <b>call&#8209;to&#8209;action</b>.</p>
+
+		  <ul class="list-unstyled">
+			  <li>Lead the process, because you know your customer better than&nbsp;anyone.</li>
+		  </ul>
+	  </div><!-- /col-md-9 -->
+	</div><!-- /row marketing -->
+
+  <div class="row marketing hideme"> 
+    <div class="text-center col-md-3 col-lg-6">
+      <img src="images/138068.svg" class="icon img-fluid" alt="thumbnail">
+    </div><!-- /icon -->
+    <div class="col-md-9 col-lg-6">
+
+      <h2 class="keyword">Just&nbsp;Works</h2>
+
+      <h3 class="question">Want it to work everywhere?</h3>
+
+      <p>Projects are <b>empirically tested</b> and compatible with devices people&nbsp;love.</p>
+
+      <ul class="list-unstyled">
+	      <li>By performing extra&nbsp;work, we can put your mind&nbsp;at&nbsp;rest.</li>
+      </ul>
+
+    </div><!-- /col-md-9 -->
+  </div><!-- /row marketing -->
+
+  <div class="row marketing hideme"> 
+	  <div class="text-center col-md-3 push-md-9">
+	  	<img src="images/362215.svg" class="icon img-fluid" alt="thumbnail">
+    </div><!-- /icon -->
+
+	  <div class="col-md-9 pull-md-3 col-lg-6 text-md-right">
+		  <h2 class="keyword">Targeted</h2>
+
+      <h3 class="question">What&nbsp;about&nbsp;your&nbsp;most valued&nbsp;customers?</h3>
+
+		  <p>Specifying areas of special attention means more <b>meaningful&nbsp;content</b> can be developed for highest&nbsp;ROI.</p>
+
+		  <ul class="list-unstyled">
+		  <li>We can even put together an agency style support&nbsp;package.</li>
+		  </ul>
+	  </div><!-- /col-md-9 -->
+	</div><!-- /row marketing -->
+
+	<div class="row marketing" id="ratings" style="padding-top: 3.2rem;">
+		<div class="text-center col-md-4">
+			<a ondragstart="return false" href="https://greekfoods.co.uk/" target="_blank">
+		  	<figure class="figure">
+		  	  <img src="images/greekfoods.png" class="figure-img img-fluid rounded hideme" alt="Webapp icon">
+		  	  <figcaption class="figure-caption">Greek&#8239;Foods.co.uk</figcaption>
+		  	</figure>
+		  </a>	
+		  <h4>Miliotis &amp;&nbsp;Son</h4>
+		  <h5 class="text-muted">Wholesale distributor</h5>
+		  <p class="text-left">A modern take on a traditional brochure, this webapp is for highend chefs &amp; restaurateurs that need keeping up to date with supplier&nbsp;prices.</p>
+		  <p><a ondragstart="return false"  target="_blank" class="btn btn-secondary" href="https://inspiredlabs.co.uk/gtmetrix.com/reports/greekfoods.co.uk.pdf" role="button">GTMetrix: 88%</a></p><br>
+		</div><!-- /text-center col-md-4 -->
+	  <div class="col-md-8 hideme">	  	
+	  	<blockquote class="blockquote"><p class="mb-0 kindwords">I&nbsp;used&nbsp;to think apps were out of reach for small&nbsp;businesses like&nbsp;ours… especially tailored&nbsp;to our&nbsp;customers.</p>
+	  	<cite class="text-muted kindwords-cite"><a ondragstart="return false" href="https://greekfoods.co.uk">Mel&nbsp;Miliotis</a> Miliotis &amp;&nbsp;Son</cite>
+	  	</blockquote>
+	  </div><!-- /col-md-8 -->
+	</div><!-- /row -->
+
+	<div class="row marketing">
+    <div class="text-center col-md-4">
+   		<a ondragstart="return false" href="https://pablowoodward.com/" target="_blank">    	
+	    	<figure class="figure">
+	    	  <img src="images/pablowoodward.png" class="figure-img img-fluid rounded hideme" alt="Webapp icon">
+	    	  <figcaption class="figure-caption">Pablo&#8239;Woodward.com</figcaption>
+	    	</figure>
+  	  </a>	    	
+      <h4>Pablo Woodward</h4>
+      <h5 class="text-muted">Actor, Artist</h5>
+      <p class="text-left">Developed with a storytelling focus, the Kasabian star produced the webapp representing his history, media showcase and career&nbsp;highlights.</p>
+      <p><a ondragstart="return false"  target="_blank" class="btn btn-secondary" href="http://inspiredlabs.co.uk/gtmetrix.com/reports/pablowoodward.com.pdf" role="button">GTMetrix: 100%</a></p><br>
+    </div><!-- /text-center col-md-4 -->
+    <div class="text-center col-md-4">
+    	<a ondragstart="return false" href="https://toetalbalance.co.uk/" target="_blank">
+      	<figure class="figure">
+      	  <img src="images/toetalbalance.png" class="figure-img img-fluid rounded hideme" alt="Webapp icon">
+      	  <figcaption class="figure-caption">Toetal&#8239;Balance.co.uk</figcaption>
+      	</figure>
+      </a>	
+      <h4>Reflexology</h4>
+      <h5 class="text-muted">Micro&nbsp;payments</h5>
+      <p class="text-left">Designed to improve sales and advertise on popular search engines, this webapp enables on&#8209;the&#8209;spot micro&nbsp;payments via secure online&nbsp;banking.</p>
+      <p><a ondragstart="return false"  target="_blank" class="btn btn-secondary" href="http://inspiredlabs.co.uk/gtmetrix.com/reports/toetalbalance.co.uk" role="button">GTMetrix: 100%</a></p><br>
+    </div><!-- /text-center col-md-4 -->
+    
+    <div class="text-center col-md-4">
+    	<a ondragstart="return false" href="https://inspiredlabs.co.uk/mg3dpro.com/" target="_blank">
+      	<figure class="figure">
+      	  <img src="images/mg3dpro.png" class="figure-img img-fluid rounded hideme" alt="Webapp icon">
+      	  <figcaption class="figure-caption">MG&#8239;3D&#8239;Pro.com</figcaption>
+      	</figure>
+      </a>	
+      <h4>Matt Greenaway</h4>
+      <h5 class="text-muted">3D&nbsp;Visualiser</h5>
+      <p class="text-left">Bringing&nbsp;everything together all in one place, this full-screen portfolio presents technical artwork and 3D renders to prospective&nbsp;clients.</p>
+      <p><a ondragstart="return false"  target="_blank" class="btn btn-secondary" href="https://inspiredlabs.co.uk/gtmetrix.com/reports/mg3dpro.com.pdf" role="button">GTMetrix: 90%</a></p><br>
+    </div><!-- /text-center col-md-4 -->
+  </div><!-- /row -->
+
+  <div class="row marketing">
+  	<div class="text-center col-md-4">
+  			<a ondragstart="return false" href="https://inspiredlabs.co.uk/3-si.com" target="_blank">    	
+  	  	<figure class="figure">
+  	  	  <img src="images/3-si.png" class="figure-img img-fluid rounded hideme" alt="Webapp icon">
+  	  	  <figcaption class="figure-caption">3-Si.com</figcaption>
+  	  	</figure>
+  	  </a>	    	
+  	  <h4>3Si</h4>
+  	  <h5 class="text-muted">Software house</h5>
+  	  <p class="text-left">Designed for those unfamiliar with data&nbsp;driven&nbsp;software.</p>
+  	  <p><a ondragstart="return false"  target="_blank" class="btn btn-secondary" href="https://inspiredlabs.co.uk/gtmetrix.com/reports/3si.com.pdf" role="button">GTMetrix: 97%</a></p><br>
+  	</div><!-- /text-center col-md-4 -->
+    <div class="col-md-8 hideme">	  	
+    	<blockquote class="blockquote"><p class="mb-0 kindwords">Scott fully understands the concepts of&nbsp;design…<br />
+    	how things flow and the way the message is conveyed to the&nbsp;user.</p>
+    	<cite class="text-muted kindwords-cite"><a ondragstart="return false" href="http://inspiredlabs.co.uk/3-si.com/">Chris Sinclair</a> Director,&nbsp;3Si</cite>
+    	</blockquote>
+    </div><!-- /col-md-8 -->
+  </div><!-- /row -->
+  
+  <div class="row marketing">
+	  <div class="text-center col-md-4">
+	  	<a ondragstart="return false" href="https://inspiredlabs.co.uk/davidlomas" target="_blank">
+	    	<figure class="figure">
+	    	  <img src="images/lomas.png" class="figure-img img-fluid rounded hideme" alt="Webapp icon">
+	    	  <figcaption class="figure-caption">David&#8239;Lomas.is&#8239;V.gd</figcaption>
+	    	</figure>
+	    </a>	
+	    <h4>David Lomas</h4>
+	    <h5 class="text-muted">Marketeer</h5>
+	    <p class="text-left">Targeting wealthy decision makers, the app promotes content marketing services to businesses that need regular updates to their social&nbsp;media.</p>
+	    <p><a ondragstart="return false"  target="_blank" class="btn btn-secondary" href="https://inspiredlabs.co.uk/gtmetrix.com/reports/davidlomas.isv.gd.pdf" role="button">GTMetrix: 96%</a></p><br>
+	  </div><!-- /text-center col-md-4 -->
+	  <div class="col-md-8 hideme">	  	
+	  	<blockquote class="blockquote"><p class="mb-0 kindwords">Scott&nbsp;is easy to work with, taking the brief for my concept and turned it into an impressive, workable&nbsp;solution.</p>
+	  	<cite class="text-muted kindwords-cite"><a ondragstart="return false" href="https://alteredfeast.co.uk/">David Lomas</a> Marketeer</cite>
+	  	</blockquote>
+	  </div>
+  </div><!-- /row -->
+  
+  <div class="row marketing">
+  	<div class="text-center col-md-4">
+  		<a ondragstart="return false" href="https://alteredfeast.co.uk/" target="_blank">
+  	  	<figure class="figure">
+  	  	  <img src="images/alteredfeast.png" class="figure-img img-fluid rounded hideme" alt="Webapp icon">
+  	  	  <figcaption class="figure-caption">Altered&#8239;Feast.co.uk</figcaption>
+  	  	</figure>
+  	  </a>	
+  	  <h4>Tom Clutterbuck</h4>
+  	  <h5 class="text-muted">Comedian&nbsp;&amp; Entrepreneur</h5>
+  	  <p class="text-left">Designed to inform busy crowds at the Brighton&nbsp;Fringe, this webapp counts down to each show every night of the&nbsp;performance.</p>
+  	  <p><a ondragstart="return false"  target="_blank" class="btn btn-secondary" href="https://inspiredlabs.co.uk/gtmetrix.com/reports/alteredfeast.instantwebapp.co.uk.pdf" role="button">GTMetrix: 98%</a></p><br>
+  	</div><!-- /text-center col-md-4 -->
+  	
+    <div class="col-md-8 hideme">	  	
+    	<blockquote class="blockquote"><p class="mb-0 kindwords">Scott made me a shiny app that created the perfect illusion that I knew what I was&nbsp;doing!</p>
+    	<cite class="text-muted kindwords-cite"><a ondragstart="return false" href="https://alteredfeast.co.uk/">Tom&nbsp;Clutterbuck</a> Comedian&nbsp;&amp; Entrepreneur</cite>
+    	</blockquote>
+    </div>
+  </div>
+  
+  <div class="row marketing">
+  	<div class="text-center col-md-4">
+  			<a ondragstart="return false" href="https://inspiredlabs.co.uk/" target="_blank">    	
+  	  	<figure class="figure">
+  	  	  <img src="images/inspiredlabs.png" class="figure-img img-fluid rounded hideme" alt="Webapp icon">
+  	  	  <figcaption class="figure-caption">InspiredLabs.co.uk</figcaption>
+  	  	</figure>
+  	  </a>	    	
+  	  <h4>Inspired Labs</h4>
+  	  <h5 class="text-muted">Portfolio</h5>
+  	  <p class="text-left">Articles for entrepreneurs and organisations to learn more about digital art &amp; UX&nbsp;design.</p>
+  	  <p><a ondragstart="return false"  target="_blank" class="btn btn-secondary" href="https://inspiredlabs.co.uk/gtmetrix.com/reports/inspiredlabs.co.uk.pdf" role="button">GTMetrix: 100%</a></p><br>
+  	</div><!-- /text-center col-md-4 -->
+    <div class="col-md-8 hideme">	  	
+    	<blockquote class="blockquote"><p class="mb-0 kindwords">Scott's&nbsp;a particularly talented&nbsp;designer</p>
+    	<cite class="text-muted kindwords-cite"><a ondragstart="return false" href="https://uk.linkedin.com/in/tanguyfautre/">Tanguy Fautré</a> Aris&nbsp;Technologies</cite>
+    	</blockquote>
+    </div><!-- /col-md-8 -->
+  </div><!-- /row -->
+  
+  <div class="row marketing hideme" id="buy" style="padding-top: 3.2rem;">
+    <div class="text-center col-md-4">
+      <p><br />
+      <!--a ondragstart="return false" class="btn btn-lg btn-secondary" role="button" href="tel:+447515686177">
+      Call us</a-->
+      <a style="background-color: #148dfe;outline:transparent;" ondragstart="return false" class="btn btn-lg btn-primary" role="button" href="mailto:alan.scott.phillips@protonmail.ch?subject=InstantWebapp%20enquiry
+      &body=I'd%20like%20to%20discuss%20a%20bespoke%20webapp%20for%20our%20needs.">
+      Email us</a></p>
+    </div><!-- /icon -->
+    <div class="col-md-8">
+      <h2 class="keyword">Connect</h2>
+      <h3 class="question">More&nbsp;ideas than&nbsp;ever?</h3>
+      <p>Let's get to know about your project and book a slot in the&nbsp;diary.</p>
+      <ul class="list-unstyled">
+        <li><a ondragstart="return false" href="https://inspiredlabs.co.uk/" target="_blank">Scott&nbsp;Phillips</a> has been turning pixels into&nbsp;gold for 20 years for people just like&nbsp;you.</li>
+      </ul>
+    </div><!-- /col-md-6 -->
+  </div><!-- /row marketing -->
+
+
+  
+</div> <!-- /container -->
+
+<div class="container">
+  <footer class="footer text-center">
+	  <p>
+		  <img src="images/227121.svg" class="icon img-fluid" alt="thumbnail">
+	  </p>
+    <p>© <a ondragstart="return false" href="https://inspiredlabs.co.uk/" target="_blank">Inspired Labs</a> 2017</p>
+  </footer>
+</div> <!-- /container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/smooth-scroll.min.js"></script>
+<script src="js/gumshoe.js"></script>
+
+<script>
+	smoothScroll.init({
+		offset: 0
+	});
+	gumshoe.init({
+		offset: 100
+	});
+</script>
+
+<script>
+	// stackoverflow.com/questions/26694385/fade-in-on-scroll-down-fade-out-on-scroll-up-based-on-element-position-in-win
+	// jsfiddle.net/e5qaD/4837/
+	$(document).ready(function() {
+	    $(window).scroll( function(){
+	        $('.hideme').each( function(i){
+	            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+	            var bottom_of_window = $(window).scrollTop() + $(window).height();
+	            if( bottom_of_window > bottom_of_object ){
+	                $(this).addClass('showme');
+	            }
+	            if( bottom_of_window < bottom_of_object ){
+	                $(this).removeClass('showme');
+	            }
+	        });
+	    });
+	});
+</script>
+</body></html>

@@ -9328,7 +9328,8 @@ details[open] summary~* {
 
   /* Call-to-action tint */
   --tint-fg: darkgrey;
-  /*#4a4a4a*//* Colour */
+  /*#4a4a4a*/
+  /* Colour */
   --tint-bg: white;
   --dim-cta: darkgrey;
   /*#4a4a4a*/
@@ -9365,80 +9366,394 @@ details[open] summary~* {
 
   /* Social Media colour */
 
-  --skype: #00aff0; /* https://brandpalettes.com/skype-color-codes/ */
-  --pinterest: #E60023; /* https://business.pinterest.com/en/pinterest-brand-guidelines */
-  --twitter: #1da1f2; /* https://about.twitter.com/en_us/company/brand-resources.html */
-  --linkedin: #0073b2; /* https://brand.linkedin.com/downloads */
-  --protonmail: #8A90C7; /* https://protonmail.com/support/knowledge-base/is-protonmail-gdpr-compliant/ *//* https://github.com/edent/SuperTinyIcons */
-  --protonmail: #8A90C7; /* https://protonmail.com/support/knowledge-base/is-protonmail-gdpr-compliant/ */
-  --vimeo: #1eb8eb; /* https://vimeo.com/311885154 */
-  --tripadvisor: #00a680; /* https://www.tripadvisor.com/Widgets */
-  --facebook: #1877f2; /* New blue: https://en.facebookbrand.com/facebookapp/ */
-  --whatsapp: #25D366; /* https://whatsappbrand.com/ */
+  --skype: #00aff0;
+  /* https://brandpalettes.com/skype-color-codes/ */
+  --pinterest: #E60023;
+  /* https://business.pinterest.com/en/pinterest-brand-guidelines */
+  --twitter: #1da1f2;
+  /* https://about.twitter.com/en_us/company/brand-resources.html */
+  --linkedin: #0073b2;
+  /* https://brand.linkedin.com/downloads */
+  --protonmail: #8A90C7;
+  /* https://protonmail.com/support/knowledge-base/is-protonmail-gdpr-compliant/ */
+  /* https://github.com/edent/SuperTinyIcons */
+  --protonmail: #8A90C7;
+  /* https://protonmail.com/support/knowledge-base/is-protonmail-gdpr-compliant/ */
+  --vimeo: #1eb8eb;
+  /* https://vimeo.com/311885154 */
+  --tripadvisor: #00a680;
+  /* https://www.tripadvisor.com/Widgets */
+  --facebook: #1877f2;
+  /* New blue: https://en.facebookbrand.com/facebookapp/ */
+  --whatsapp: #25D366;
+  /* https://whatsappbrand.com/ */
+
+  /* Thanks to Sharmin akter: shuvochowdhuryart@gmail.com */
+  --electric-lime: #bcff00;
+  --caribbean: #17e2a0;
+  --meadow: #16bf82;
+  --cobalt: #1771a0;
+  --egyptian: #27389d;
+  --prussia: #772bed;
+  --raspberry: #bf0060;
+  --pumpkin: #f36017;
+  --mandarino: #ffb111;
+  --soccorso: #ffce00;
+}
+
+/*------------------- InstantWebapp colourscheme ---------------------*/
+
+/* htmlcsscolor.com/hex/f36017 */
+.pumpkin {
+  color: var(--pumpkin);
+}
+
+.bg-pumpkin {
+  background-color: var(--pumpkin);
+}
+
+.b--pumpkin {
+  border-color: var(--pumpkin);
+}
+
+.hover-pumpkin:hover,
+.hover-pumpkin:focus {
+  color: var(--pumpkin);
+}
+
+.hover-bg-pumpkin:hover,
+.hover-bg-pumpkin:focus {
+  background-color: var(--pumpkin);
+}
+
+/* Roadside Assistance */
+.soccorso {
+  color: var(--soccorso);
+}
+
+.bg-soccorso {
+  background-color: var(--soccorso);
+}
+
+.b--soccorso {
+  border-color: var(--soccorso);
+}
+
+.hover-soccorso:hover,
+.hover-soccorso:focus {
+  color: var(--soccorso);
+}
+
+.hover-bg-soccorso:hover,
+.hover-bg-soccorso:focus {
+  background-color: var(--soccorso);
+}
+
+/* Tangerine */
+.mandarino {
+  color: var(--mandarino);
+}
+
+.bg-mandarino {
+  background-color: var(--mandarino);
+}
+
+.b--mandarino {
+  border-color: var(--mandarino);
+}
+
+.hover-mandarino:hover,
+.hover-mandarino:focus {
+  color: var(--mandarino);
+}
+
+.hover-bg-mandarino:hover,
+.hover-bg-mandarino:focus {
+  background-color: var(--mandarino);
+}
+
+/* Egypt sky */
+.egyptian {
+  color: var(--egyptian);
+}
+
+.bg-egyptian {
+  background-color: var(--egyptian);
+}
+
+.b--egyptian {
+  border-color: var(--egyptian);
+}
+
+.hover-egyptian:hover,
+.hover-egyptian:focus {
+  color: var(--egyptian);
+}
+
+.hover-bg-egyptian:hover,
+.hover-bg-egyptian:focus {
+  background-color: var(--egyptian);
+}
 
 
+/* Wiki shades of purple */
+.grape {
+  color: var(--grape);
+}
 
+.bg-grape {
+  background-color: var(--grape);
+}
+
+.b--grape {
+  border-color: var(--grape);
+}
+
+.hover-grape:hover,
+.hover-grape:focus {
+  color: var(--grape);
+}
+
+.hover-bg-grape:hover,
+.hover-bg-grape:focus {
+  background-color: var(--grape);
+}
+
+/* htmlcsscolor.com/hex/bcff00 */
+.electric-lime {
+  color: var(--electric-lime);
+}
+
+.bg-electric-lime {
+  background-color: var(--electric-lime);
+}
+
+.b--electric-lime {
+  border-color: var(--electric-lime);
+}
+
+.hover-electric-lime:hover,
+.hover-electric-lime:focus {
+  color: var(--electric-lime);
+}
+
+.hover-bg-electric-lime:hover,
+.hover-bg-electric-lime:focus {
+  background-color: var(--electric-lime);
+}
+
+/* It Works! */
+.raspberry {
+  color: var(--raspberry);
+}
+
+.bg-raspberry {
+  background-color: var(--raspberry);
+}
+
+.b--raspberry {
+  border-color: var(--raspberry);
+}
+
+.hover-raspberry:hover,
+.hover-raspberry:focus {
+  color: var(--raspberry);
+}
+
+.hover-bg-raspberry:hover,
+.hover-bg-raspberry:focus {
+  background-color: var(--raspberry);
+}
+
+
+/* What is better than cobolt? #1771a0 */
+.cobalt {
+  color: var(--cobalt);
+}
+
+.bg-cobalt {
+  background-color: var(--cobalt);
+}
+
+.b--cobalt {
+  border-color: var(--cobalt);
+}
+
+.hover-cobalt:hover,
+.hover-cobalt:focus {
+  color: var(--cobalt);
+}
+
+.hover-bg-cobalt:hover,
+.hover-bg-cobalt:focus {
+  background-color: var(--cobalt);
+}
+
+/* Prussian Violet */
+.prussia {
+  color: var(--prussia);
+}
+
+.bg-prussia {
+  background-color: var(--prussia);
+}
+
+.b--prussia {
+  border-color: var(--prussia);
+}
+
+.hover-prussia:hover,
+.hover-prussia:focus {
+  color: var(--prussia);
+}
+
+.hover-bg-prussia:hover,
+.hover-bg-prussia:focus {
+  background-color: var(--prussia);
+}
+
+/* Example */
+
+.caribbean {
+  color: var(--caribbean);
+}
+
+.bg-caribbean {
+  background-color: var(--caribbean);
+}
+
+.b--caribbean {
+  border-color: var(--caribbean);
+}
+
+.hover-caribbean:hover,
+.hover-caribbean:focus {
+  color: var(--caribbean);
+}
+
+.hover-bg-caribbean:hover,
+.hover-bg-caribbean:focus {
+  background-color: var(--caribbean);
+}
+
+/* Example */
+.meadow {
+  color: var(--meadow);
+}
+
+.bg-meadow {
+  background-color: var(--meadow);
+}
+
+.b--meadow {
+  border-color: var(--meadow);
+}
+
+.hover-meadow:hover,
+.hover-meadow:focus {
+  color: var(--meadow);
+}
+
+.hover-bg-meadow:hover,
+.hover-bg-meadow:focus {
+  background-color: var(--meadow);
+}
+
+/* Mexican Pink: en.wikipedia.org/wiki/Mexican_pink */
+
+.mexicano {
+  color: #ff0078;
+}
+
+.bg-mexicano {
+  background-color: #ff0078;
+}
+
+.b--mexicano {
+  border-color: #ff0078;
+}
+
+.hover-mexicano:hover,
+.hover-mexicano:focus {
+  color: #ff0078;
+}
+
+.hover-bg-mexicano:hover,
+.hover-bg-mexicano:focus {
+  background-color: #ff0078;
 }
 
 /*------------------- Social Media colour ---------------------*/
 
 
-.skype { color: var(--skype); }
-.bg-skype { background-color: var(--skype); }
-.b--skype { border-color: var(--skype); }
+.skype {
+  color: var(--skype);
+}
+
+.bg-skype {
+  background-color: var(--skype);
+}
+
+.b--skype {
+  border-color: var(--skype);
+}
 
 .hover-skype:hover,
-.hover-skype:focus { color: var(--skype); }
+.hover-skype:focus {
+  color: var(--skype);
+}
 
 .hover-bg-skype:hover,
-.hover-bg-skype:focus { background-color: var(--skype); }
+.hover-bg-skype:focus {
+  background-color: var(--skype);
+}
 
 
 
 
- .pinterest {
-   color: var(--pinterest);
- }
+.pinterest {
+  color: var(--pinterest);
+}
 
- .bg-pinterest {
-   background-color: var(--pinterest);
- }
+.bg-pinterest {
+  background-color: var(--pinterest);
+}
 
- .b--pinterest {
-   border-color: var(--pinterest);
- }
+.b--pinterest {
+  border-color: var(--pinterest);
+}
 
- .hover-pinterest:hover,
- .hover-pinterest:focus {
-   color: var(--pinterest);
- }
+.hover-pinterest:hover,
+.hover-pinterest:focus {
+  color: var(--pinterest);
+}
 
- .hover-bg-pinterest:hover,
- .hover-bg-pinterest:focus {
-   background-color: var(--pinterest);
- }
+.hover-bg-pinterest:hover,
+.hover-bg-pinterest:focus {
+  background-color: var(--pinterest);
+}
 
-  .twitter {
-    color: var(--twitter);
-  }
+.twitter {
+  color: var(--twitter);
+}
 
-  .bg-twitter {
-    background-color: var(--twitter);
-  }
+.bg-twitter {
+  background-color: var(--twitter);
+}
 
-  .b--twitter {
-    border-color: var(--twitter);
-  }
+.b--twitter {
+  border-color: var(--twitter);
+}
 
-  .hover-twitter:hover,
-  .hover-twitter:focus {
-    color: var(--twitter);
-  }
+.hover-twitter:hover,
+.hover-twitter:focus {
+  color: var(--twitter);
+}
 
-  .hover-bg-twitter:hover,
-  .hover-bg-twitter:focus {
-    background-color: var(--twitter);
-  }
+.hover-bg-twitter:hover,
+.hover-bg-twitter:focus {
+  background-color: var(--twitter);
+}
 
 .linkedin {
   color: var(--linkedin);
@@ -9485,27 +9800,27 @@ details[open] summary~* {
 }
 
 
- .protonmail {
-   color: var(--protonmail);
- }
+.protonmail {
+  color: var(--protonmail);
+}
 
- .bg-protonmail {
-   background-color: var(--protonmail);
- }
+.bg-protonmail {
+  background-color: var(--protonmail);
+}
 
- .b--protonmail {
-   border-color: var(--protonmail);
- }
+.b--protonmail {
+  border-color: var(--protonmail);
+}
 
- .hover-protonmail:hover,
- .hover-protonmail:focus {
-   color: var(--protonmail);
- }
+.hover-protonmail:hover,
+.hover-protonmail:focus {
+  color: var(--protonmail);
+}
 
- .hover-bg-protonmail:hover,
- .hover-bg-protonmail:focus {
-   background-color: var(--protonmail);
- }
+.hover-bg-protonmail:hover,
+.hover-bg-protonmail:focus {
+  background-color: var(--protonmail);
+}
 
 .vimeo {
   color: var(--vimeo);
