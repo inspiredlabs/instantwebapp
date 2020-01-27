@@ -17,6 +17,13 @@
 /* 08.11.19 .smooth-scroll			scroll-behavior:smooth  		addition								*/
 /* 26.11.19 .touch-manipulation	touch-action:manipulation   addition								*/
 
+/* Consider `.hover-o-*` convention. */
+/* Recycle existing class and break Tachyons convention. */
+/* 07.01.20 .emojisymbol			Semantic unicode-icons				addition								*/
+/* 13.01.20 .link							word-wrap: break-word;			bug fix 								*/
+/* 24.01.20 .twitter, .facebook, .pm-blue. .pm-blue-light, etc.					addition								*/
+
+
 /* SORT ME */
 /* Integrate: https://uncss-online.com/ */
 /* .box-sizing,etc...{border-box;margin-top:0;margin-bottom:0;}. */
@@ -9374,11 +9381,14 @@ details[open] summary~* {
   /* https://about.twitter.com/en_us/company/brand-resources.html */
   --linkedin: #0073b2;
   /* https://brand.linkedin.com/downloads */
-  --protonmail: #8A90C7;
+
+  /* https://design-system-beta.netlify.com/colors/ */
   /* https://protonmail.com/support/knowledge-base/is-protonmail-gdpr-compliant/ */
   /* https://github.com/edent/SuperTinyIcons */
-  --protonmail: #8A90C7;
-  /* https://protonmail.com/support/knowledge-base/is-protonmail-gdpr-compliant/ */
+  --pm-blue: #657ee4;
+  --pm-blue-dark: #526ee0;
+  --pm-blue-light: #788ee8;
+
   --vimeo: #1eb8eb;
   /* https://vimeo.com/311885154 */
   --tripadvisor: #00a680;
@@ -9388,7 +9398,7 @@ details[open] summary~* {
   --whatsapp: #25D366;
   /* https://whatsappbrand.com/ */
 
-  /* Thanks to Sharmin akter: shuvochowdhuryart@gmail.com */
+  /* Inspired by Sharmin akter: shuvochowdhuryart@gmail.com */
   --electric-lime: #bcff00;
   --caribbean: #17e2a0;
   --meadow: #16bf82;
@@ -9800,27 +9810,75 @@ details[open] summary~* {
 }
 
 
-.protonmail {
-  color: var(--protonmail);
+/* Protonmail */
+.pm-blue {
+  color: var(--pm-blue);
 }
 
-.bg-protonmail {
-  background-color: var(--protonmail);
+.bg-pm-blue {
+  background-color: var(--pm-blue);
 }
 
-.b--protonmail {
-  border-color: var(--protonmail);
+.b--pm-blue {
+  border-color: var(--pm-blue);
 }
 
-.hover-protonmail:hover,
-.hover-protonmail:focus {
-  color: var(--protonmail);
+.hover-pm-blue:hover,
+.hover-pm-blue:focus {
+  color: var(--pm-blue);
 }
 
-.hover-bg-protonmail:hover,
-.hover-bg-protonmail:focus {
-  background-color: var(--protonmail);
+.hover-bg-pm-blue:hover,
+.hover-bg-pm-blue:focus {
+  background-color: var(--pm-blue);
 }
+
+/* Protonmail */
+.pm-blue-dark {
+  color: var(--pm-blue-dark);
+}
+
+.bg-pm-blue-dark {
+  background-color: var(--pm-blue-dark);
+}
+
+.b--pm-blue-dark {
+  border-color: var(--pm-blue-dark);
+}
+
+.hover-pm-blue-dark:hover,
+.hover-pm-blue-dark:focus {
+  color: var(--pm-blue-dark);
+}
+
+.hover-bg-pm-blue-dark:hover,
+.hover-bg-pm-blue-dark:focus {
+  background-color: var(--pm-blue-dark);
+}
+
+/* Protonmail */
+.pm-blue-light {
+  color: var(--pm-blue-light);
+}
+
+.bg-pm-blue-light {
+  background-color: var(--pm-blue-light);
+}
+
+.b--pm-blue-light {
+  border-color: var(--pm-blue-light);
+}
+
+.hover-pm-blue-light:hover,
+.hover-pm-blue-light:focus {
+  color: var(--pm-blue-light);
+}
+
+.hover-bg-pm-blue-light:hover,
+.hover-bg-pm-blue-light:focus {
+  background-color: var(--pm-blue-light);
+}
+
 
 .vimeo {
   color: var(--vimeo);
@@ -11564,3 +11622,68 @@ input:focus::placeholder {
 }
 
 /*</style>*/
+
+/* https://css-tricks.com/snippets/css/common-unicode-icons/ */
+/* Recycle existing class and break Tachyons convention.
+a[href^="mailto:"]:before {
+  content: '';
+}
+
+a[href^="tel:"]:before {
+  content: '';
+}
+
+a[href^="sms:"]:before {
+  content: '';
+}
+
+a[href^="geo:"]:before {
+  content: '';
+}
+
+a[href^="market:"]:before {
+  content: '';
+}
+*/
+
+
+
+/* 🔒 lock for paywall */
+/* .menu for rvo.lt: = */
+/* .cross for rvo.lt: https://unicode-table.com/en/1F5D9/ */
+
+.back.emojisymbol:before {
+  content: "\21A9";
+  /*content: "\1F519"; BACK arrow */
+
+}
+
+.link.emojisymbol:before {
+  content: "\1F517";
+}
+
+/* https://unicode-table.com/en/1F517/ */
+.phone.emojisymbol:before {
+  content: "\2706";
+  /* \1F4DE */
+}
+
+.mail.emojisymbol:before {
+  content: "\1F582";
+}
+
+.important.emojisymbol:before {
+  content: "\27BD";
+}
+
+.alert.emojisymbol:before {
+  content: "\26A0";
+}
+
+.emojisymbol:before {
+  font-family: sans-serif, emojisymbols;
+  /* `Menlo` UNICODE: https://mts.io/2015/04/21/unicode-symbol-render-text-emoji/ */
+}
+
+/* .quote.emojisymbol:before         { content: "\275D"; } */
+/* .quote.emojisymbol:after          { content: "\275E"; } */
