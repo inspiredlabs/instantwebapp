@@ -1,27 +1,35 @@
 /*! TACHYONSHOWER | demo: https://codepen.io/inspiredlabs/pen/LYPZVQK */
 /*! Utility classes for duplication-free layout expression  */
-/*! HTML {{ .Site "partial" . }} components abstraction layer */
-/*! THIS {{ .Site "partial" . | minified }} using: uncss-online.com/ */
+/*{{/* partial "add-to-tachyon-shower" . */}} abstraction layer for components */
+/* Document this (then add postCSS and Purge into build process): */
+/*{{/* $style := resources.Get "css/uncssonline.css" | minify */}}*/
+/*{{/* $style.Content | replaceRE `\/\*(.*)\*\/` `$style` | safeCSS */}}*/
 
 
-/* 16.04.19	.dim 								transform:translateZ(0)			bug fix 	*/
-/* 17.04.19	.grow 							background-clip							bug fix 	*/
-/* 01.05.19	.ts 								shadow											addition 	*/
-/* 30.05.19	.f8 								0.6rem											addition 	*/
-/* 14.08.19	.debug *						display colours							media query addition 		*/
-/* 13.10.19	.b--transparent			border top highlight				moved cascade override	*/
-/* 04.11.19	.ma-auto						mr-auto ml-auto							+ missing top & bottom	*/
-/* 04.11.19 .backface-hidden		-webkit hide (flickity)			addition								*/
-/* 04.11.19 .no-focus-ring 			<button> + button-reset			addition								*/
-/* 06.11.19 .transition 				give up subpixel render 		-webkit-font-smoothing	*/
-/* 08.11.19 .smooth-scroll			scroll-behavior:smooth  		addition								*/
-/* 26.11.19 .touch-manipulation	touch-action:manipulation   addition								*/
-
-/* Consider `.hover-o-*` convention. */
-/* Recycle existing class and break Tachyons convention. */
+/* 28.06.20 .prussia… 	                                    rename/addition					*/
+/* 30.01.20 .ds2-dark-gray… 	filter: drop-shadow(0px 0.625rem 0.625rem #333);    	*/
+/* 30.01.20 .ts1-white… 			text-shadow: 0px 0.125rem 0.125rem white;							*/
+/* 29.01.20 `#menu nav`,`[aria-expanded=false]~#menu nav`…	See comment							*/
+/* 29.01.20 .no-body-scroll 	overscroll shortcut?					multiple rules comment	*/
+/* 29.01.20 .portrait-etc 		horiz/vert nav & banners…			multiple media queries	*/
+/* 24.01.20 .twitter, .facebook, .pm-blue-light, etc.				addition								*/
+/* 13.01.20 .link							word-wrap: break-word;				bug fix 								*/
 /* 07.01.20 .emojisymbol			Semantic unicode-icons				addition								*/
-/* 13.01.20 .link							word-wrap: break-word;			bug fix 								*/
-/* 24.01.20 .twitter, .facebook, .pm-blue. .pm-blue-light, etc.					addition								*/
+/* Recycle existing class and break Tachyons convention. */
+/* Consider `.hover-o-*` convention. */
+/* 26.11.19 .touch-manipulation	touch-action:manipulation   addition								*/
+/* 08.11.19 .smooth-scroll			scroll-behavior:smooth  		addition								*/
+/* 06.11.19 .transition 				give up subpixel render 		-webkit-font-smoothing	*/
+/* 04.11.19 .no-focus-ring 			<button> + button-reset			addition								*/
+/* 04.11.19 .backface-hidden		-webkit hide (flickity)			addition								*/
+/* 04.11.19	.ma-auto						mr-auto ml-auto							+ missing top & bottom	*/
+/* 13.10.19	.b--transparent			border top highlight				moved cascade override	*/
+/* 14.08.19	.debug *						display colours							media query addition 		*/
+/* 30.05.19	.f8 								0.6rem											addition 	*/
+/* 01.05.19	.ts 								shadow											addition 	*/
+/* 17.04.19	.grow 							background-clip							bug fix 	*/
+/* 16.04.19	.dim 								transform:translateZ(0)			bug fix 	*/
+
 
 
 /* SORT ME */
@@ -9404,7 +9412,7 @@ details[open] summary~* {
   --meadow: #16bf82;
   --cobalt: #1771a0;
   --egyptian: #27389d;
-  --prussia: #772bed;
+  --grape: #772bed; /* prussia */
   --raspberry: #bf0060;
   --pumpkin: #f36017;
   --mandarino: #ffb111;
@@ -11219,6 +11227,8 @@ input:focus::placeholder {
   background-color: #445576;
 }
 
+/*************** Useful, but breaks convention! ***************/
+
 /* Transitions */
 #menu nav {
   /* Animation timing from: roblaplaca.com/examples/bezierBuilder */
@@ -11260,11 +11270,21 @@ input:focus::placeholder {
   }
 }
 
-/*</style>*/
+/*************** Useful, but above breaks convention! ***************/
 
-/*<!-- Text shadow #333 -->*/
-/*<style>*/
+/*************** Check: in use? ***************/
+.no-body-scroll {
+  /* https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element */
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+}
 
+
+
+
+/* https://css-tricks.com/breaking-css-box-shadow-vs-drop-shadow/ */
 /* Xpx Ypx BLURpx RGB */
 /* Atomise convention:
 	.text-shadow { text-shadow: 0px 1px 1px #333; }
@@ -11274,93 +11294,413 @@ input:focus::placeholder {
 
 /* small white text shadow */
 .ts1-white {
-  text-shadow: 0px 0.0625rem 0.0625rem white;
+  text-shadow: 0px 0.125rem 0.125rem white;
 }
 
 @media screen and (min-width: 30em) {
   .ts1-white-ns {
-    text-shadow: 0px 0.0625rem 0.0625rem white;
+    text-shadow: 0px 0.125rem 0.125rem white;
   }
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .ts1-white-m {
-    text-shadow: 0px 0.0625rem 0.0625rem white;
+    text-shadow: 0px 0.125rem 0.125rem white;
   }
 }
 
 @media screen and (min-width: 60em) {
   .ts1-white-l {
-    text-shadow: 0px 0.0625rem 0.0625rem white;
+    text-shadow: 0px 0.125rem 0.125rem white;
+  }
+}
+
+/* small white SVG shadow */
+.ds1-white {
+  filter: drop-shadow(0px 0.125rem 0.125rem white);
+}
+
+@media screen and (min-width: 30em) {
+  .ds1-white-ns {
+    filter: drop-shadow(0px 0.125rem 0.125rem white);
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .ds1-white-m {
+    filter: drop-shadow(0px 0.125rem 0.125rem white);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .ds1-white-l {
+    filter: drop-shadow(0px 0.125rem 0.125rem white);
   }
 }
 
 /* large white text shadow */
 .ts2-white {
-  text-shadow: 0px 0.125rem 0.125rem white;
+  text-shadow: 0px 0.625rem 0.625rem white;
 }
 
 @media screen and (min-width: 30em) {
   .ts2-white-ns {
-    text-shadow: 0px 0.125rem 0.125rem white;
+    text-shadow: 0px 0.625rem 0.625rem white;
   }
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .ts2-white-m {
-    text-shadow: 0px 0.125rem 0.125rem white;
+    text-shadow: 0px 0.625rem 0.625rem white;
   }
 }
 
 @media screen and (min-width: 60em) {
   .ts2-white-l {
-    text-shadow: 0px 0.125rem 0.125rem white;
+    text-shadow: 0px 0.625rem 0.625rem white;
+  }
+}
+
+/* large white SVG shadow */
+.ds2-white {
+  filter: drop-shadow(0px 0.625rem 0.625rem white);
+}
+
+@media screen and (min-width: 30em) {
+  .ds2-white-ns {
+    filter: drop-shadow(0px 0.625rem 0.625rem white);
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .ds2-white-m {
+    filter: drop-shadow(0px 0.625rem 0.625rem white);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .ds2-white-l {
+    filter: drop-shadow(0px 0.625rem 0.625rem white);
   }
 }
 
 /* small dark-gray text shadow */
 .ts1-dark-gray {
-  text-shadow: 0px 0.0625rem 0.0625rem #333;
+  text-shadow: 0px 0.125rem 0.125rem #333;
 }
 
 @media screen and (min-width: 30em) {
   .ts1-dark-gray-ns {
-    text-shadow: 0px 0.0625rem 0.0625rem #333;
+    text-shadow: 0px 0.125rem 0.125rem #333;
   }
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .ts1-dark-gray-m {
-    text-shadow: 0px 0.0625rem 0.0625rem #333;
+    text-shadow: 0px 0.125rem 0.125rem #333;
   }
 }
 
 @media screen and (min-width: 60em) {
   .ts1-dark-gray-l {
-    text-shadow: 0px 0.0625rem 0.0625rem #333;
+    text-shadow: 0px 0.125rem 0.125rem #333;
+  }
+}
+
+/* small dark-gray SVG shadow */
+.ds1-dark-gray {
+  filter: drop-shadow(0px 0.125rem 0.125rem #333);
+}
+
+@media screen and (min-width: 30em) {
+  .ds1-dark-gray-ns {
+    filter: drop-shadow(0px 0.125rem 0.125rem #333);
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .ds1-dark-gray-m {
+    filter: drop-shadow(0px 0.125rem 0.125rem #333);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .ds1-dark-gray-l {
+    filter: drop-shadow(0px 0.125rem 0.125rem #333);
   }
 }
 
 /* large dark-gray text shadow */
 .ts2-dark-gray {
-  text-shadow: 0px 0.125rem 0.125rem #333;
+  text-shadow: 0px 0.625rem 0.625rem #333;
 }
 
 @media screen and (min-width: 30em) {
   .ts2-dark-gray-ns {
-    text-shadow: 0px 0.125rem 0.125rem #333;
+    text-shadow: 0px 0.625rem 0.625rem #333;
   }
 }
 
 @media screen and (min-width: 30em) and (max-width: 60em) {
   .ts2-dark-gray-m {
-    text-shadow: 0px 0.125rem 0.125rem #333;
+    text-shadow: 0px 0.625rem 0.625rem #333;
   }
 }
 
 @media screen and (min-width: 60em) {
   .ts2-dark-gray-l {
-    text-shadow: 0px 0.125rem 0.125rem #333;
+    text-shadow: 0px 0.625rem 0.625rem #333;
+  }
+}
+
+/* large dark-gray SVG shadow */
+.ds2-dark-gray {
+  filter: drop-shadow(0px 0.625rem 0.625rem #333);
+}
+
+@media screen and (min-width: 30em) {
+  .ds2-dark-gray-ns {
+    filter: drop-shadow(0px 0.625rem 0.625rem #333);
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .ds2-dark-gray-m {
+    filter: drop-shadow(0px 0.625rem 0.625rem #333);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .ds2-dark-gray-l {
+    filter: drop-shadow(0px 0.625rem 0.625rem #333);
+  }
+}
+
+/*</style>*/
+/*<style>*/
+
+@media all and (orientation:portrait) {
+  .portrait-top-0 {
+    top: 0;
+  }
+
+  @media screen and (min-width: 30em) {
+    .portrait-top-0-ns {
+      top: 0;
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .portrait-top-0-m {
+      top: 0;
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .portrait-top-0-l {
+      top: 0;
+    }
+  }
+
+  .portrait-bottom-0 {
+    bottom: 0;
+  }
+
+  .portrait-vh-50 {
+    height: 50vh
+  }
+
+  @media screen and (min-width: 30em) {
+    .portrait-vh-50-ns {
+      height: 50vh
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .portrait-vh-50-m {
+      height: 50vh
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .portrait-vh-50-l {
+      height: 50vh
+    }
+  }
+
+  .portrait-vh-66 {
+    height: 66vh
+  }
+
+  @media screen and (min-width: 30em) {
+    .portrait-vh-66-ns {
+      height: 66vh
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .portrait-vh-66-m {
+      height: 66vh
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .portrait-vh-66-l {
+      height: 66vh
+    }
+  }
+
+  .portrait-vh-85 {
+    height: 85vh
+  }
+
+  @media screen and (min-width: 30em) {
+    .portrait-vh-85-ns {
+      height: 85vh
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .portrait-vh-85-m {
+      height: 85vh
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .portrait-vh-85-l {
+      height: 85vh
+    }
+  }
+
+  @media screen and (min-width: 30em) {
+    .portrait-bottom-0-ns {
+      bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .portrait-bottom-0-m {
+      bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .portrait-bottom-0-l {
+      bottom: 0;
+    }
+  }
+}
+
+@media all and (orientation:landscape) {
+  .landscape-top-0 {
+    top: 0;
+  }
+
+  @media screen and (min-width: 30em) {
+    .landscape-top-0-ns {
+      top: 0;
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .landscape-top-0-m {
+      top: 0;
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .landscape-top-0-l {
+      top: 0;
+    }
+  }
+
+  .landscape-bottom-0 {
+    bottom: 0;
+  }
+
+  @media screen and (min-width: 30em) {
+    .landscape-bottom-0-ns {
+      bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .landscape-bottom-0-m {
+      bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .landscape-bottom-0-l {
+      bottom: 0;
+    }
+  }
+
+
+  .landscape-vh-50 {
+    height: 50vh
+  }
+
+  @media screen and (min-width: 30em) {
+    .landscape-vh-50-ns {
+      height: 50vh
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .landscape-vh-50-m {
+      height: 50vh
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .landscape-vh-50-l {
+      height: 50vh
+    }
+  }
+
+  .landscape-vh-66 {
+    height: 66vh
+  }
+
+  @media screen and (min-width: 30em) {
+    .landscape-vh-66-ns {
+      height: 66vh
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .landscape-vh-66-m {
+      height: 66vh
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .landscape-vh-66-l {
+      height: 66vh
+    }
+  }
+
+  .landscape-vh-85 {
+    height: 85vh
+  }
+
+  @media screen and (min-width: 30em) {
+    .landscape-vh-85-ns {
+      height: 85vh
+    }
+  }
+
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .landscape-vh-85-m {
+      height: 85vh
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .landscape-vh-85-l {
+      height: 85vh
+    }
   }
 }
 

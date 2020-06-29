@@ -1,96 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
 TODO LIST:
 
-Sections:
-overview
-Design: Our design, your advantage.
-  - Features/selling points /benefits to customer...
-  - GDPR = Privacy matters. Period. GDPR is the law. That's why we prefer Protonmail, Matomo and avoid services that appear to abuse your personal data.
-  - x
-feedback:
-  - ratings. He's like a friend of a friend. Take these references, see how happy they are.
-contact
-social
-buy
+  Sections:
+  overview
+  Design: Our design, your advantage.
+    - Features/selling points /benefits to customer...
+    - GDPR = Privacy matters. Period. GDPR is the law. That's why we prefer Protonmail, Matomo and avoid services that appear to abuse your personal data.
+    - x
+  feedback:
+    - ratings. He's like a friend of a friend. Take these references, see how happy they are.
+  contact
+  social
+  buy
+
+  Comparison: 
+  - need to compare Wordpress, and Squarespace: https://www.websitebuilderexpert.com/designing-websites/why-you-should-not-hire-a-website-designer/
+
 -->
 <html lang=en class="system overflow-y-auto smooth-scroll">
 
-
 <head>
-<meta charset="utf-8">
-<title></title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--link rel="stylesheet" type="text/css" href="./css/tmp.css"-->
-<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/tachyon.shower.css">
+  <meta charset="utf-8">
+  <title>InstantWebapp | Web design for a world of apps </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--link rel="stylesheet" type="text/css" href="./css/tmp.css"-->
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/tachyon.shower.css">
 
-<style type="text/css">
-
-#scrollSpy a,
-li {
-position: relative
-}
-
-li {
-display: table-cell
-}
-
-
-#scrollSpy a:after {
-bottom:0;
-background:black;
-content: "";
-display: block;
-height: 4px;
-height: 0.2rem;
-left: 0;
-position: absolute;
-transition: width .3s ease 0s, left .3s ease 0s;
-width: 0
-}
-
-#scrollSpy a:hover:after {
-width: 100%;
-left: 0;
-}
-
-
-#scrollSpy li.active {
-/* background-color: gainsboro; */
-}
-
-#scrollSpy li.active a:after {
-  width: 100%;
-}
-
-#contact {
-/*background-color: #f42b37;*/
-}
-
-#design:active~hr {
-margin-left: 25%;
-}
-
-#feedback:active~hr {
-margin-left: 50%;
-}
-
-#contact:active~hr {
-margin-left: 75%;
-}
-
-</style>
-
+  <style type="text/css">
+    #scrollSpy a,
+    li {
+      position: relative
+    }
+    
+    li {
+      display: table-cell
+    }
+    
+    #scrollSpy a:after {
+      bottom: 0;
+      background: black;
+      content: "";
+      display: block;
+      height: 4px;
+      height: 0.2rem;
+      left: 0;
+      position: absolute;
+      transition: width .3s ease 0s, left .3s ease 0s;
+      width: 0
+    }
+    
+    #scrollSpy a:hover:after {
+      width: 100%;
+      left: 0;
+    }
+    
+    #scrollSpy li.active {
+      /* background-color: gainsboro; */
+    }
+    
+    #scrollSpy li.active a:after {
+      width: 100%;
+    }
+    
+    #contact {
+      /*background-color: #f42b37;*/
+    }
+    
+    #design:active~hr {
+      margin-left: 25%;
+    }
+    
+    #feedback:active~hr {
+      margin-left: 50%;
+    }
+    
+    #contact:active~hr {
+      margin-left: 75%;
+    }
+  </style>
 </head>
 
-
-
-
-
-
-
-<body class="pa0 ma0" id="top">
-  <section class="mw7 center">
+<body class="pa0 ma0 " id="top">
+  <!--section class="mw7 center">
     <article class="pv4 bt bb b--black-10 ph3 ph0-l">
       <div class="flex flex-column flex-row-ns">
         <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
@@ -104,13 +96,13 @@ margin-left: 75%;
           <p class="f6 lh-copy gray mv0">By <span class="ttu">Robin Darnell</span></p>
           <time class="f6 db gray">Nov. 21, 2020</time>
         </div>
-        
+
         <aside class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns center tc">
           <img class="w4 w4" src="images/136827.svg" alt="alt" />
         </aside>
 
       </div>
-      
+
     </article>
 
     <article class="pv4 bt bb b--black-10 ph3 ph0-l">
@@ -124,67 +116,74 @@ margin-left: 75%;
           <p class="f6 lh-copy gray mv0">By <span class="ttu">S. Phillips</span></p>
           <time class="f6 db gray">Feb. 09, 2020</time>
         </div>
-    
+
         <aside class="pl3-ns order-2 order-1-ns mb4 mb0-ns w-100 w-40-ns center tc">
           <img class="w4 w4" src="images/139871.svg" alt="alt" />
         </aside>
-    
-      </div>
-      
-    </article>
-  </section>
 
-<script>/*
-<nav class="z-999 fixed bg-white w-100 f8 f7-ns f5-m f4-l "><!-- mw9 center ph3-ns -->
-  <div class="cf ph2-ns flex justify-between">
-    <div class="fl w-100 w-20-ns pa2 order-0">
-      <a class="link no-underline black pv4 " href="#home">
-        <span class="dib dib-ns dn-m dn-l pv4 o-50 glow">Home</span>
-        <span class="dn dn-ns dib-m dib-l ttn tracked-none pv4 pr0">InstantWebapp</span></a></li>
-    </div>
-    <div class="fl dn dib-ns w-10-ns pa2"></div>
-    <div class="fl w-100 w-50-ns pa2">
-      <ul id="scrollSpy" class="list ttu tracked flex justify-end w-100 pa0 ma0 "><!--outline  pv4 -->
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#design">Design</a></li>
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#feedback">Feedback</a></li>
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="fl w-100 w-20-ns pa2 order-1 order-last-ns"><!-- justify-between -->
-      <div class="outline bg-white flex justify-end pv4 ma0">
-        <label class="dn dn-ns dn-m dib-l o-50 glow black" for="language">Language:</label>
-        <select class="dib" id="language">
-          <option selected>En<!-- <span class="dn dn-ns dib-m dib-l"> -->glish<!-- </span> --></option>
-          <option>It<!-- <span class="dn dn-ns dib-m dib-l"> -->aliano<!-- </span> --></option>
-        </select>
+      </div>
+
+    </article>
+  </section-->
+  <style>
+    /*
+  <nav class="z-999 fixed bg-white w-100 f8 f7-ns f5-m f4-l ">
+    <!-- mw9 center ph3-ns -->
+    <div class="cf ph2-ns flex justify-between">
+      <div class="fl w-100 w-20-ns pa2 order-0">
+        <a class="link no-underline black pv4 " href="#home">
+          <span class="dib dib-ns dn-m dn-l pv4 o-50 glow">Home</span>
+          <span class="dn dn-ns dib-m dib-l ttn tracked-none pv4 pr0">InstantWebapp</span></a>
+        </li>
+      </div>
+      <div class="fl dn dib-ns w-10-ns pa2"></div>
+      <div class="fl w-100 w-50-ns pa2">
+        <ul id="scrollSpy" class="list ttu tracked flex justify-end w-100 pa0 ma0 ">
+          <!--outline  pv4 -->
+          <li class="pl3"><a class="link dib o-50 glow black pv4" href="#design">Design</a></li>
+          <li class="pl3"><a class="link dib o-50 glow black pv4" href="#feedback">Feedback</a></li>
+          <li class="pl3"><a class="link dib o-50 glow black pv4" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fl w-100 w-20-ns pa2 order-1 order-last-ns">
+        <!-- justify-between -->
+        <div class="outline bg-white flex justify-end pv4 ma0">
+          <label class="dn dn-ns dn-m dib-l o-50 glow black" for="language">Language:</label>
+          <select class="dib" id="language">
+              <option selected>En<!-- <span class="dn dn-ns dib-m dib-l"> -->glish<!-- </span> --></option>
+              <option>It<!-- <span class="dn dn-ns dib-m dib-l"> -->aliano<!-- </span> --></option>
+            </select>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-*/</script>
-<script>/*
-  <nav class="z-999 fixed bg-red w-100 f8 f7-ns f5-m f4-l"><!--   -->
+  </nav>
+
+  
+    <nav class="z-999 fixed bg-red w-100 f8 f7-ns f5-m f4-l">
+    <!--   -->
     <ul id="scrollSpy" class="list ttu tracked flex justify-around w-100 pa0 ma0 ">
       <!-- <li class="pl0 left-0 relative"><a class="link dib dib-ns dn-m dn-l pv4 o-50 glow black pv4"
-          href="#home">Home</a></li>
-      <li class="pl0 left-0 relative"><a class="link dn dn-ns dib-m dib-l black pv4" href="#home">InstantWebapp</a></li> -->
-      
+href="#home">Home</a></li>
+<li class="pl0 left-0 relative"><a class="link dn dn-ns dib-m dib-l black pv4" href="#home">InstantWebapp</a></li> -->
+
       <li class="pl0 ">
         <a class="link no-underline black " href="#home">
           <span class="dib dib-ns dn-m dn-l pv4 o-50 glow">Home</span>
-          <span class="dn dn-ns dib-m dib-l ttn tracked-none pv4 pr0">InstantWebapp</span></a></li>
-      
+          <span class="dn dn-ns dib-m dib-l ttn tracked-none pv4 pr0">InstantWebapp</span></a>
+      </li>
+
       <span class="">
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#design">Design</a></li>
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#feedback">Feedback</a></li>
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#contact">Contact</a></li><!-- "enquire" "buy" "learn more" -->
-      </span>
+<li class="pl3"><a class="link dib o-50 glow black pv4" href="#design">Design</a></li>
+<li class="pl3"><a class="link dib o-50 glow black pv4" href="#feedback">Feedback</a></li>
+<li class="pl3"><a class="link dib o-50 glow black pv4" href="#contact">Contact</a></li><!-- "enquire" "buy" "learn more" -->
+</span>
     </ul>
   </nav>
-*/</script>
+          
+        */
+  </style>
 
-  <!-- bottom: -3px;
-  bottom: -0.18rem; -->
+
 
   <div class="fixed bottom-0 pa3">
     <p><a data-scroll href="#top" class="b no-underline o-30 glow">Top</a></p>
@@ -192,321 +191,360 @@ margin-left: 75%;
 
   <div class="mr-auto ml-auto w-100">
     <div class="grid">
-
       <main class="">
-        <section class="pa2 pt5 bg-egyptian" id="home" >
+        <section class="pa2 pt5 bg-egyptian" id="home">
           <!-- bg-washed-green dark-green ml-auto mr-auto w-50-->
-          <article class="mw7 center ph3 ph5-ns tc br2 pv5 mb0 white ">
-
-            <span class="fw2 f4 lh-copy mt0 mb3 db tc" lang=en>Do you have a company?</span>
-            <span class="fw2 f4 lh-copy mt0 mb3 db tc" lang=en>Do you want to beat the competition?</span>
-            <span class="fw6 f3 f2-ns lh-title mt0 mb3 db tc" lang=en>Let's find you then!</span>
+          <article class="mw7 center ph3 ph5-ns tc br2 pv5 mb0 white "><span class="fw2 f4 lh-copy mt0 mb3 db tc" lang=en>Do you have a company?</span><span class="fw2 f4 lh-copy mt0 mb3 db tc" lang=en>Do you want to beat the competition?</span><span class="fw6 f3 f2-ns lh-title mt0 mb3 db tc" lang=en>Let's find you then!</span>
             <span class="fw2 f4 lh-copy mt0 mb3 db tc" lang=en>With my help you can rank higher on Google.</span>
             <p class="fw1 f5 mt0 mb3 db tc" lang=en>Get in touch, or find out more:</p>
-            <div>
-              <a class="w-40 tc f6 br-pill  no-underline egyptian bg-white ba b--egyptian grow pv2 ph3 dib mr3"
-                href="tel:+393408931544">+39 340 893 1544</a><!-- washed-green bg-egyptian ba b--egyptian -->
-              <a class="w-third mr-auto ml-auto tc f6 br-pill white bg-near-black b--near-black no-underline ba grow pv2 ph3 dib"
-                href="https://inspiredlabs.co.uk/">Portfolio</a>
-            </div>
+            <div><a class="w-40 tc f6 br-pill  no-underline egyptian bg-white ba b--egyptian grow pv2 ph3 dib mr3" href="tel:+393408931544">+39 340 893 1544</a>
+              <!-- washed-green bg-egyptian ba b--egyptian --><a class="w-third mr-auto ml-auto tc f6 br-pill white bg-near-black b--near-black no-underline ba grow pv2 ph3 dib" href="https://inspiredlabs.co.uk/">Portfolio</a></div>
           </article>
         </section>
-        <section class="vh-100 w-100 ma0 pa0 white dt bg-prussia" id="design"><!--  -->
-          <h4 class="dn dib-ns ph3 pv2">Share:</h4>
-          <ul class="list tracked-m tracked-l ttu mb3 pl0 b">
-            <li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns  pv2-ns br0 "><a href=""
-                class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-facebook">facebook</a></li>
-            <li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns  pv2-ns br0 "><a href=""
-                class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-twitter">twitter</a></li>
-            <li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns  pv2-ns br0 "><a href=""
-                class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-linkedin">LinkedIn</a></li>
-            <li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns  pv2-ns br0 "><a href=""
-                class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-protonmail">email</a></li>
-            <!--li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns ph2-m ph3-l pv2-ns br0 "><a href="" class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-pinterest">Pinterest</a></li-->
-          </ul>
-
-          <div class="flex items-center w-100">
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/136827.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/134641.svg" alt="alt" />
-              </aside>
-            </div>
+        <!--section class="vh-100 w-100 ma0 pa0 white dt bg-plum" id="design">
+           
+        <h4 class="dn dib-ns ph3 pv2">Share:</h4>
+        <ul class="list tracked-m tracked-l ttu mb3 pl0 b">
+          <li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns  pv2-ns br0 "><a href="" class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-facebook">facebook</a></li>
+          <li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns  pv2-ns br0 "><a href="" class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-twitter">twitter</a></li>
+          <li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns  pv2-ns br0 "><a href="" class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-linkedin">LinkedIn</a></li>
+          <li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns  pv2-ns br0 "><a href="" class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-pm-blue-light">email</a></li>
+          <li class="f8 f7-ns f5-m f4-l ph0 pv2 ph2-ns ph2-m ph3-l pv2-ns br0 "><a href="" class="ph2 pv2 ph2-ns ph2-m ph3-l pv2-ns hover-white white-50 link bg-pinterest">Pinterest</a></li>
+        </ul>
+        <div class="flex items-center w-100">
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/136827.svg" alt="alt" /></aside>
           </div>
-          
-          <div class="flex items-center w-100">
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/138068.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/139871.svg" alt="alt" />
-              </aside>
-            </div>
-          </div>
-          
-          <!-- new -->
-          
-          <div class="flex items-center w-100">
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/140785.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/141367.svg" alt="alt" />
-              </aside>
-            </div>
-          </div>
-          
-          <div class="flex items-center w-100">
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/149226.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/149304.svg" alt="alt" />
-              </aside>
-            </div>
-          </div>
-          
-          <!-- new -->
-          
-          <div class="flex items-center w-100">
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/149419.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/149384.svg" alt="alt" />
-              </aside>
-            </div>
-          </div>
-          
-          <div class="flex items-center w-100">
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/149381.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/149350.svg" alt="alt" />
-              </aside>
-            </div>
-          </div>
-          
-          <!-- new -->
-          
-          <div class="flex items-center w-100">
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/259807.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/233096.svg" alt="alt" />
-              </aside>
-            </div>
-          </div>
-          
-          <div class="flex items-center w-100">
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/227121.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/151494.svg" alt="alt" />
-              </aside>
-            </div>
-          </div>
-          
-          <!-- new -->
-          
-          <div class="flex items-center w-100">
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/493092.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/461627.svg" alt="alt" />
-              </aside>
-            </div>
-          </div>
-          
-          
-          <div class="flex items-center w-100">
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/362215.svg" alt="alt" />
-              </aside>
-            </div>
-            <div class="bg-gray fl w-100 w-50-ns red">
-              <aside class="tc pa4">
-                <img class="w4 w4" src="images/271549.svg" alt="alt" />
-              </aside>
-            </div>
-          </div>
-
-          <article class="cf" id="xyz">
-            <div class="fl w-100 w-50-ns pa3 pa2-ns">
-              <div class="ml-auto mr-auto measure">
-                <header class=" pv4 tc">
-                  <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Mauw</h3>
-                  <h4 class="f5 fw4 lh-title mt0 ttu tracked">Yeah, yeah, yeah.</h4>                  
-                </header><hr class="bb b--white-70" />
-                <main class="serif lh-copy f4">
-                  <p>Why not?</p>
-                  <p>Just because.</p>
-                  <p>PabloWoodward. Etc...</p>
-                </main>
-              </div>
-            </div>
-            <div class="bg-white fl w-100 w-50-ns green">
-              <aside class="tc pa4 ">
-                <img class="w4 w4" src="images/271549.svg" alt="Mauw" />
-              </aside>
-            </div>
-
-
-            
-          </article>
-        
-        </section>
-
-    <section class="vh-100 w-100 ma0 pa0 white dt bg-raspberry" id="feedback">
-      <article class="cf" id="per">
-        <div class="fl w-100 w-50-ns pa3 pa2-ns">          
-          <div class="ml-auto mr-auto measure">
-            <header class=" pv4 tc">
-              <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Mauw</h3>
-              <h4 class="f5 fw4 lh-title mt0 ttu tracked">Yeah, yeah, yeah.</h4>
-            </header><hr class="bb b--white-70" />
-            <main class="serif lh-copy f4">
-              <p>Why not?</p>
-              <p>Just because.</p>
-              <p>PabloWoodward. Etc...</p>
-            </main>
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/134641.svg" alt="alt" /></aside>
           </div>
         </div>
-        <aside class="fl w-100 w-50-ns tc ">
-          <figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
-            <div class="aspect-ratio--object cover" style="background:url(images/iwa-pablowoodward-01.jpg) center;"></div>
-          </figure>
-        </aside>
-      </article>
-      <article class="cf" id="per">
-        <aside class="fl w-100 w-50-ns tc ">
-          <figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
-            <div class="aspect-ratio--object cover" style="background:url(images/iwa-per-01.jpg) center;"></div>
-          </figure>
-        </aside>
-        <div class="fl w-100 w-50-ns pa3 pa2-ns">
-          <div class="ml-auto mr-auto measure">
-            <header class=" pv4 tc">
-              <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Be seen</h3>
-              <h4 class="f5 fw4 lh-title mt0 ttu tracked">Written for your audience</h4>
-            </header><hr class="bb b--white-70" />
-            <main class="serif lh-copy f4">
-              <p>Have you wondered why agencies don't prioritise your content?</p>
-              <p>Writing is hard.</p>
-              <p>By defining content from the very begining, we can focus entirely on your customer needs. This is an
-                effective way to begin our design after the discovery phase.</p>
-              <p>Developing an SEO strategy is a process. By evolving your written content around keywords that visitors are
-                really seeking we can adapt and fine-tune your project's design.</p>
-            </main>
+        <div class="flex items-center w-100">
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/138068.svg" alt="alt" /></aside>
+          </div>
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/139871.svg" alt="alt" /></aside>
           </div>
         </div>
-      </article>
+        <div class="flex items-center w-100">
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/140785.svg" alt="alt" /></aside>
+          </div>
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/141367.svg" alt="alt" /></aside>
+          </div>
+        </div>
+        <div class="flex items-center w-100">
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/149226.svg" alt="alt" /></aside>
+          </div>
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/149304.svg" alt="alt" /></aside>
+          </div>
+        </div>
+        <div class="flex items-center w-100">
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/149419.svg" alt="alt" /></aside>
+          </div>
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/149384.svg" alt="alt" /></aside>
+          </div>
+        </div>
+        <div class="flex items-center w-100">
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/149381.svg" alt="alt" /></aside>
+          </div>
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/149350.svg" alt="alt" /></aside>
+          </div>
+        </div>
+        <div class="flex items-center w-100">
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/259807.svg" alt="alt" /></aside>
+          </div>
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/233096.svg" alt="alt" /></aside>
+          </div>
+        </div>
+        <div class="flex items-center w-100">
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/227121.svg" alt="alt" /></aside>
+          </div>
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/151494.svg" alt="alt" /></aside>
+          </div>
+        </div>
+        <div class="flex items-center w-100">
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/493092.svg" alt="alt" /></aside>
+          </div>
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/461627.svg" alt="alt" /></aside>
+          </div>
+        </div>
+        <div class="flex items-center w-100">
+          <div class="bg-white fl w-100 w-50-ns green">
+            <aside class="tc pa4"><img class="w4 w4" src="images/362215.svg" alt="alt" /></aside>
+          </div>
+          <div class="bg-gray fl w-100 w-50-ns red">
+            <aside class="tc pa4"><img class="w4 w4" src="images/271549.svg" alt="alt" /></aside>
+          </div>
+        </div>
+        </section-->
+    </div>
   </div>
 
+  <!--section class="w-100 flex flex-row-ns flex-column bg-caribbean" id="design">
+    <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+      <article class="ml-auto mr-auto measure ">
+        <header class=" pv4 tc">
+          <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Design</h3>
+          <h4 class="f5 fw4 lh-title mt0 ttu tracked">Thorough Design Thinking</h4>
+        </header>
+        <hr class="bt bb b--black-10 b--white-70 mb5" />
+        <main class="serif lh-copy f4">
+          <p>Developed to help entreprenures&nbsp; ship – no&nbsp; configuration, no&nbsp; meetings: just&nbsp; launch!
+          </p>
+          <p>A "bare-bones" webapp can be ready for a fixed-price deposit. Following an initial&nbsp; consultation we will track your priorities, so you'll always know what to&nbsp;expect.</p>
+          <b>What do we need to launch?</b>
+          <p>Perfect is the enemy&nbsp; of&nbsp; good, complex&nbsp; the curse of <i>real artists that ship!</i></p>
+          <p>There's no complicated procedure. Although, some help may be required to confirm key detail about your&nbsp;idea. Each <i>iteration</i> serves to stress-test the business&nbsp;benefit for best ROI&nbsp;(return on investment).</p>
+          <p>Boom.</p>
+        </main>
+      </article>
+    </div>
+    <aside class="w-100 w-50-ns flex-column flex-grow-1 " style="background-color:#1a1a1a">
+      <figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
+        <div class="aspect-ratio--object cover" style="background:url(images/iwa-pablowoodward-01.jpg) center;"></div>
+      </figure>
+    </aside>
+  </section-->
 
-  <section class="vh-100 w-100 white dt bg-mandarino" id="contact">
-    
+  <section class="w-100 flex flex-row-ns flex-column bg-meadow" id="launch">
+    <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+      <article class="ml-auto mr-auto measure ">
+        <header class=" pv4 tc">
+          <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Launch</h3>
+          <h4 class="f5 fw4 lh-title mt0 ttu tracked">Fast in every dimension</h4>
+        </header>
+        <hr class="bt bb b--black-10 b--white-70 mb5" />
+        <main class="serif lh-copy f4">
+          <!-- InstantWebapp is a product developed -->
+          <p>Developed to help entreprenures&nbsp; ship – no&nbsp; configuration, no&nbsp; meetings: just&nbsp; launch!
+          </p>
+          <p>A "bare-bones" webapp can be ready for a fixed-price deposit. Following an initial&nbsp; consultation we will track your priorities, so you'll always know what to&nbsp;expect.</p>
+          <b>What do we need to launch?</b>
+          <p>Perfect is the enemy&nbsp; of&nbsp; good, complex&nbsp; the curse of <i>real artists that ship!</i></p>
+          <p>There's no complicated procedure. Although, some help may be required to confirm key detail about your&nbsp;idea. Each <i>iteration</i> serves to stress-test the business&nbsp;benefit for best ROI&nbsp;(return on investment).</p>
+          <!-- you're 
+ The schedule should focus on where you'll be confident 
+ you might not even need a domain&nbsp;
+    name with each priority and for peace-of-mind,
+    aims to scale your business idea risk-free. business&nbsp;
+    grow the principle of how can X with basic content and add to your venture,
+    with y This x helps you focus on gathering your thoughts and to avoid repetative meetings,
+    complicated presentations and x. business value compatability: to work on your customer's devices
+ is tested for substance focus -->
+          <p>Boom.</p>
+        </main>
+      </article>
+      <!-- /measure -->
+    </div>
+    <aside class="w-100 w-50-ns flex-column flex-grow-1 " style="background-color:#1a1a1a">
+      <figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
+        <div class="aspect-ratio--object cover" style="background:url(images/iwa-pablowoodward-01.jpg) center;"></div>
+      </figure>
+    </aside>
+  </section>
+
+  <section class="w-100 flex flex-row-ns flex-column bg-raspberry" id="visibility">
+    <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 order-2">
+      <article class="ml-auto mr-auto measure ">
+        <header class=" pv4 tc">
+          <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Visibility</h3>
+          <h4 class="f5 fw4 lh-title mt0 ttu tracked">Get seen on search engines</h4>
+        </header>
+        <hr class="bt bb b--black-10 b--white-70 mb5" />
+        <main class="serif lh-copy f4">
+          <p>Why don't agencies write your&nbsp;content from the very&nbsp;beginning?</p>
+          <p>Writing is&nbsp; hard.
+          </p>
+          <p>To focus entirely on your customer needs, you should consider a <i>content&nbsp;
+    strategy</i>. Effective, does&nbsp; not need to be&nbsp; complicated.
+          </p><b>Want to develop a more comprehensive SEO&nbsp;
+    strategy?</b>
+          <p>As part of the process, we can develop content that will continue to be found on search engines. Then we can fine-tune things to make sure it's acted upon by your&nbsp;audience.</p>
+          <p>Perfect.</p>
+          <!-- <p>Seen by search engines,
+    read by audiences</p><p>By evolving content around keywords that your visitors are really looking for,
+    means we can fine-tune your project's call-to-action.</p>
+ <p>By defining content from the very begining,
+    we can focus entirely on your customer needs. This is an effective way to begin our design after the discovery phase.</p><p>Writing is hard.</p><p>Writing effective SEO,
+    is even harder.</p><p>Content strategy.</p>-->
+        </main>
+      </article>
+      <!-- /measure -->
+    </div>
+    <aside class="w-100 w-50-ns flex-column flex-grow-1 " style="background-color:#1a1a1a">
+      <figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
+        <div class="aspect-ratio--object cover" style="background:url(images/iwa-alessandroronca-01.jpg) center;"></div>
+      </figure>
+    </aside>
+  </section>
+
+  <section class="w-100 flex flex-row-ns flex-column bg-mandarino" id="identity">
+    <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+      <article class="ml-auto mr-auto measure ">
+        <header class=" pv4 tc">
+          <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Identity</h3>
+          <h4 class="f5 fw4 lh-title mt0 ttu tracked">Create the right first impression</h4>
+        </header>
+        <hr class="bt bb b--black-10 b--white-70 mb5" />
+        <main class="serif lh-copy f4">
+          <p>The&nbsp; right look-and-feel is essential for your aspiring brand. Give your new venture a distinctive logo mark and <i>two</i>iterations of changes for peace&#8209; of&#8209; mind.
+          </p><b>Prefer a brand of&nbsp;
+    distinction?</b>
+          <p>For&nbsp; more granular control,
+            <i>Graphic&nbsp;
+    Design Consultancy</i>could be the way to go.</p>
+          <p>You&nbsp; can choose to add this, anytime – for as long as you need. This&nbsp; will always be a fixed&nbsp; standard day&#8209; rate.
+          </p>
+          <p>Easy.</p>
+          <!--p>The perception of your brand Identity Package with</p-->
+        </main>
+      </article>
+      <!-- /measure -->
+    </div>
+    <aside class="w-100 w-50-ns flex-column flex-grow-1 order-2 bg-white">
+      <figure class=" tc pa4 pt0 mv6">
+        <img class="w-80" src="images/blurred.shadow.tandem.svg" src="images/localitysite.svg" alt="alt" />
+      </figure>
+    </aside>
+  </section>
+
+  <section class="w-100 flex flex-row-ns flex-column bg-grape" id="structure">
+    <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 order-2">
+      <article class="ml-auto mr-auto measure ">
+        <header class=" pv4 tc ">
+          <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Structure</h3>
+          <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Organise&nbsp; business at an information&nbsp; level
+          </h4>
+        </header>
+        <hr class="bt bb b--black-10 b--white-70 mb5 " />
+        <main class="serif lh-copy f4 ">
+          <p>Everyone knows <i>data</i>is today's most valuable&nbsp;asset.</p>
+          <!-- <p>What&nbsp;
+    is the most valuable asset&nbsp;
+    today? <b>Data</b>.</p>-->
+          <p>Businesses&nbsp; appreciate the benefit of modern ways of&nbsp; working. But often, those same businesses don't know the real value of thier own&nbsp;information!
+            <!-- Profits are lost when they continue to be unable to benefit from thier own data properly. -->
+          </p>
+          <p>To structure a modern business,
+            <i>Information&nbsp;
+    Architecture</i>is one powerful tool to help optimise process to relase&nbsp; profits.
+          </p><b>Want to invest in Information&nbsp;
+    Architecture?</b>
+          <p>Planning, and small changes can unlock benefits that were invisible beforehand. <a x>Book a consultation</a>if you want to immediately boost your&nbsp; productivity.
+          </p>
+          <!-- Inspired Labs consultancy... Improve customer experience with : - findability of key "go-to " information. - Visual and Informational hierarchy. - Organise,
+    label and format each data in context. Improve business asset value : - significance,
+    onotologies and taxonomies all focused around a company's unique market proposition.
+ - create a glossary and develop a standardised language around your activities - how relationships and interactions between parts of an organisation can harmonise (rather than compete, avoid rework or unnescacry information overload) - foster improvements to conversion funnel/sales process. - representation and simplification - quantification of valuable components - direct attentions - encourage certain interactions - reduce mistakes and pitfalls -->
+          <p>Impressive.</p>
+        </main>
+      </article>
+      <!-- /measure -->
+    </div>
+    <aside class="w-100 w-50-ns flex-column flex-grow-1 " style="background-color:#1a1a1a">
+      <figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
+        <div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center; "></div>
+      </figure>
+    </aside>
+  </section>
+
+  <section class="w-100 flex flex-row-ns flex-column bg-electric-lime " id="relevant">
+    <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+      <article class="ml-auto mr-auto measure ">
+        <header class=" pv4 tc ">
+          <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Relevance</h3>
+          <!-- <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Business without borders</h4>-->
+          <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Multilingual content management</h4>
+        </header>
+        <hr class="bt bb b--black-10 b--white-70 mb5 " />
+        <main class="serif lh-copy f4 ">
+          <p>Business without borders.</p>
+          <p>Customers from the European Union and beyond are open minded about where their suppliers are&nbsp; based.
+            <!-- Why miss out on&nbsp;
+    potential by restricting yourself to only one&nbsp;
+    geography? -->
+          </p>
+          <p>Find common ground with your target market by using <i>content&nbsp;
+    translation</i>and auto&#8209; redirect visitors to the correct&nbsp; language pages based on their&nbsp; browser.
+          </p><b>Need advanced content writing&nbsp;
+    services?</b>
+          <p>To maxise cultural relevance,
+            <a href="https://inspiredlabs.co.uk " class="link pointer charcoal dim underline transition ">Inspired Labs</a>offers fixed&#8209; rate </i>translation, localisation &amp; transcreation&nbsp; services
+            </i>. And, as a premium client, we understand you want the flexability to translate your own ideas –&nbsp; no problem. We have a lean, reliable&nbsp; CMS ready to fit into your choice of&nbsp; workflow.
+          </p>
+          <!-- <p>Carte blanche!</p>-->
+          <!-- <p>cordon bleu</p>-->
+          <!-- <p>Piece de résistance</p>-->
+          <!-- <p>Savvy</p>-->
+          <!-- <p>Sans-restriction!</p>-->
+          <p>Bravo!</p>
+        </main>
+      </article>
+      <!-- /measure -->
+    </div>
+    <aside class="w-100 w-50-ns flex-column flex-grow-1 " style="background-color:#1a1a1a">
+      <figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
+        <div class="aspect-ratio--object cover " style="background:url(images/iwa-alessandroronca-01.jpg) center; "></div>
+      </figure>
+    </aside>
+  </section>
+
+
+  <!--section class="vh-100 w-100 white dt bg-mandarino ">
     <div class="mw9 center ">
       <div class="cf ">
-        <div class="fl w-100 w-50-ns ">
-          <div class="ml-auto mr-auto measure ">
-            <header class=" pv4 tc">
-              <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Be seen</h3>
-              <h4 class="f5 fw4 lh-title mt0 ttu tracked">Written for your audience</h4>
-            </header>
-            <hr class="bb b--white-70" />
-            <main class="serif lh-copy f4">
-              <p>Have you wondered why agencies don't prioritise your content?</p>
-              <p>Writing is hard.</p>
-              <p>By defining content from the very begining, we can focus entirely on your customer needs. This is an
-                effective way to begin our design after the discovery phase.</p>
-              <p>Developing an SEO strategy is a process. By evolving your written content around keywords that visitors are
-                really seeking we can adapt and fine-tune your project's design.</p>
-            </main>
-          </div><!-- /ml-auto mr-auto measure -->
-        </div><!-- /fl w-100 w-50-ns -->
-        <div class="fl w-100 w-50-ns bg-white">
-          <aside class="tc pa4 h5 mv7 ">
-            <img class="w4 w4 " src="images/271549.svg" alt="alt" />
-          </aside>
-        </div>
+        <div class="fl w-50 "></div>
+        <div class="fl w-100 w-50-ns bg-white "></div>
       </div>
     </div>
-
     <div class="flex items-center w-100 ">
-      <div class="bg-gray w-100 mandarino "><!-- fl -->
-        
+      <div class="bg-gray w-100 mandarino ">
         <div class="ml-auto mr-auto measure ">
-          <header class=" pv4 tc">
-            <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Be seen</h3>
-            <h4 class="f5 fw4 lh-title mt0 ttu tracked">Written for your audience</h4>
+          <header class=" pv4 tc ">
+            <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Be seen</h3>
+            <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Written for your audience</h4>
           </header>
-          <hr class="bb b--white-70" />
-          <main class="serif lh-copy f4">
+          <hr class="bb b--white-70 " />
+          <main class="serif lh-copy f4 ">
             <p>Have you wondered why agencies don't prioritise your content?</p>
             <p>Writing is hard.</p>
-            <p>By defining content from the very begining, we can focus entirely on your customer needs. This is an
-              effective way to begin our design after the discovery phase.</p>
-            <p>Developing an SEO strategy is a process. By evolving your written content around keywords that visitors are
-              really seeking we can adapt and fine-tune your project's design.</p>
+            <p>By defining content from the very begining, we can focus entirely on your customer needs. This is an effective way to begin our design after the discovery phase.</p>
+            <p>Developing an SEO strategy is a process. By evolving your written content around keywords that visitors are really seeking we can adapt and fine-tune your project's design.</p>
           </main>
-        </div><!-- /ml-auto... -->
-
+        </div>
       </div>
-      <div class="w-100 "><!--fl  bg-white green -->
-        <aside class="tc pa4">
-          <img class="w4 w4" src="images/271549.svg" alt="alt" />
-          <!-- <h1 class="f6 f2-m f-subheadline-l fw6 "><span class="i serif ">(i)</span></h1> -->
+      <div class="w-100 ">
+        <aside class="tc pa4 "><img class="w4 w4 " src="images/271549.svg " alt="alt " />
+          <h1 class="f6 f2-m f-subheadline-l fw6 "><span class="i serif ">(i)</span></h1>
         </aside>
       </div>
     </div>
-  </section>
-</main>
-</div>
-</div>
-
-    <!-- Javascript -->
-    <script src="{{ .Site.BaseURL }}js/smooth-scroll.min.js"></script>
-    <script src="{{ .Site.BaseURL }}js/gumshoe.js"></script>
-    <script>
-      var scroll = new SmoothScroll('a[href*="#"]');
-      /* */
-      var spy = new Gumshoe('#scrollSpy a');
-    </script>
+  </section-->
+  </main>
+  </div>
+  </div>
+  <!-- Javascript -->
+  <script src="{{ .Site.BaseURL }}js/smooth-scroll.min.js "></script>
+  <script src="{{ .Site.BaseURL }}js/gumshoe.js "></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="# "]');
+    var spy = new Gumshoe('#scrollSpy a');
+  </script>
 </body>
+
 </html>
-
-

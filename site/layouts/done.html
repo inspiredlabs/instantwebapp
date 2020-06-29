@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="refresh" content="3; url=index.html" /><!-- Skip, 3 seconds -->
+
+<title>Thank you!</title>
+
+
+	<style>
+
+		body {
+			margin: 0;
+			padding: 1rem;
+			background-color: #f8f8f8;
+			font-family: sans-serif;
+		}
+
+		div.wrapper {
+			width: 100%;
+			padding: 0;
+			display: table;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0;
+		}
+
+		div.container {
+			padding: 0;
+			vertical-align: middle;
+			display: table-cell;
+			margin: 0;
+		}
+
+		div.content {
+			width: 68%;
+			background-color: white;
+			margin: 0 auto;
+			text-align: center;
+			font-family: Georgia;
+			font-size: 2rem;
+			font-style: italic;
+			/* text-shadow: 0px 1px 1px rgba(0, 0, 0, 1); */
+			padding: 2rem;
+			outline: 1px solid gainsboro;
+		}
+
+		div.content b {
+			/*color: dimgray;*/
+		}
+
+		a {
+			display: inline-block;
+			padding: 1rem;
+			/* border: 1px solid #333; */
+
+			zoom: 1;
+			filter: alpha(opacity=38);
+			opacity: 0.38;
+
+		}
+
+		a:hover {
+			filter: alpha(opacity=100);
+			opacity: 1;
+		}
+
+		@media only screen
+		and (min-device-width : 320px) {
+			div.content {
+				font-size: 1rem;
+				padding: 1rem;
+			}
+		}
+
+		@media only screen
+		and (min-device-width : 480px) {
+			div.content {
+				font-size: 1.5rem;
+				padding: 1.5rem;
+			}
+		}
+
+		@media only screen
+		and (min-device-width : 640px) {
+			div.content {
+				font-size: 2rem;
+				padding: 2rem;
+			}
+		}
+
+	</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="container">
+		<div class="content">
+			<script type = "text/javascript">
+			var inspiration =
+			[
+				"Thank you! –<b>The&nbsp;Disco&nbsp;Bunny</>",
+				"Done – thanks! –<b>The&nbsp;Disco&nbsp;Bunny</>",
+				];
+
+			document.write (inspiration[Math.floor( Math.random() * 2 )]);
+			</script>
+
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
