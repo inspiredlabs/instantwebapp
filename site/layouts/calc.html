@@ -6,327 +6,141 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-
   <style>
-    *:focus {
-      outline: none;
-      text-decoration: none !important;
+
+
+    /* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    } */
+    @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+      input[type='checkbox'],
+      input[type='radio'] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
     }
-    /*add keyboard focus*/
-    
-     ::selection,
-    .panel-links *::selection,
-    blockquote *::selection {
-      color: inherit;
-      background: transparent;
-    }
-    
-     ::-moz-selection,
-    .panel-links *::-moz-selection,
-    blockquote *::-moz-selection {
-      color: inherit;
-      background: transparent;
-    }
-    
-    h2::selection,
-    h3::selection,
-    h4::selection,
-    h4 *::selection,
-    p::selection,
-    p *::selection,
-    table *::selection,
-    address::selection,
-    figcaption::selection,
-    figcaption *::selection {
-      color: white;
-      background: black;
-    }
-    
-    h2::-moz-selection,
-    h3::-moz-selection,
-    h4::-moz-selection,
-    h4 *::-moz-selection,
-    p::-moz-selection,
-    p *::-moz-selection,
-    table *::-moz-selection,
-    address::-moz-selection,
-    figcaption::-moz-selection,
-    figcaption *::-moz-selection {
-      color: white;
-      background: black;
-    }
-    
-     ::-webkit-input-placeholder {
-      color: pink;
-    }
-    
-     :-moz-placeholder {
-      color: pink;
-    }
-    
-     ::-moz-placeholder {
-      color: pink;
-    }
-    
-     :-ms-input-placeholder {
-      color: pink;
-    }
-    
-    html {
-      -ms-touch-action: manipulation;
-      touch-action: manipulation;
-    }
-    
-    * {
-      cursor: default;
-      -webkit-highlight: none;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      -webkit-touch-callout: none;
-      -webkit-user-select: text;
-      -khtml-user-select: text;
-      -moz-user-select: text;
-      -o-user-select: text;
-      user-select: text;
-    }
-    
-     :visited,
-     :focus,
-     :active,
-     :hover {
-      outline: 0 none !important;
-    }
-    
-     ::-moz-focus-inner {
-      border: 0;
-    }
-    
-     ::selection,
-    .form-control input+label *::selection {
-      background: rgba(0, 0, 0, 0);
-    }
-    
-     ::-moz-selection,
-    .form-control input+label *::-moz-selection {
-      background: rgba(0, 0, 0, 0);
-    }
-    
-    .form-control::selection {
-      background: rgba(0, 0, 0, 0.3);
-    }
-    
-    .form-control::-moz-selection {
-      background: rgba(0, 0, 0, 0.3);
-    }
-    
-    h2::selection,
-    h3::selection,
-    h4::selection,
-    h4 *::selection,
-    p::selection,
-    p *::selection,
-    table *::selection,
-    address::selection,
-    figcaption::selection,
-    figcaption *::selection,
-    li::selection {
-      color: white;
-      background: black;
-    }
-    
-    a[href^="tel:"]:hover {
-      text-decoration: none;
-    }
-    
-    a[href^="tel:"]:after {
-      content: "\260e";
-      margin-left: 0.25em;
-    }
-    
-    input {
-      border-radius: 0;
-    }
-    
-    label {
-      cursor: auto;
-    }
-    
-     :required {}
-    
-    input[type="date"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      padding: 0.75rem 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.8;
-      width: 100%;
-    }
-    
-    input[type="date"]:not(.has-value):before {
-      color: #999;
-      content: attr(placeholder);
-    }
-    
-    .highlight * {
-      border: 2px solid transparent;
-      outline: 10px solid transparent;
-      transition: all 0.333s ease;
-      cursor: pointer;
-    }
-    
-    .highlight textarea {
-      border: 2px solid transparent;
-      transition: all 0.333s ease;
-    }
-    
-    .highlight input:hover,
-    .highlight textarea:hover {
-      border: 2px solid #4a4a4a;
-    }
-    
-    .btn,
-    a * {
-      cursor: pointer;
-    }
-    
-    input[type="radio"] {
-      display: none;
-    }
-    
-    input[type="radio"]+label:hover,
-    input[type="radio"]:hover {
+
+    input[type='checkbox']{ height: 0; width: 0; }
+
+    input[type='checkbox'] + label{
       position: relative;
-      z-index: 1;
+      display: flex;
+      margin: .6rem 0;
+      align-items: center;
+      color: #9e9e9e;
+      /*   transition: color 250ms cubic-bezier(.4,.0,.23,1); */
     }
-    
-    input[type="checkbox"]+label,
-    input[type="radio"]+label {
-      display: block;
-      width: 100%;
+
+    input[type='checkbox'] + label > span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1em;
+      width: 1em;
+      height: 1em;
+      background: transparent;
+      border: .5rem solid grey;
       cursor: pointer;
-      padding: 1rem;
+      transition: all 250ms cubic-bezier(.4,.0,.23,1);
     }
-    
-    input[type="checkbox"]+label,
-    input[type="radio"]+label {
-      background-color: rgb(222, 222, 222);
+    input[type='checkbox']:checked + label {
+      color: forestgreen;
     }
-    
-    input[type="checkbox"]:checked+label,
-    input[type="radio"]:checked+label {
-      background-color: #4a4a4a;
-      color: white;
+    input[type='checkbox']:checked + label > span{
+      background-color:#4EA24E;
+      border: .5rem solid forestgreen;
+      animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
     }
-    
-    input[type="radio"]+label,
-    input[type="radio"]:checked+label,
-    input[type="checkbox"]+label,
-    input[type="checkbox"]:checked+label {
-      -webkit-transition: background-color 0.4s linear;
-      -o-transition: background-color 0.4s linear;
-      -moz-transition: background-color 0.4s linear;
-      transition: background-color 0.4s linear;
-      position: relative;
+    input[type='checkbox']:checked + label > span:before{
+      content: "";
+      position: absolute;
+      top: .95em;
+      left: .45em;
+      border-right: .3rem solid transparent;
+      border-bottom: .3rem solid transparent;
+      transform: rotate(45deg);
+      transform-origin: 0% 100%;
+      animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
     }
-    
-    input[type="checkbox"] {
-      display: none;
+
+    @keyframes checkbox-check {
+      0%{
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        transform: translate3d(0,0,0) rotate(45deg);
+      }
+      33%{
+        width: .2em;
+        height: 0;
+        border-color: white;
+        transform: translate3d(0,0,0) rotate(45deg);
+      }
+      100%{
+        width: .2em;
+        height: 1em;
+        border-color: white;
+        transform: translate3d(0,-1em,0) rotate(45deg);
+      }
     }
-    
-    input:checked+label {
-      color: silver;
-    }
-    
-    select.custom {
-      outline: none;
-      border: 2px solid transparent;
-      padding: 1rem;
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20fill%3D%22%23555555%22%20%0A%09%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%22-261%20145.2%2024%2024%22%20style%3D%22enable-background%3Anew%20-261%20145.2%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20d%3D%22M-245.3%2C156.1l-3.6-6.5l-3.7%2C6.5%20M-252.7%2C159l3.7%2C6.5l3.6-6.5%22%2F%3E%0A%3C%2Fsvg%3E");
-      background-repeat: no-repeat;
-      background-position: right center;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-    
-    select.custom:hover,
-    select.custom:active {
-      border: 2px solid #4a4a4a;
-    }
-    
-    select.custom::-ms-expand {
-      display: none;
-    }
-    /* Remove jank:
-        	https://stackoverflow.com/questions/2946748/iphone-webkit-css-animations-cause-flicker
-        */
   </style>
-</head>
 
-<body id="home" style="-webkit-backface-visibility: hidden;">
-  <form action="" name="deposit" method="POST" data-netlify="true">
-    <label for="inputSenderName" class="col-sm-3 col-form-label col-form-label-lg">Your name*</label
-      >
-      <input
-        required=""
-        name="name"
-        class=""
-        id="inputSenderName"
-        placeholder="Your name"
-      />
 
-      <label
-        for="inputSenderEmail"
-        class="">
-        Your email*
-      </label>
-    <input required="" name="replyto" type="email" class="" id="inputSenderEmail" placeholder="your@address.com" pattern="[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-    />
-    <fieldset class="form-check highlight" id="inputDonation">
-      <legend>
-        <h5>Are you able to make a donation?</h5>
-      </legend>
-      <input type="radio" name="_video_income" id="donationSmall" value="£600, Deposit" /><label class="" for="donationSmall" onclick="document.getElementsByName('deposit')[0].action = 'https://paypal.me/alanscottphillips/600.00';">£600, Deposit</label
-        >
+  <input id="instagram" type="checkbox" name="sum" value="50"/>
+  <label for="instagram" >
+    <span></span>
+    Instagram
+  </label>
 
-        <input
-          type="radio"
-          name="_video_income"
-          id="donationMedium"
-          value="£1200, Deposit"
-        /><label
-          class=""
-          for="donationMedium"
-          onclick="document.getElementsByName('deposit')[0].action = 'https://paypal.me/alanscottphillips/1200.00';"
-          >£1200, Partial Payment</label
-        >
-        <input
-          type="radio"
-          name="_video_income"
-          id="donationLarge"
-          value="£3600, Pay in full"
-        /><label
-          class=""
-          for="donationLarge"
-          onclick="document.getElementsByName('deposit')[0].action = 'https://paypal.me/alanscottphillips/3600.00';"
-          >£3600, Pay in full</label
-        >
-      </fieldset>
-      <button
-        style="width: 100%;"
-        type="submit"
-        class="form-control bg-black white"
-      >PayPal</button>
-      
-    </form>
-    <!--
-      notes:
-      - https://docs.netlify.com/forms/setup/#submit-forms-via-ajax
-      - https://stackoverflow.com/questions/10306129/javascript-get-element-by-name -->
+  <input id="monitoring" type="checkbox" name="sum" value="50"/>
+  <label for="monitoring" >
+    <span></span>
+    site monitoring
+  </label>
 
-<!--script src="js/savestorage.min.js"></script>
-<script type="text/javascript">
-saveStorage("#videoGift");
-saveStorage("#eventBooking");
-</script-->
+  <input id="linkedin" type="checkbox" name="sum" value="50"/>
+  <label for="linkedin" >
+    <span></span>
+    LinkedIn
+  </label>
+
+<p class="summary">
+Amount due in the PayPal checkout:<b>£</b><b class="total">0</b>. <!-- You can cancel or change plans anytime. -->
+</p>
+
+<script>
+//https://stackoverflow.com/questions/31431983/use-addeventlistener-on-a-class-not-working
+//https://stackoverflow.com/questions/13540751/how-get-total-sum-from-input-box-values-using-javascript
+HTMLCollection.prototype.forEach = Array.prototype.forEach;
+
+const inputs = document.getElementsByName('sum'),
+      total  = document.querySelector('.total');
+
+
+      inputs.forEach(function(element, i){
+        inputs[i].onchange = function() {
+          var add = this.value * (this.checked ? 1 : -1);
+          total.innerHTML = parseInt(total.innerHTML) + add
+          }
+      });
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</script>
+</script>
 </body>
 </html>

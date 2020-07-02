@@ -29,6 +29,7 @@ TODO LIST:
         <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/tachyon.shower.css">
 
         <style>
+            type="text/css"
             #scrollSpy a,
             li {
                 position: relative
@@ -39,7 +40,7 @@ TODO LIST:
             }
 
             #scrollSpy a:after {
-                top: 0;
+                bottom: 0;
                 background: black;
                 content: "";
                 display: block;
@@ -57,11 +58,17 @@ TODO LIST:
             }
 
             #scrollSpy li.active {
-                /* background-color: gainsboro;*/
+                ;
+                /* background-color: gainsboro; */
             }
 
             #scrollSpy li.active a:after {
                 width: 100%;
+            }
+
+            #contact {
+                ;
+                /*background-color: #f42b37;*/
             }
 
             #design:active~hr {
@@ -72,93 +79,206 @@ TODO LIST:
                 margin-left: 50%;
             }
 
-            #buy:active~hr {
+            #contact:active~hr {
                 margin-left: 75%;
             }
         </style>
 
         <style>
-
-
-          /* body{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          } */
+          .hue-rotate {
+            -webkit-animation: hue-rotate 10s infinite linear;
+            -moz-animation: hue-rotate 10s infinite linear;
+            -o-animation: hue-rotate 10s infinite linear;
+            -ms-animation: hue-rotate 10s infinite linear;
+            /*background-color:rgba(0,0,0, 0.333) !important;*/
+          }
           
-          @supports(-webkit-appearance: none) or (-moz-appearance: none) {
-            input[type='checkbox'],
-            input[type='radio'] {
-              -webkit-appearance: none;
-              -moz-appearance: none;
+          @keyframes hue-rotate {
+            from {
+              filter: hue-rotate(0deg);
+              -webkit-filter: hue-rotate(0deg);
+              -moz-filter: hue-rotate(0deg);
+              -o-filter: hue-rotate(0deg);
+              -ms-filter: hue-rotate(0deg);
+            }
+          
+            to {
+              filter: hue-rotate(-360deg);
+              -webkit-filter: hue-rotate(-360deg);
+              -moz-filter: hue-rotate(-360deg);
+              -o-filter: hue-rotate(-360deg);
+              -ms-filter: hue-rotate(-360deg);
             }
           }
-
-          input[type='checkbox']{ height: 0;width: 0;}
-
-          input[type='checkbox'] + label{
-            position: relative;
-            display: flex;
-            margin: .6rem 0;
-            align-items: center;
-            color: #9e9e9e;
-            /*   transition: color 250ms cubic-bezier(.4,.0,.23,1);*/
-          }
-
-          input[type='checkbox'] + label > span{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 1em;
-            width: 1em;
-            height: 1em;
-            background: transparent;
-            border: .5rem solid grey;
-            cursor: pointer;
-            transition: all 250ms cubic-bezier(.4,.0,.23,1);
-          }
-          input[type='checkbox']:checked + label {
-            color: var(--caribbean);
-          }
-          input[type='checkbox']:checked + label > span{            
-            background-color:var(--meadow);
-            border: .5rem solid var(--caribbean);
-            animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
-          }
-          input[type='checkbox']:checked + label > span:before{
-            content: "";
-            position: absolute;
-            top: .86em;/*.95em*/
-            left: .36em;/*.45em*/
-            border-right: .3rem solid transparent;
-            border-bottom: .3rem solid transparent;
-            transform: rotate(45deg);
-            transform-origin: 0% 100%;
-            animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
-          }
-
-          @keyframes checkbox-check {
-            0%{
-              width: 0;
-              height: 0;
-              border-color: transparent;
-              transform: translate3d(0,0,0) rotate(45deg);
+          
+          @-webkit-keyframes hue-rotate {
+            from {
+              filter: hue-rotate(0deg);
+              -webkit-filter: hue-rotate(0deg);
+              -moz-filter: hue-rotate(0deg);
+              -o-filter: hue-rotate(0deg);
+              -ms-filter: hue-rotate(0deg);
             }
-            33%{
-              width: .2em;
-              height: 0;
-              border-color: white;
-              transform: translate3d(0,0,0) rotate(45deg);
-            }
-            100%{
-              width: .2em;
-              height: 1em;
-              border-color: white;
-              transform: translate3d(0,-1em,0) rotate(45deg);
+          
+            to {
+              filter: hue-rotate(-360deg);
+              -webkit-filter: hue-rotate(-360deg);
+              -moz-filter: hue-rotate(-360deg);
+              -o-filter: hue-rotate(-360deg);
+              -ms-filter: hue-rotate(-360deg);
             }
           }
-        </style>
-
+          
+          </style>
+          <style>
+          #micro { 
+              position: absolute;
+               width: 320px;
+              /* background: #ee3e64; */
+              z-index: 5;
+              opacity: 1;
+              transition: all 0.888s;
+              -webkit-transition: all 0.888s;
+            }
+            #small { 
+              position: absolute;
+               width: 320px;
+              /* background: #44accf; */
+              z-index: 4;
+            }
+            #medium {
+              position: absolute;
+              width: 320px;
+              /* background: orange; */
+              z-index: 3;
+            }
+            #large {
+              position: absolute;
+              width: 320px;
+              /* background: forestgreen; */
+              z-index: 2;
+            }
+            #maximal {
+              position: absolute;
+              width: 320px;
+              /* background: grey; */
+              z-index: 1;
+              right: 0;
+              opacity: 1;
+              transition: all 0.888s;
+              -webkit-transition: all 0.888s;			
+            }
+            .handle {
+              position: relative;
+              height: 192px;
+              background-color: ghostwhite;
+              overflow: hidden;
+            }
+            .img-size {
+              transition: all 0.888s;
+              -webkit-transition: all 0.888s;
+            }
+          /**/
+            @media (max-width:33.9999em){
+              .img-size {
+                max-width: 240px;
+              }
+              .handle {
+                height: 144px;
+                background-color: forestgreen;
+              }
+              #maximal {
+                right: -57px;
+              }
+              /*#micro, #maximal {
+                opacity: 0;    			
+              }
+              #maximal {
+                opacity: 0;
+              }*/
+            }
+            
+            @media (min-width:34em){
+              /*
+              body {
+                width: 320px;
+              }
+              */
+              .img-size {
+                width: 320px;
+              }
+              
+              .handle {
+                height: 192px;
+                background-color: silver;
+              }
+          
+            }
+            @media (min-width:48em){
+              /*
+              body {
+                width: 480px;
+              }
+              */
+          
+              #small {
+                left: calc(7.7%);
+              }
+              #medium {
+                left: calc(12.1%);
+              }
+              #large {
+                left: calc(28%);
+              }
+          
+            }
+            @media (min-width:62em){
+              /*
+              body {
+                width: 768px;
+              }
+              */
+              #small {
+                left: calc(5.8%);
+              }
+              #medium {
+                left: calc(10.5%);
+              }
+              #large {
+                left: calc(30%);
+              }
+          
+            }
+            @media screen and (min-width: 60em){
+              /*
+              body {
+                width: 1024px;
+              }
+              */
+              .handle {
+                height: 288px;
+                background-color: grey;
+              }
+              .img-size {
+                width: 480px;
+                /* width: 512px; */
+              }
+              
+              #small {
+                left: calc(4%);
+              }
+              #medium {
+                left: calc(8.1%);
+              }
+              #large {
+                left: calc(26.8%);
+              }
+              #maximal {
+                right: 0;			
+          
+              }
+            }
+          </style>
     </head>
 
     <body
@@ -206,33 +326,62 @@ TODO LIST:
         
             </article>
           </section-->
+        <style>/*
+  <nav class="z-999 fixed bg-white w-100 f8 f7-ns f5-m f4-l ">
+    <!-- mw9 center ph3-ns -->
+    <div class="cf ph2-ns flex justify-between">
+      <div class="fl w-100 w-20-ns pa2 order-0">
+        <a class="link no-underline black pv4 " href="#home">
+          <span class="dib dib-ns dn-m dn-l pv4 o-50 glow">Home</span>
+          <span class="dn dn-ns dib-m dib-l ttn tracked-none pv4 pr0">InstantWebapp</span></a>
+        </li>
+      </div>
+      <div class="fl dn dib-ns w-10-ns pa2"></div>
+      <div class="fl w-100 w-50-ns pa2">
+        <ul id="scrollSpy" class="list ttu tracked flex justify-end w-100 pa0 ma0 ">
+          <!--outline  pv4 -->
+          <li class="pl3"><a class="link dib o-50 glow black pv4" href="#design">Design</a></li>
+          <li class="pl3"><a class="link dib o-50 glow black pv4" href="#feedback">Feedback</a></li>
+          <li class="pl3"><a class="link dib o-50 glow black pv4" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fl w-100 w-20-ns pa2 order-1 order-last-ns">
+        <!-- justify-between -->
+        <div class="outline bg-white flex justify-end pv4 ma0">
+          <label class="dn dn-ns dn-m dib-l o-50 glow black" for="language">Language:</label>
+          <select class="dib" id="language">
+              <option selected>En<!-- <span class="dn dn-ns dib-m dib-l"> -->glish<!-- </span> --></option>
+              <option>It<!-- <span class="dn dn-ns dib-m dib-l"> -->aliano<!-- </span> --></option>
+            </select>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-<nav class="z-999 fixed bg-white w-100 f8 f7-ns f5-m f4-l ">
-  <!-- mw9 center ph3-ns -->
-  <div class="cf ph2-ns flex justify-between">
-    <div class="fl w-100 w-20-ns ">
-      <a class="link no-underline black pv4 " href="#home">
-        
-        <span class="dib dib-ns dn-m dn-l pv4 o-50 glow">Home</span>
-        <span class="dn dn-ns dib-m dib-l ttn tracked-none pv4 pr0">InstantWebapp</span>
-      </a>
-        
+  
+    <nav class="z-999 fixed bg-red w-100 f8 f7-ns f5-m f4-l">
+    <!--   -->
+    <ul id="scrollSpy" class="list ttu tracked flex justify-around w-100 pa0 ma0 ">
+      <!-- <li class="pl0 left-0 relative"><a class="link dib dib-ns dn-m dn-l pv4 o-50 glow black pv4"
+href="#home">Home</a></li>
+<li class="pl0 left-0 relative"><a class="link dn dn-ns dib-m dib-l black pv4" href="#home">InstantWebapp</a></li> -->
+
+      <li class="pl0 ">
+        <a class="link no-underline black " href="#home">
+          <span class="dib dib-ns dn-m dn-l pv4 o-50 glow">Home</span>
+          <span class="dn dn-ns dib-m dib-l ttn tracked-none pv4 pr0">InstantWebapp</span></a>
       </li>
-    </div>
-    <div class="fl dn dib-ns w-10-ns "></div>
-    <div class="fl w-100 w-50-ns ">
-      <ul id="scrollSpy" class="list ttu tracked flex justify-end w-100 pa0 ma0 ">
-        <!--outline  pv4 -->
-        <!-- <li class="pl3"><a class="link dib o-50 glow black pv4" href="#features">Features</a></li> -->
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#design">Design</a></li>
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#feedback">Feedback</a></li>
-        <!-- <li class="pl3"><a class="link dib o-50 glow black pv4" href="#contact">Contact</a></li> -->
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#buy">Buy</a></li>
-      </ul>
-    </div>
-    
-  </div>
-</nav>
+
+      <span class="">
+<li class="pl3"><a class="link dib o-50 glow black pv4" href="#design">Design</a></li>
+<li class="pl3"><a class="link dib o-50 glow black pv4" href="#feedback">Feedback</a></li>
+<li class="pl3"><a class="link dib o-50 glow black pv4" href="#contact">Contact</a></li><!-- "enquire" "buy" "learn more" -->
+</span>
+    </ul>
+  </nav>
+          
+        */</style>
+
 
     <div class="fixed bottom-0 pa3">
         <p>
@@ -245,7 +394,25 @@ TODO LIST:
             <main class="">
                 <section
                     class="pa2 pt5 bg-egyptian " id="home">
-
+                    <div class="mr-auto ml-auto w-60 handle hue-rotate" style="background-color:transparent">
+                      <div id="micro">
+                        <img class=img-size src="images/hue-rotate-micro.svg"/>
+                      </div>
+                      <div id="small">
+                        <img class=img-size src="images/hue-rotate-small.svg"/>	
+                      </div>
+                      <div id="medium">
+                        <img class=img-size src="images/hue-rotate-medium.svg"/>	
+                      </div>
+                      <div id="large">
+                        <img class=img-size src="images/hue-rotate-large.svg"/>
+                      </div>
+                      <div id="maximal">
+                        <img class=img-size src="images/hue-rotate-maximal.svg"/>	
+                      </div>
+                    </div>  
+                    
+                    <!-- bg-washed-green dark-green ml-auto mr-auto w-50
                     <article class="mw7 center ph3 ph5-ns tc br2 pv5 mb0 white ">
                         <span class="fw2 f4 lh-copy mt0 mb3 db tc" lang="en">Do you have a company?</span>
                         <span class="fw2 f4 lh-copy mt0 mb3 db tc" lang="en">Do you want to beat the competition?</span>
@@ -256,7 +423,7 @@ TODO LIST:
                             <a class="w-40 tc f6 br-pill  no-underline egyptian bg-white ba b--egyptian grow pv2 ph3 dib mr3" href="tel:+393408931544">+39 340 893 1544</a>
                             <a class="w-third mr-auto ml-auto tc f6 br-pill white bg-near-black b--near-black no-underline ba grow pv2 ph3 dib" href="https://inspiredlabs.co.uk/">Portfolio</a>
                         </div>
-                    </article>
+                    </article-->
                 </section>
                 <!--section class="vh-100 w-100 ma0 pa0 white dt bg-plum" id="design">
                            
@@ -361,11 +528,11 @@ TODO LIST:
                 </header>
                 <hr class="bt bb b--black-10 b--white-70 mb5" />
                 <main class="serif lh-copy f4">
-                  <p>Developed to help entreprenures&nbsp;ship – no&nbsp;configuration, no&nbsp;meetings: just&nbsp;launch!
+                  <p>Developed to help entreprenures&nbsp; ship – no&nbsp; configuration, no&nbsp; meetings: just&nbsp; launch!
                   </p>
-                  <p>A "bare-bones" webapp can be ready for a fixed-price deposit. Following an initial&nbsp;consultation we will track your priorities, so you'll always know what to&nbsp;expect.</p>
+                  <p>A "bare-bones" webapp can be ready for a fixed-price deposit. Following an initial&nbsp; consultation we will track your priorities, so you'll always know what to&nbsp;expect.</p>
                   <b>What do we need to launch?</b>
-                  <p>Perfect is the enemy&nbsp;of&nbsp;good, complex&nbsp;the curse of <i>real artists that ship!</i></p>
+                  <p>Perfect is the enemy&nbsp; of&nbsp; good, complex&nbsp; the curse of <i>real artists that ship!</i></p>
                   <p>There's no complicated procedure. Although, some help may be required to confirm key detail about your&nbsp;idea. Each <i>iteration</i> serves to stress-test the business&nbsp;benefit for best ROI&nbsp;(return on investment).</p>
                   <p>Boom.</p>
                 </main>
@@ -378,9 +545,6 @@ TODO LIST:
             </aside>
           </section-->
 
-
-        <hr class="w-100 bt bb b--black-10 b--white-70 mb5" id="design">  
-
         <section class="w-100 flex flex-row-ns flex-column bg-meadow" id="launch">
             <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
                 <article class="ml-auto mr-auto measure ">
@@ -392,11 +556,11 @@ TODO LIST:
                     <main
                         class="serif lh-copy f4">
                         <!-- InstantWebapp is a product developed -->
-                        <p>Developed to help entreprenures&nbsp;ship – no&nbsp;configuration, no&nbsp;meetings: just&nbsp;launch!
+                        <p>Developed to help entreprenures&nbsp; ship – no&nbsp; configuration, no&nbsp; meetings: just&nbsp; launch!
                         </p>
-                        <p>A "bare-bones" webapp can be ready for a fixed-price deposit. Following an initial&nbsp;consultation we will track your priorities, so you'll always know what to&nbsp;expect.</p>
+                        <p>A "bare-bones" webapp can be ready for a fixed-price deposit. Following an initial&nbsp; consultation we will track your priorities, so you'll always know what to&nbsp;expect.</p>
                         <b>What do we need to launch?</b>
-                        <p>Perfect is the enemy&nbsp;of&nbsp;good, complex&nbsp;the curse of
+                        <p>Perfect is the enemy&nbsp; of&nbsp; good, complex&nbsp; the curse of
                             <i>real artists that ship!</i>
                         </p>
                         <p>There's no complicated procedure. Although, some help may be required to confirm key detail about your&nbsp;idea. Each
@@ -433,9 +597,11 @@ TODO LIST:
                     <hr class="bt bb b--black-10 b--white-70 mb5"/>
                     <main class="serif lh-copy f4">
                         <p>Why don't agencies write your&nbsp;content from the very&nbsp;beginning?</p>
-                        <p>Writing is&nbsp;hard.
+                        <p>Writing is&nbsp; hard.
                         </p>
-                        <p>To focus entirely on your customer needs, you should consider a <i>content&nbsp;strategy</i>.Effective, does&nbsp;not need to be&nbsp;complicated.</p>
+                        <p>To focus entirely on your customer needs, you should consider a
+                            <i>content&nbsp;strategy</i>.
+                                            Effective, does&nbsp;not need to be&nbsp;complicated.</p>
                         <b>Want to develop a more comprehensive SEO&nbsp;strategy?</b>
                         <p>As part of the process, we can develop content that will continue to be found on search engines. Then we can fine-tune things to make sure it's acted upon by your&nbsp;audience.</p>
                         <p>Perfect.</p>
@@ -465,14 +631,17 @@ TODO LIST:
                     </header>
                     <hr class="bt bb b--black-10 b--white-70 mb5"/>
                     <main class="serif lh-copy f4">
-                      <p>The&nbsp;right look-and-feel is essential for your aspiring brand. Give your new venture a distinctive logo mark and <i>two</i>&nbsp;iterations of changes for peace&#8209;of&#8209;mind.
-                      </p>
-                      <b>Prefer a brand of&nbsp;distinction?</b>
-                      <p>For&nbsp;more granular control, <i>Graphic&nbsp;Design Consultancy</i>&nbsp;could be the way to go.</p>
-                      <p>You&nbsp;can choose to add this, anytime – for as long as you need. This&nbsp;will always be a fixed&nbsp;day&#8209;rate.
-                      </p>
-                      <p>Easy.</p>
-                      <!--p>The perception of your brand Identity Package with</p-->
+                        <p>The&nbsp;right look-and-feel is essential for your aspiring brand. Give your new venture a distinctive logo mark and
+                            <i>two</i>iterations of changes for peace&#8209;of&#8209; mind.
+                        </p>
+                        <b>Prefer a brand of&nbsp;
+                                distinction?</b>
+                        <p>For&nbsp; more granular control,
+                            <i>Graphic&nbsp;Design Consultancy</i>could be the way to go.</p>
+                        <p>You&nbsp;can choose to add this, anytime – for as long as you need. This&nbsp;will always be a fixed&nbsp; standard day&#8209; rate.
+                        </p>
+                        <p>Easy.</p>
+                        <!--p>The perception of your brand Identity Package with</p-->
                     </main>
                 </article>
                 <!-- /measure -->
@@ -491,7 +660,7 @@ TODO LIST:
                 <article class="ml-auto mr-auto measure ">
                     <header class=" pv4 tc ">
                         <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Structure</h3>
-                        <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Organise&nbsp;business at an information&nbsp;level
+                        <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Organise&nbsp; business at an information&nbsp; level
                         </h4>
                     </header>
                     <hr class="bt bb b--black-10 b--white-70 mb5 "/>
@@ -501,7 +670,7 @@ TODO LIST:
                         <!-- <p>What&nbsp;
                             is the most valuable asset&nbsp;
                             today? <b>Data</b>.</p>-->
-                        <p>Businesses&nbsp;appreciate the benefit of modern ways of&nbsp;working. But often, those same businesses don't know the real value of thier own&nbsp;information!
+                        <p>Businesses&nbsp; appreciate the benefit of modern ways of&nbsp; working. But often, those same businesses don't know the real value of thier own&nbsp;information!
                             <!-- Profits are lost when they continue to be unable to benefit from thier own data properly. -->
                         </p>
                         <p>For a modern business,
@@ -509,7 +678,7 @@ TODO LIST:
                         </p>
                         <b>Want to invest in Information&nbsp;Architecture?</b>
                         <p>Planning, and small changes can unlock benefits that were invisible beforehand.
-                            <a x>Book a consultation</a>if you want to immediately boost your&nbsp;productivity.
+                            <a x>Book a consultation</a>if you want to immediately boost your&nbsp; productivity.
                         </p>
                         <!-- Inspired Labs consultancy... Improve customer experience with : - findability of key "go-to " information. - Visual and Informational hierarchy. - Organise,
                             label and format each data in context. Improve business asset value : - significance,
@@ -522,202 +691,78 @@ TODO LIST:
             </div>
             <aside class="w-100 w-50-ns flex-column flex-grow-1 " style="background-color:#1a1a1a">
                 <figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
-                    <div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center;"></div>
+                    <div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center; "></div>
                 </figure>
             </aside>
         </section>
 
         <section class="w-100 flex flex-row-ns flex-column bg-electric-lime " id="relevant">
-          <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
-            <article class="ml-auto mr-auto measure ">
-            <header class=" pv4 tc ">
-              <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Relevance</h3>
-              <!-- <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Business without borders</h4>-->
-              <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Multilingual content management</h4>
-            </header>
-            <hr class="bt bb b--black-10 b--white-70 mb5 "/>
-            <main class="serif lh-copy f4 ">
-            <p>Business without borders.</p>
-            <p>Customers from the European Union
-                <!-- and beyond -->
-                are open minded about where their suppliers are&nbsp;based.
-                <!-- Why miss out on&nbsp;
-                    potential by restricting yourself to only one&nbsp;
-                    geography? -->
+            <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+                <article class="ml-auto mr-auto measure ">
+                    <header class=" pv4 tc ">
+                        <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Relevance</h3>
+                        <!-- <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Business without borders</h4>-->
+                        <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Multilingual content management</h4>
+                    </header>
+                    <hr class="bt bb b--black-10 b--white-70 mb5 "/>
+                    <main class="serif lh-copy f4 ">
+                        <p>Business without borders.</p>
+                        <p>Customers from the European Union
+                            <!-- and beyond -->
+                            are open minded about where their suppliers are&nbsp; based.
+                            <!-- Why miss out on&nbsp;
+                                potential by restricting yourself to only one&nbsp;
+                                geography? -->
+                        </p>
+                        <p>Find common ground with your target market by using
+                            <i>content&nbsp;
+                                    translation</i>&nbsp;and auto&#8209;redirect visitors to the correct&nbsp; language pages based on their&nbsp; browser.
+                        </p>
+                        <b>Need advanced content writing&nbsp;
+                                services?</b>
+                        <p>To maxise cultural relevance,
+                            <a href="https://inspiredlabs.co.uk " class="link pointer charcoal dim underline transition ">Inspired Labs</a>&nbsp;offers fixed&#8209; rate</p>
+                    </i>translation, localisation &amp; transcreation&nbsp;services
+                </i>. And, as a premium client, we understand you want the flexability to translate your own ideas –&nbsp; no problem. We have a lean, reliable&nbsp; CMS ready to fit into your choice of&nbsp; workflow.
             </p>
-            <p>Find common ground with your target market by using
-                <i>content&nbsp;
-                        translation</i>&nbsp;and auto&#8209;redirect visitors to the correct&nbsp;language pages based on their&nbsp;browser.
-            </p>
-            <b>Need advanced content writing&nbsp;
-                    services?</b>
-            <p>To maxise cultural relevance,
-                <a href="https://inspiredlabs.co.uk " class="link pointer charcoal dim underline transition ">Inspired Labs</a>&nbsp;offers fixed&#8209;rate</p>
-            </i>translation, localisation &amp;transcreation&nbsp;services
-        </i>. And, as a premium client, we understand you want the flexability to translate your own ideas –&nbsp;no problem. We have a lean, reliable&nbsp;CMS ready to fit into your choice of&nbsp;workflow.
+            <!-- <p>Carte blanche!</p>-->
+            <!-- <p>cordon bleu</p>-->
+            <!-- <p>Piece de résistance</p>-->
+            <!-- <p>Savvy</p>-->
+            <!-- <p>Sans-restriction!</p>--><p>Bravo!
         </p>
-        <!-- <p>Carte blanche!</p>-->
-        <!-- <p>cordon bleu</p>-->
-        <!-- <p>Piece de résistance</p>-->
-        <!-- <p>Savvy</p>-->
-        <!-- <p>Sans-restriction!</p>-->
-        <p>Bravo!</p>
     </main>
-  </article>
-  </div>
-    <aside class="w-100 w-50-ns flex-column flex-grow-1 " style="background-color:#1a1a1a">
-      <figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
-        <div class="aspect-ratio--object cover " style="background:url(images/iwa-alessandroronca-01.jpg) center;"></div>
-      </figure>
-    </aside>
-  </section>
-</main>
-</div>
-</div>
-
-
-
-
-<hr class="w-100 bt bb b--black-10 b--white-70 mb5" id="features">  
-<section class="w-100 pa2-ns pv4-ns bg-caribbean" id="buy_features">
-  <article class="ml-auto mr-auto measure ">
-    <header class=" pv4 tc">
-      <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Buy</h3>
-      <h4 class="f5 fw4 lh-title mt0 ttu tracked">Contract-free Deposit</h4>
-    </header>
-    <hr class="bt bb b--black-10 b--white-70 mb5" />
-    <main class="serif lh-copy f4">
-      <p>Developed to help entreprenures&nbsp;who want pay-as-you-go Design &amp; Development to just&nbsp;launch!
-      </p>
-      <p>A "bare-bones" webapp can be ready for a fixed-price deposit. Following an initial&nbsp;consultation we will track your priorities, so you'll always know what to&nbsp;expect.</p>
-      <b>What do we need to launch?</b>
-
-    <form class="pv4 bg-white" action="" name="deposit" method="POST" data-netlify="true">
-      
-      <fieldset class="form-check highlight" id="buy"><!-- bn -->
-        <legend class="fw7 mb3">Features</legend>
-        
-        <input class="mr2" id="buy_launch" value="600" name="sum" type="checkbox"/>
-        <label class="lh-copy" for="buy_launch">
-          <span class="br-100"></span>
-          <header title="Launch">Fast in every dimension</header><!-- Bare Bones,  -->
-        </label>
-  
-        <input class="mr2" id="buy_identity" value="600" name="sum" type="checkbox"/>
-        <label class="lh-copy" for="buy_identity">
-          <span class="br-100"></span>
-          <header title="Identity">Create the right first impression</header>
-        </label>
-
-        <input class="mr2" id="buy_relevance" value="600" name="sum" type="checkbox"/>
-        <label class="lh-copy" for="buy_relevance">
-          <span class="br-100"></span>
-          <header title="Relevance">Multilingual Content Management</header>
-        </label>
-
-        <input class="mr2" id="buy_visibility" value="600" name="sum" type="checkbox"/>
-        <label class="lh-copy" for="buy_visibility">
-          <span class="br-100"></span>
-          <header title="Visibility">Get seen on search engines</header>
-        </label>
-
-        <input class="mr2" id="buy_structure" value="600" name="sum" type="checkbox"/>
-        <label class="lh-copy" for="buy_structure">
-          <span class="br-100"></span>
-          <header title="Structure">Organise at an information  level </header>
-        </label>
-
-        <input class="mr2" id="buy_structure" value="600" name="sum" type="checkbox"/>
-        <label class="lh-copy" for="buy_structure">
-          <span class="br-100"></span>
-          structure
-        </label>
-
-     
-
-      </fieldset>
-    </form>
-    
-  <p class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
-  Amount due:&nbsp;<b>£</b><b class="total">0</b>. <!-- To complete your transaction you will be forward to a PayPal checkout page. You can cancel or change plans anytime. -->
-  </p>
-
-    
-
-      <p>Boom.</p>
-    </main>
-    </article>
-  </section>
-  <!--section class="bg-caribbean">
-    <article class="ml-auto mr-auto measure">
-      <header class="">
-        <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
-          On Typography
-        </h1>
-        <h2 class="f3 mid-gray lh-title">
-          An excerpt from the Form of the Book by Jan Tschichold
-        </h2>
-        <time class="f6 ttu tracked gray">Sometime before 1967</time>
-      </header>
-    
-      <div class="">
-        <p class="f4-ns lh-copy mt0-ns black-30">
-          One two three four five six seven eight nine ten eleven.
-        </p>
-        <p class="f4-ns lh-copy mt0-ns">
-          TYPOGRAPHY, even when poorly executed, can never be taken for granted;
-          nor is it ever accidental. Indeed, beauti- fully typeset pages are always
-          the result of long experience. Now and then they even attain the rank of
-          great artistic achievement. But the art of typesetting stands apart from
-          ex- pressive artwork, because the appeal is not limited to a small
-          circle. It is open to everyone's critical judgment, and nowhere does this
-          judgment carry more weight. Typography that can- not be read by everybody
-          is useless. Even for someone who constantly ponders matters of
-          readability and legibility, it is difficult to determine whether
-          something can be read with ease, but the average reader will rebel at
-          once when the type is too small or otherwise irritates the eye; both are
-          signs of a certain illegibility already.
-        </p>
-        <p class="f4-ns lh-copy">
-          All typography consists of letters. These appear either in the form of a
-          smoothly running sentence or as an assembly of lines, which may even have
-          contrasting shapes. Good typog- raphy begins, and this is no minor
-          matter, with the typeset- ting of a single line of text in a book or a
-          newspaper. Using exactly the same typeface, it is possible to create either
-          a pleasant line, easily read, or an onerous one. Spacing, if it is too wide
-          or too compressed, will spoil almost any typeface.
-        </p>
-      </div>
-    </article-->
-
-
-
-
-
-
-
-
-
-<script>
-//https://stackoverflow.com/questions/31431983/use-addeventlistener-on-a-class-not-working
-//https://stackoverflow.com/questions/13540751/how-get-total-sum-from-input-box-values-using-javascript
-HTMLCollection.prototype.forEach = Array.prototype.forEach;
-
-const inputs = document.getElementsByName('sum'),
-      total  = document.querySelector('.total');
-
-
-      inputs.forEach(function(element, i){
-        inputs[i].onchange = function() {
-          var add = this.value * (this.checked ? 1 : -1);
-          total.innerHTML = parseInt(total.innerHTML) + add
-          }
-      });
-
-</script>
-
-
-
-
-<!-- Javascript --><script src="{{ .Site.BaseURL }}js/smooth-scroll.min.js "></script><script src="{{ .Site.BaseURL }}js/gumshoe.js "></script><script>var scroll = new SmoothScroll('a[href*="# "]');
+</article>
+    <!-- /measure -->
+</body></html></div><aside class="w-100 w-50-ns flex-column flex-grow-1 " style="background-color:#1a1a1a"><figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
+<div class="aspect-ratio--object cover " style="background:url(images/iwa-alessandroronca-01.jpg) center; "></div></figure></aside></section><!--section class="vh-100 w-100 white dt bg-mandarino ">
+        <div class="mw9 center ">
+          <div class="cf ">
+            <div class="fl w-50 "></div>
+            <div class="fl w-100 w-50-ns bg-white "></div>
+          </div>
+        </div>
+        <div class="flex items-center w-100 ">
+          <div class="bg-gray w-100 mandarino ">
+            <div class="ml-auto mr-auto measure ">
+              <header class=" pv4 tc ">
+                <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Be seen</h3>
+                <h4 class="f5 fw4 lh-title mt0 ttu tracked ">Written for your audience</h4>
+              </header>
+              <hr class="bb b--white-70 " />
+              <main class="serif lh-copy f4 ">
+                <p>Have you wondered why agencies don't prioritise your content?</p>
+                <p>Writing is hard.</p>
+                <p>By defining content from the very begining, we can focus entirely on your customer needs. This is an effective way to begin our design after the discovery phase.</p>
+                <p>Developing an SEO strategy is a process. By evolving your written content around keywords that visitors are really seeking we can adapt and fine-tune your project's design.</p>
+              </main>
+            </div>
+          </div>
+          <div class="w-100 ">
+            <aside class="tc pa4 "><img class="w4 w4 " src="images/271549.svg " alt="alt " />
+              <h1 class="f6 f2-m f-subheadline-l fw6 "><span class="i serif ">(i)</span></h1>
+            </aside>
+          </div>
+        </div>
+      </section--></main></div></div><!-- Javascript --><script src="{{ .Site.BaseURL }}js/smooth-scroll.min.js "></script><script src="{{ .Site.BaseURL }}js/gumshoe.js "></script><script>var scroll = new SmoothScroll('a[href*="# "]');
 var spy = new Gumshoe('#scrollSpy a');</script></body></html>

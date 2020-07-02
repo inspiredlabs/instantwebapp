@@ -264,64 +264,61 @@
 
 <body id="home" style="-webkit-backface-visibility: hidden;">
   <form action="" name="deposit" method="POST" data-netlify="true">
-    <label for="inputSenderName" class="col-sm-3 col-form-label col-form-label-lg">Your name*</label
+    <label for="inputSenderName" class="col-sm-3 col-form-label col-form-label-lg" name="_name">Your name*</label
       >
       <input
         required=""
-        name="name"
-        class=""
+        name="_name"
+        class="form-control form-control-lg"
         id="inputSenderName"
         placeholder="Your name"
       />
 
       <label
         for="inputSenderEmail"
-        class="">
+        class="col-sm-3 col-form-label col-form-label-lg">
         Your email*
       </label>
-    <input required="" name="replyto" type="email" class="" id="inputSenderEmail" placeholder="your@address.com" pattern="[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+    <input required="" name="_replyto" type="email" class="form-control form-control-lg" id="inputSenderEmail" placeholder="your@address.com" pattern="[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
     />
     <fieldset class="form-check highlight" id="inputDonation">
       <legend>
         <h5>Are you able to make a donation?</h5>
       </legend>
-      <input type="radio" name="_video_income" id="donationSmall" value="£600, Deposit" /><label class="" for="donationSmall" onclick="document.getElementsByName('deposit')[0].action = 'https://paypal.me/alanscottphillips/600.00';">£600, Deposit</label
+      <input type="radio" name="_video_income" id="donationSmall" value="£5" /><label class="form-check-label col-form-label-lg" for="donationSmall" onclick="document.getElementsByName('deposit')[0].action = 'https://paypal.me/PabloWoodward/5.00';">£5, a helping hand</label
         >
-
         <input
           type="radio"
           name="_video_income"
           id="donationMedium"
-          value="£1200, Deposit"
+          value="£11, or more"
         /><label
-          class=""
+          class="form-check-label col-form-label-lg"
           for="donationMedium"
-          onclick="document.getElementsByName('deposit')[0].action = 'https://paypal.me/alanscottphillips/1200.00';"
-          >£1200, Partial Payment</label
+          onclick="document.getElementsByName('deposit')[0].action = 'https://paypal.me/PabloWoodward/11.00';"
+          >£11, a gentle push forward</label
         >
         <input
           type="radio"
           name="_video_income"
           id="donationLarge"
-          value="£3600, Pay in full"
+          value="£20, or more"
         /><label
-          class=""
+          class="form-check-label col-form-label-lg"
           for="donationLarge"
-          onclick="document.getElementsByName('deposit')[0].action = 'https://paypal.me/alanscottphillips/3600.00';"
-          >£3600, Pay in full</label
+          onclick="document.getElementsByName('deposit')[0].action = 'https://paypal.me/PabloWoodward/20.00';"
+          >£20 or more, Superdonation</label
         >
       </fieldset>
       <button
         style="width: 100%;"
         type="submit"
         class="form-control bg-black white"
-      >PayPal</button>
+      >
+        PayPal
+      </button>
       
-    </form>
-    <!--
-      notes:
-      - https://docs.netlify.com/forms/setup/#submit-forms-via-ajax
-      - https://stackoverflow.com/questions/10306129/javascript-get-element-by-name -->
+    </form><!-- https://stackoverflow.com/questions/10306129/javascript-get-element-by-name -->
 
 <!--script src="js/savestorage.min.js"></script>
 <script type="text/javascript">
