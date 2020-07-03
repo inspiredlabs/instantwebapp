@@ -4,27 +4,11 @@
 /*! Utility classes for duplication-free layout expression  */
 
 
-/*{{/* partial "add-to-tachyon-shower" . */
-
-
-}
-
-}
-abstraction layer for components */
+/* ` partial "add-to-tachyon-shower" ` abstraction layer for components */
 /* Document this (then add postCSS and Purge into build process): */
 
-/*{{/* $style := resources.Get "css/uncssonline.css" | minify */
-
-}
-
-}
-*/
-/*{{/* $style.Content | replaceRE `\/\*(.*)\*\/` `$style` | safeCSS */
-
-}
-
-}
-*/
+/*` $style := resources.Get "css/uncssonline.css" | minify ` */
+/*` $style.Content | replaceRE `\/\*(.*)\*\/` `$style` | safeCSS ` */
 /* 28.06.20 .prussia… 	                                    rename/addition					*/
 
 /* 30.01.20 .ds2-dark-gray… 	filter: drop-shadow(0px 0.625rem 0.625rem #333);    	*/
@@ -7302,15 +7286,9 @@ details[open] summary~* {
   /*gray*/
   /* Colour */
   --charcoal: #4a4a4a;
-  --dark-beige: rgba(234,
-  219,
-  160,
-  var(--ten));
+  --dark-beige: rgba(234,219,160,var(--ten));
   /* #eadba0; */
-  --beige: rgba(244,
-  237,
-  207,
-  var(--ten));
+  --beige: rgba(244, 237,207,var(--ten));
   /* #f4edcf; */
   --plum: #7f3c84;
   --tyrian: #57005d;
@@ -7354,14 +7332,15 @@ details[open] summary~* {
   /* https://whatsappbrand.com/ */
   /* Inspired by Sharmin akter: shuvochowdhuryart@gmail.com */
   --electric-lime: #bcff00;
-  --caribbean: #17e2a0;
-  --meadow: #16bf82;
+  --caribbean: #17e2a0; /* black = 5.5, white = 1.69! */
+  --meadow: #16bf82; /* black = 5.5, white = 2.38! */
   --cobalt: #1771a0;
   --egyptian: #27389d;
   --grape: #772bed;
-  /* prussia */
-  --raspberry: #bf0060;
-  --pumpkin: #f36017;
+  --prussia: #59339d; /* prussia */
+  --raspberry: #bf0060; /* black = 3.38!, white = 6.2 */
+  --mexicano: #ff0078; /* black = 5.52, white = 3.8! */
+  --pumpkin: #f36017; /* black = 6.49, white = 3.23! */
   --mandarino: #ffb111;
   --soccorso: #ffce00;
 }
@@ -7579,21 +7558,21 @@ details[open] summary~* {
 
 /* Mexican Pink: en.wikipedia.org/wiki/Mexican_pink */
 .mexicano {
-  color: #ff0078;
+  color: var(--mexicano);
 }
 .bg-mexicano {
-  background-color: #ff0078;
+  background-color: var(--mexicano);
 }
 .b--mexicano {
-  border-color: #ff0078;
+  border-color: var(--mexicano);
 }
 .hover-mexicano:hover,
 .hover-mexicano:focus {
-  color: #ff0078;
+  color: var(--mexicano);
 }
 .hover-bg-mexicano:hover,
 .hover-bg-mexicano:focus {
-  background-color: #ff0078;
+  background-color: var(--mexicano);
 }
 
 /*------------------- Social Media colour ---------------------*/
