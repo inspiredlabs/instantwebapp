@@ -7331,18 +7331,18 @@ details[open] summary~* {
   --whatsapp: #25D366;
   /* https://whatsappbrand.com/ */
   /* Inspired by Sharmin akter: shuvochowdhuryart@gmail.com */
-  --electric-lime: #bcff00;
-  --caribbean: #17e2a0; /* black = 5.5, white = 1.69! */
-  --meadow: #16bf82; /* black = 5.5, white = 2.38! */
-  --cobalt: #1771a0;
-  --egyptian: #27389d;
-  --grape: #772bed;
-  --prussia: #59339d; /* prussia */
-  --raspberry: #bf0060; /* black = 3.38!, white = 6.2 */
-  --mexicano: #ff0078; /* black = 5.52, white = 3.8! */
-  --pumpkin: #f36017; /* black = 6.49, white = 3.23! */
-  --mandarino: #ffb111;
-  --soccorso: #ffce00;
+  --electric-lime: hsla(76, 100%, 50%, 1); /* #bcff00 */
+  --caribbean: hsla(160, 82%, 49%, 1); /* #17e2a0 */ /* black = 5.5, white = 1.69! */
+  --meadow: hsla(158, 79%, 42%, 1); /* #16bf82 */ /* black = 5.5, white = 2.38! */
+  --cobalt: hsla(201, 75%, 36%, 1); /* #1771a0 */
+  --egyptian: hsla(231, 60%, 38%, 1); /* #27389d */
+  --grape: hsla(264, 84%, 55%, 1); /* #772bed */
+  --prussia: hsla(262, 51%, 41%, 1); /* #59339d */
+  --raspberry: hsla(330, 100%, 37%, 1); /* #bf0060 */ /* black = 3.38!, white = 6.2 */
+  --mexicano: hsla(332, 100%, 50%, 1); /* #ff0078 */ /* black = 5.52, white = 3.8! */
+  --pumpkin: hsla(20, 90%, 52%, 1); /* #f36017 */ /* black = 6.49, white = 3.23! */
+  --mandarino: hsla(40, 100%, 53%, 1); /* #ffb111 */
+  --soccorso: hsla(48, 100%, 50%, 1)/* #ffce00 */
 }
 
 /*------------------- InstantWebapp colourscheme ---------------------*/

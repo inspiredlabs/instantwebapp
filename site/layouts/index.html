@@ -40,7 +40,7 @@ TODO LIST:
 
             #scrollSpy a:after {
                 top: 0;
-                background: black;
+                background: white;
                 content: "";
                 display: block;
                 height: 4px;
@@ -50,6 +50,9 @@ TODO LIST:
                 transition: width 0.3s ease 0s, left 0.3s ease 0s;
                 width: 0
             }
+
+            #scrollSpy #buy li.active a:after,
+            #scrollSpy #buy li.hover a:after { background: transparent!important; }
 
             #scrollSpy a:hover:after {
                 width: 100%;
@@ -64,17 +67,7 @@ TODO LIST:
                 width: 100%;
             }
 
-            #design:active~hr {
-                margin-left: 25%;
-            }
-
-            #feedback:active~hr {
-                margin-left: 50%;
-            }
-
-            #buy:active~hr {
-                margin-left: 75%;
-            }
+            
         </style>
 
         <style>
@@ -158,30 +151,11 @@ TODO LIST:
             }
           }
 
-          :root {
-            --prussia: #59339d; /* prussia */
-          }
-
-          /* Prussian Violet */
-          .prussia {
-            color: var(--prussia);
-          }
-          .bg-prussia {
-            background-color: var(--prussia);
-          }
-          .b--prussia {
-            border-color: var(--prussia);
-          }
-          .hover-prussia:hover,
-          .hover-prussia:focus {
-            color: var(--prussia);
-          }
-          .hover-bg-prussia:hover,
-          .hover-bg-prussia:focus {
-            background-color: var(--prussia);
-          }
+          
 
         </style>
+        
+        
 
     </head>
 
@@ -231,11 +205,11 @@ TODO LIST:
             </article>
           </section-->
 
-<nav class="z-999 fixed bg-white w-100 f8 f7-ns f5-m f4-l ">
+<nav class="z-999 fixed bg-black w-100 f8 f7-ns f5-m f4-l ">
   <!-- mw9 center ph3-ns -->
   <div class="cf ph2-ns flex justify-between">
     <div class="fl w-100 w-20-ns ">
-      <a class="link no-underline black pv4 " href="#home">
+      <a class="link no-underline white pv4 " href="#home">
         
         <span class="dib dib-ns dn-m dn-l pv4 o-50 glow">Home</span>
         <span class="dn dn-ns dib-m dib-l ttn tracked-none pv4 pr0">InstantWebapp</span>
@@ -247,11 +221,33 @@ TODO LIST:
     <div class="fl w-100 w-50-ns ">
       <ul id="scrollSpy" class="list ttu tracked flex justify-end w-100 pa0 ma0 ">
         <!--outline  pv4 -->
-        <!-- <li class="pl3"><a class="link dib o-50 glow black pv4" href="#features">Features</a></li> -->
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#design">Design</a></li>
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#feedback">Feedback</a></li>
-        <!-- <li class="pl3"><a class="link dib o-50 glow black pv4" href="#contact">Contact</a></li> -->
-        <li class="pl3"><a class="link dib o-50 glow black pv4" href="#buy">Buy</a></li>
+        <li class="pl3">
+          <a class="link dn dn-ns dn-m dib-l o-50 glow white transition pv4 " href="#about">About</a>
+        </li>
+        <li class="pl3">
+          <a class="link dn dn-ns dn-m dib-l o-50 glow white transition pv4 " href="#features">Features</a>
+        </li>
+        <li class="pl3">
+          <a class="link dib o-50 glow white transition pv4" href="#design">Design</a>
+        </li>
+        <li class="pl3">
+          <a class="link dib dib-ns dib-m dn-l o-50 glow white transition pv4" href="#reviews">Reviews</a>
+          <a class="link dn dn-ns dn-m dib-l o-50 glow white transition pv4 " href="#reviews">Reviews</a>
+        </li>
+        <li class="pl3">
+          <a class="link dib dn-ns dn-m dn-l o-50 glow white transition pv4" href="#contact">Contact</a>
+          <a class="link dn dib-ns dib-m dib-l o-50 glow white transition pv4 " href="#contact">Contact</a>
+        </li>
+        <li class="pl3">
+          <a class="link dib dn-ns dn-m dn-l o-50 glow white transition pv4" href="#buy">Buy</a>
+          <a class="link dn dib-ns dib-m dib-l pv4 grow transition" href="#buy">
+            <span class="br-pill bg-mexicano b--transparent fw7 white pa2">Buy&nbsp;Now</span>
+          </a>
+
+
+
+          
+        </li>
       </ul>
     </div>
     
@@ -260,7 +256,7 @@ TODO LIST:
 
     <div class="fixed bottom-0 pa3">
         <p>
-            <a data-scroll href="#top" class="b no-underline o-30 glow">Top</a>
+            <a data-scroll href="#top" class="pointer link b underline o-30 glow charcoal">Top</a>
         </p>
     </div>
 
@@ -268,7 +264,29 @@ TODO LIST:
         <div class="grid">
             <main class="">
                 <section
-                    class="pa2 pt5 bg-egyptian " id="home">
+                    class="pa2 pt5 bg-gradient " id="home">
+
+                    <style>
+                    .bg-gradient {
+                      background-image: linear-gradient(var(--meadow), var(--egyptian));
+                    }
+                    </style>
+                    <!--style>
+                    :root {
+                      --electric-lime: hsla(76, 100%, 50%, 1); /* #bcff00 */
+                      --caribbean: hsla(160, 82%, 49%, 1); /* #17e2a0 */ /* black = 5.5, white = 1.69! */
+                      --meadow: hsla(158, 79%, 42%, 1); /* #16bf82 */ /* black = 5.5, white = 2.38! */
+                      --cobalt: hsla(201, 75%, 36%, 1); /* #1771a0 */
+                      --egyptian: hsla(231, 60%, 38%, 1); /* #27389d */
+                      --grape: hsla(264, 84%, 55%, 1); /* #772bed */
+                      --prussia: hsla(262, 51%, 41%, 1); /* #59339d */
+                      --raspberry: hsla(330, 100%, 37%, 1); /* #bf0060 */ /* black = 3.38!, white = 6.2 */
+                      --mexicano: hsla(332, 100%, 50%, 1); /* #ff0078 */ /* black = 5.52, white = 3.8! */
+                      --pumpkin: hsla(20, 90%, 52%, 1); /* #f36017 */ /* black = 6.49, white = 3.23! */
+                      --mandarino: hsla(40, 100%, 53%, 1); /* #ffb111 */
+                      --soccorso: hsla(48, 100%, 50%, 1); /* #ffce00 */
+                    }
+                    </style-->
 
                     <article class="mw7 center ph3 ph5-ns tc br2 pv5 mb0 white ">
                         <span class="fw2 f4 lh-copy mt0 mb3 db tc" lang="en">Do you have a company?</span>
@@ -403,7 +421,27 @@ TODO LIST:
           </section-->
 
 
-        <hr class="w-100 b--transparent bg-meadow pa0 ma0 h5" id="design">
+        <section class="w-100 bg-cobalt pv3 " id="design">
+          <article class="mw5 center bg-white pa3 pa4-ns mv3 tc" id="profile"><!-- br3 ba b--black-10 -->
+            <img src="images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+            <h1 class="f3 mb2">Scott Phillips</h1>
+            <h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+            <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">InspiredLabs.co.uk</a>
+            <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Github</a>
+            <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Twitter</a>
+          </article>
+        </section>
+
+        <section class="w-100 bg-meadow pv3 " id="meadow">
+          <article class="mw5 center bg-white pa3 pa4-ns mv3 tc" id="profile"><!-- br3 ba b--black-10 -->
+            <img src="images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+            <h1 class="f3 mb2">Scott Phillips</h1>
+            <h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+            <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">InspiredLabs.co.uk</a>
+            <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Github</a>
+            <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Twitter</a>
+          </article>
+        </section>
 
         <section class="w-100 flex flex-row-ns flex-column bg-caribbean" id="launch">
             <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
@@ -445,7 +483,7 @@ TODO LIST:
                     <div class="aspect-ratio--object cover" style="background:url(images/iwa-pablowoodward-01.jpg) center;"></div>
                 </figure>
                 <a class="pointer tc ttu fw1 f7 tracked-mega hover-white transition silver underline pv2 ph3 db mb3" href="https://pablowoodward.com/" target="_blank">PabloWoodward.com</a>
-                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-caribbean ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_essentials').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-caribbean ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_essentials').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
             </aside>
         </section>
 
@@ -480,9 +518,47 @@ TODO LIST:
                     <div class="aspect-ratio--object cover" style="background:url(images/iwa-tdb-01.jpg) center;"></div>
                 </figure>
                 <a class="pointer tc ttu fw1 f7 tracked-mega hover-white transition silver underline pv2 ph3 db mb3" href="https://thediscobunny.com/" target="_blank">TheDiscoBunny.com</a>
-                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-electric-lime ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_seo_package').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-electric-lime ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_seo_package').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
             </aside>
         </section>
+
+        <section class="w-100 bg-soccorso pv3 " id="soccorso">
+          <article class="mw5 center bg-white pa3 pa4-ns mv3 tc" id="profile"><!-- br3 ba b--black-10 -->
+            <img src="images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+            <h1 class="f3 mb2">Scott Phillips</h1>
+            <h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+            <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">InspiredLabs.co.uk</a>
+            <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Github</a>
+            <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Twitter</a>
+          </article>
+        </section>
+
+        <!--section class="w-100 flex flex-row-ns flex-column bg-soccorso" id="consistency">
+            <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+                <article class="ml-auto mr-auto measure ">
+                    <header class=" pv4 tc">
+                        <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Consistency</h3>
+                        <h4 class="f5 fw4 lh-title mt0 ttu tracked">Handcrafted &amp;&nbsp;Exclusive</h4>
+                    </header>
+                    <hr class="bt bb b--black-10 mb5"/>
+                    <main class="serif lh-copy f4">
+                      <p>A <i>Design&nbsp;Language</i> is a symbol of the mature brand. Visual richness should compliment your existing brand assets for a sense of harmony, rhythm and&nbsp;purpose.</p>
+                      <p>Typography, colour schemes, iconography, branding and even illustration.</p>
+                      <p>Control cost or liberate your&nbsp;vision&hellip; it's up to&nbsp;you.</p>
+                      <p>To achieve bespoke simply add <i>Graphic&nbsp;Design&nbsp;Consultancy</i> for £300 per. day.
+                      </p>
+                      <p>Ideal.</p>                      
+                    </main>
+                </article>
+            </div>
+            <aside class="w-100 w-50-ns flex-column flex-grow-1 tc order-2 bg-white">
+              <figure class=" tc pa4 pt0 mv6">
+                  <img class="w-80" src="images/localitysite.svg" alt="alt"/>
+              </figure>
+              <a class="pointer tc ttu fw1 f7 tracked-mega hover-black transition silver underline pv2 ph3 db mb3" href="#" target="_blank">Property Management</a>
+                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-soccorso ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_logo_bundle').click();validateBundle();//location.hash='#buy';">Add to basket</a>
+            </aside>
+        </section-->
 
         <section class="w-100 flex flex-row-ns flex-column bg-mandarino" id="identity">
             <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
@@ -511,38 +587,11 @@ TODO LIST:
                 <!-- src="images/localitysite.svg" -->
                 </figure>
                 <a class="pointer tc ttu fw1 f7 tracked-mega hover-black transition silver underline pv2 ph3 db mb3" href="https://www.facebook.com/tandemfestival/" target="_blank">Tandem Festival</a>
-                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-mandarino ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_logo_bundle').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-mandarino ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_logo_bundle').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
             </aside>
         </section>
 
-        <section class="w-100 flex flex-row-ns flex-column bg-soccorso" id="consistency">
-            <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
-                <article class="ml-auto mr-auto measure ">
-                    <header class=" pv4 tc">
-                        <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Consistency</h3>
-                        <h4 class="f5 fw4 lh-title mt0 ttu tracked">Handcrafted &amp;&nbsp;Exclusive</h4>
-                    </header>
-                    <hr class="bt bb b--black-10 mb5"/>
-                    <main class="serif lh-copy f4">
-                      <!--p>The perception of your brand Identity Package with</p-->
-                      <p>A <i>Design&nbsp;Language</i> is a symbol of the mature brand. Visual richness should compliment your existing brand assets for a sense of harmony, rhythm and&nbsp;purpose.</p>
-                      <p>Typography, colour schemes, iconography, branding and even illustration.</p>
-                      <p>Control cost or liberate your&nbsp;vision&hellip; it's up to&nbsp;you.</p>
-                      <p>To achieve bespoke simply add <i>Graphic&nbsp;Design&nbsp;Consultancy</i> for £300 per. day.
-                      </p>
-                      <p>Ideal.</p>                      
-                    </main>
-                </article>
-                <!-- /measure -->
-            </div>
-            <aside class="w-100 w-50-ns flex-column flex-grow-1 tc order-2 bg-white">
-              <figure class=" tc pa4 pt0 mv6">
-                  <img class="w-80" src="images/localitysite.svg" alt="alt"/>
-              </figure>
-              <a class="pointer tc ttu fw1 f7 tracked-mega hover-black transition silver underline pv2 ph3 db mb3" href="#" target="_blank">Property Management</a>
-                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-soccorso ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_logo_bundle').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
-            </aside>
-        </section>
+        
 
         <section class="w-100 flex flex-row-ns flex-column bg-pumpkin" id="relevant">
           <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1  ">
@@ -577,7 +626,7 @@ TODO LIST:
             <div class="aspect-ratio--object cover " style="background:url(images/iwa-alessandroronca-01.jpg) center;"></div>
           </figure>
           <a class="pointer tc ttu fw1 f7 tracked-mega hover-white transition silver underline pv2 ph3 db mb3" href="http://alessandroronca.it/" target="_blank">AlessandroRonca.IT</a>
-          <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-pumpkin ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_multilingual').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+          <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-pumpkin ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_multilingual').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
         </aside>
       </section>
 
@@ -613,11 +662,30 @@ TODO LIST:
                   <div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center;"></div>
               </figure>
               <a class="pointer tc ttu fw1 f7 tracked-mega hover-white transition silver underline pv2 ph3 db mb3" href="https://umbria.netlify.app/" target="_blank" title="Il Parco dell' Energia Rinnovabile">Sustability Research Center</a>
-              <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-raspberry white ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+              <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-raspberry white ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
             </aside>
           </section>
 
-          <hr class="w-100 b--transparent bg-mexicano pa0 ma0 h5" id="feedback">
+          <section class="w-100 bg-mexicano pv3 " id="feedback">
+            <article class="mw5 center bg-white pa3 pa4-ns mv3 tc" id="profile"><!-- br3 ba b--black-10 -->
+              <img src="images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+              <h1 class="f3 mb2">Scott Phillips</h1>
+              <h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+              <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">InspiredLabs.co.uk</a>
+              <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Github</a>
+              <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Twitter</a>
+            </article>
+          </section>
+          <section class="w-100 bg-grape pv3 " id="grape">
+              <article class="mw5 center bg-white pa3 pa4-ns mv3 tc" id="profile"><!-- br3 ba b--black-10 -->
+                <img src="images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+                <h1 class="f3 mb2">Scott Phillips</h1>
+                <h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+                <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">InspiredLabs.co.uk</a>
+                <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Github</a>
+                <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Twitter</a>
+              </article>
+            </section>
           
           <section class="w-100 flex flex-row-ns flex-column bg-prussia white" id="transact">
           <div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
@@ -650,7 +718,7 @@ TODO LIST:
                     <div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center;"></div>
                 </figure>
                 <a class="pointer tc ttu fw1 f7 tracked-mega hover-white transition silver underline pv2 ph3 db mb3" href="https://umbria.netlify.app/" target="_blank" title="Il Parco dell' Energia Rinnovabile">Sustability Research Center</a>
-                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-prussia white ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-prussia white ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
               </aside>
             </section>
 
@@ -685,7 +753,7 @@ TODO LIST:
                       <div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center;"></div>
                   </figure>
                   <a class="pointer tc ttu fw1 f7 tracked-mega hover-white transition silver underline pv2 ph3 db mb3" href="https://umbria.netlify.app/" target="_blank" title="Il Parco dell' Energia Rinnovabile">Sustability Research Center</a>
-                  <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-plum white ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+                  <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-plum white ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
                 </aside>
               </section>
 
@@ -720,7 +788,7 @@ TODO LIST:
                         <div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center;"></div>
                     </figure>
                     <a class="pointer tc ttu fw1 f7 tracked-mega hover-white transition silver underline pv2 ph3 db mb3" href="https://umbria.netlify.app/" target="_blank" title="Il Parco dell' Energia Rinnovabile">Sustability Research Center</a>
-                    <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-egyptian white ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+                    <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-egyptian white ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
                   </aside>
                 </section>
 
@@ -753,7 +821,7 @@ TODO LIST:
                               <div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center;"></div>
                           </figure>
                           <a class="pointer tc ttu fw1 f7 tracked-mega hover-white transition silver underline pv2 ph3 db mb3" href="https://umbria.netlify.app/" target="_blank" title="Il Parco dell' Energia Rinnovabile">Sustability Research Center</a>
-                          <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-cobalt white ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+                          <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-cobalt white ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
                         </aside>
                       </section>
 
@@ -786,17 +854,29 @@ TODO LIST:
                                     <div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center;"></div>
                                 </figure>
                                 <a class="pointer tc ttu fw1 f7 tracked-mega hover-white transition silver underline pv2 ph3 db mb3" href="https://umbria.netlify.app/" target="_blank" title="Il Parco dell' Energia Rinnovabile">Sustability Research Center</a>
-                                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-meadow ba b--transparent grow pv2 ph3" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
+                                <a class="pointer tc ttu fw6 f6 tracked br-pill grow transition dib no-underline bg-meadow ba b--transparent grow pv2 ph3 mb4" onclick="document.getElementById('buy_info_arch').click();validateBundle();//location.hash='#buy';">Add to basket</a><!-- fw4 f7 tracked-mega -->
                               </aside>
                             </section>
-                            <hr class="w-100 b--transparent bg-cobalt pa0 ma0 h5" id="buy">
-
-
-
-
-
-
-
+                            <section class="w-100 bg-cobalt pv3 " id="contact">
+                              <article class="mw5 center bg-white pa3 pa4-ns mv3 tc" id="profile"><!-- br3 ba b--black-10 -->
+                                <img src="images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+                                <h1 class="f3 mb2">Scott Phillips</h1>
+                                <h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+                                <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">InspiredLabs.co.uk</a>
+                                <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Github</a>
+                                <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Twitter</a>
+                              </article>
+                            </section>
+                            <section class="w-100 bg-cobalt pv3 " id="buy">
+                              <article class="mw5 center bg-white pa3 pa4-ns mv3 tc" id="profile"><!-- br3 ba b--black-10 -->
+                                <img src="images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+                                <h1 class="f3 mb2">Scott Phillips</h1>
+                                <h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+                                <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">InspiredLabs.co.uk</a>
+                                <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Github</a>
+                                <a class="pointer f7 fw4 tracked gray hover-black-80 transition underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Twitter</a>
+                              </article>
+                            </section>
 
     </main>
   </div>
@@ -949,10 +1029,6 @@ function validateBundle(){
 // X: https://stackoverflow.com/questions/31431983/use-addeventlistener-on-a-class-not-working
 // y: https://stackoverflow.com/questions/13540751/how-get-total-sum-from-input-box-values-using-javascript
 
-
-
-
-
 HTMLCollection.prototype.forEach = Array.prototype.forEach;
 
 const inputs = document.getElementsByName('sum'),
@@ -967,9 +1043,6 @@ const inputs = document.getElementsByName('sum'),
       });
 
 </script>
-
-
-
 
 <!-- Javascript --><script src="{{ .Site.BaseURL }}js/smooth-scroll.min.js "></script><script src="{{ .Site.BaseURL }}js/gumshoe.js "></script><script>var scroll = new SmoothScroll('a[href*="# "]');
 var spy = new Gumshoe('#scrollSpy a');</script></body></html>
