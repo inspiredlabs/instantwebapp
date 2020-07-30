@@ -9,50 +9,31 @@
 
 /*` $style := resources.Get "css/uncssonline.css" | minify ` */
 /*` $style.Content | replaceRE `\/\*(.*)\*\/` `$style` | safeCSS ` */
-/* 28.06.20 .prussia… 	                                    rename/addition					*/
 
+
+/* 28.06.20 .blockquote 	     avoid collisions            rename: `blockquote`			*/
+/* 28.06.20 .prussia… 	                                   rename/addition					*/
 /* 30.01.20 .ds2-dark-gray… 	filter: drop-shadow(0px 0.625rem 0.625rem #333);    	*/
-
 /* 30.01.20 .ts1-white… 			text-shadow: 0px 0.125rem 0.125rem white;							*/
-
 /* 29.01.20 `#menu nav`,`[aria-expanded=false]~#menu nav`…	See comment							*/
-
 /* 29.01.20 .no-body-scroll 	overscroll shortcut?					multiple rules comment	*/
-
 /* 29.01.20 .portrait-etc 		horiz/vert nav & banners…			multiple media queries	*/
-
 /* 24.01.20 .twitter, .facebook, .pm-blue-light, etc.				addition								*/
-
 /* 13.01.20 .link							word-wrap: break-word;				bug fix 								*/
-
 /* 07.01.20 .emojisymbol			Semantic unicode-icons				addition								*/
-
 /* Recycle existing class and break Tachyons convention. */
-
 /* Consider `.hover-o-*` convention. */
-
 /* 26.11.19 .touch-manipulation	touch-action:manipulation   addition								*/
-
 /* 08.11.19 .smooth-scroll			scroll-behavior:smooth  		addition								*/
-
 /* 06.11.19 .transition 				give up subpixel render 		-webkit-font-smoothing	*/
-
 /* 04.11.19 .no-focus-ring 			<button> + button-reset			addition								*/
-
 /* 04.11.19 .backface-hidden		-webkit hide (flickity)			addition								*/
-
 /* 04.11.19	.ma-auto						mr-auto ml-auto							+ missing top & bottom	*/
-
 /* 13.10.19	.b--transparent			border top highlight				moved cascade override	*/
-
 /* 14.08.19	.debug *						display colours							media query addition 		*/
-
 /* 30.05.19	.f8 								0.6rem											addition 	*/
-
 /* 01.05.19	.ts 								shadow											addition 	*/
-
 /* 17.04.19	.grow 							background-clip							bug fix 	*/
-
 /* 16.04.19	.dim 								transform:translateZ(0)			bug fix 	*/
 
 /* SORT ME */
@@ -7331,6 +7312,7 @@ details[open] summary~* {
   --whatsapp: #25D366;
   /* https://whatsappbrand.com/ */
   /* Inspired by Sharmin akter: shuvochowdhuryart@gmail.com */
+  /* Hue Saturation Luminence Alpha: http://hslpicker.com/ */
   --electric-lime: hsla(76, 100%, 50%, 1); /* #bcff00 */
   --caribbean: hsla(160, 82%, 49%, 1); /* #17e2a0 */ /* black = 5.5, white = 1.69! */
   --meadow: hsla(158, 79%, 42%, 1); /* #16bf82 */ /* black = 5.5, white = 2.38! */
@@ -7350,6 +7332,7 @@ details[open] summary~* {
 /* htmlcsscolor.com/hex/f36017 */
 .pumpkin {
   color: var(--pumpkin);
+  fill: var(--pumpkin);
 }
 .bg-pumpkin {
   background-color: var(--pumpkin);
@@ -7369,6 +7352,7 @@ details[open] summary~* {
 /* Roadside Assistance */
 .soccorso {
   color: var(--soccorso);
+  fill: var(--soccorso);
 }
 .bg-soccorso {
   background-color: var(--soccorso);
@@ -7388,6 +7372,7 @@ details[open] summary~* {
 /* Tangerine */
 .mandarino {
   color: var(--mandarino);
+  fill: var(--mandarino);
 }
 .bg-mandarino {
   background-color: var(--mandarino);
@@ -7407,6 +7392,7 @@ details[open] summary~* {
 /* Egypt sky */
 .egyptian {
   color: var(--egyptian);
+  fill: var(--egyptian);
 }
 .bg-egyptian {
   background-color: var(--egyptian);
@@ -7426,6 +7412,7 @@ details[open] summary~* {
 /* Wiki shades of purple */
 .grape {
   color: var(--grape);
+  fill: var(--grape);
 }
 .bg-grape {
   background-color: var(--grape);
@@ -7445,6 +7432,7 @@ details[open] summary~* {
 /* htmlcsscolor.com/hex/bcff00 */
 .electric-lime {
   color: var(--electric-lime);
+  fill: var(--electric-lime);
 }
 .bg-electric-lime {
   background-color: var(--electric-lime);
@@ -7464,6 +7452,7 @@ details[open] summary~* {
 /* It Works! */
 .raspberry {
   color: var(--raspberry);
+  fill: var(--raspberry);
 }
 .bg-raspberry {
   background-color: var(--raspberry);
@@ -7483,6 +7472,7 @@ details[open] summary~* {
 /* What is better than cobolt? #1771a0 */
 .cobalt {
   color: var(--cobalt);
+  fill: var(--cobalt);
 }
 .bg-cobalt {
   background-color: var(--cobalt);
@@ -7502,6 +7492,7 @@ details[open] summary~* {
 /* Prussian Violet */
 .prussia {
   color: var(--prussia);
+  fill: var(--prussia);
 }
 .bg-prussia {
   background-color: var(--prussia);
@@ -7521,6 +7512,7 @@ details[open] summary~* {
 /* Example */
 .caribbean {
   color: var(--caribbean);
+  fill: var(--caribbean);
 }
 .bg-caribbean {
   background-color: var(--caribbean);
@@ -7540,6 +7532,7 @@ details[open] summary~* {
 /* Example */
 .meadow {
   color: var(--meadow);
+  fill: var(--meadow);
 }
 .bg-meadow {
   background-color: var(--meadow);
@@ -7559,6 +7552,7 @@ details[open] summary~* {
 /* Mexican Pink: en.wikipedia.org/wiki/Mexican_pink */
 .mexicano {
   color: var(--mexicano);
+  fill: var(--mexicano);
 }
 .bg-mexicano {
   background-color: var(--mexicano);
@@ -7578,6 +7572,7 @@ details[open] summary~* {
 /*------------------- Social Media colour ---------------------*/
 .skype {
   color: var(--skype);
+  fill: var(--skype);
 }
 .bg-skype {
   background-color: var(--skype);
@@ -7595,6 +7590,7 @@ details[open] summary~* {
 }
 .pinterest {
   color: var(--pinterest);
+  fill: var(--pinterest);
 }
 .bg-pinterest {
   background-color: var(--pinterest);
@@ -7612,6 +7608,7 @@ details[open] summary~* {
 }
 .twitter {
   color: var(--twitter);
+  fill: var(--twitter);
 }
 .bg-twitter {
   background-color: var(--twitter);
@@ -7629,6 +7626,7 @@ details[open] summary~* {
 }
 .linkedin {
   color: var(--linkedin);
+  fill: var(--linkedin);
 }
 .bg-linkedin {
   background-color: var(--linkedin);
@@ -7646,6 +7644,7 @@ details[open] summary~* {
 }
 .facebook {
   color: var(--facebook);
+  fill: var(--facebook);
 }
 .bg-facebook {
   background-color: var(--facebook);
@@ -7665,6 +7664,7 @@ details[open] summary~* {
 /* Protonmail */
 .pm-blue {
   color: var(--pm-blue);
+  fill: var(--pm-blue);
 }
 .bg-pm-blue {
   background-color: var(--pm-blue);
@@ -7684,6 +7684,7 @@ details[open] summary~* {
 /* Protonmail */
 .pm-blue-dark {
   color: var(--pm-blue-dark);
+  fill: var(--pm-blue-dark);
 }
 .bg-pm-blue-dark {
   background-color: var(--pm-blue-dark);
@@ -7703,6 +7704,7 @@ details[open] summary~* {
 /* Protonmail */
 .pm-blue-light {
   color: var(--pm-blue-light);
+  fill: var(--pm-blue-light);
 }
 .bg-pm-blue-light {
   background-color: var(--pm-blue-light);
@@ -7720,6 +7722,7 @@ details[open] summary~* {
 }
 .vimeo {
   color: var(--vimeo);
+  fill: var(--vimeo);
 }
 .bg-vimeo {
   background-color: var(--vimeo);
@@ -7737,6 +7740,7 @@ details[open] summary~* {
 }
 .tripadvisor {
   color: var(--tripadvisor);
+  fill: var(--tripadvisor);
 }
 .bg-tripadvisor {
   background-color: var(--tripadvisor);
@@ -7754,6 +7758,7 @@ details[open] summary~* {
 }
 .whatsapp {
   color: var(--whatsapp);
+  fill: var(--whatsapp);
 }
 .bg-whatsapp {
   background-color: var(--whatsapp);
@@ -8454,7 +8459,7 @@ code {
 /* https://discourse.gohugo.io/t/markdown-not-being-rendered-within-html-block/2532/3 */
 
 /* Shortcode: gohugo.io/templates/shortcode-templates/ */
-blockquote {
+.blockquote {
   font-family: "baskerville",
   "serif";
   /* "Georgia" */
@@ -8474,12 +8479,12 @@ blockquote {
   /* .fw6 */
   opacity: 0.9;
 }
-blockquote p {
+.blockquote p {
   padding-right: 0.2rem;
 }
 
 /* Fix overflow glitch */
-blockquote a {
+.blockquote a {
   opacity: .8;
 }
 .helvetica-neue {

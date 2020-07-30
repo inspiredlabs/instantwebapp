@@ -88,6 +88,49 @@
     }
   </style>
 
+<table id="sum">
+    <tr>
+        <td class="value">12</td>
+        <td>Some value</td>
+    </tr>
+    <tr>
+        <td class="value">2</td>
+        <td>Some value</td>
+    </tr>
+    <tr>
+        <td class="value">17</td>
+        <td>Some value</td>
+    </tr>
+</table>
+<script language="javascript" type="text/javascript">
+  //https://stackoverflow.com/questions/43031988/javascript-efficiency-for-vs-foreach
+  //https://www.daniweb.com/programming/web-development/threads/187238/collect-sum-of-a-column-in-a-html-table
+  var table = document.getElementById('sum').getElementsByTagName('td');
+  var sum = 0;
+  for(var i = 0; i < table.length; i ++) {
+    if(table[i].className == 'value') {
+      sum += isNaN(table[i].innerHTML) ? 0 : parseInt(table[i].innerHTML);
+    }
+  }
+  document.getElementById('sum').innerHTML += '<tr><td>' + sum + '</td><td>total</td></tr>';
+
+
+
+
+/*** 
+    //https://stackoverflow.com/questions/3065342/how-do-i-iterate-through-table-rows-and-cells-in-javascript
+    var t = document.getElementById('sum');
+    if(t) {
+        Array.from(t.rows).forEach((tr, row_ind) => {
+            Array.from(tr.cells).forEach((cell, col_ind) => {
+                console.log('Value at row/col [' + row_ind + ',' + col_ind + '] = ' + cell.textContent);
+
+            });
+        });
+    }
+**/ 
+</script>
+
 
   <input id="instagram" type="checkbox" name="sum" value="50"/>
   <label for="instagram" >
@@ -119,7 +162,6 @@ HTMLCollection.prototype.forEach = Array.prototype.forEach;
 const inputs = document.getElementsByName('sum'),
       total  = document.querySelector('.total');
 
-
       inputs.forEach(function(element, i){
         inputs[i].onchange = function() {
           var add = this.value * (this.checked ? 1 : -1);
@@ -127,20 +169,6 @@ const inputs = document.getElementsByName('sum'),
           }
       });
 
-
-
-
-</script>
-
-
-
-
-
-
-
-
-
-</script>
 </script>
 </body>
 </html>
