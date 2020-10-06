@@ -11,6 +11,8 @@
 /*` $style.Content | replaceRE `\/\*(.*)\*\/` `$style` | safeCSS ` */
 
 
+/* 28.06.20 .name 	           description               thing: `x`			*/
+/* 06.10.20 .shadow-N-hover    Vertical box-shadow       card  hover: `box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;` */
 /* 28.06.20 .blockquote 	     avoid collisions            rename: `blockquote`			*/
 /* 28.06.20 .prussia… 	                                   rename/addition					*/
 /* 30.01.20 .ds2-dark-gray… 	filter: drop-shadow(0px 0.625rem 0.625rem #333);    	*/
@@ -642,21 +644,50 @@ img {
 .bl-0 {
   border-left-width: 0;
 }
+
+.shadow-1-hover,
+.shadow-2-hover,
+.shadow-3-hover,
+.shadow-4-hover,
+.shadow-5-hover, {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
 .shadow-1 {
   box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
 }
+.shadow-1-hover:hover {
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+}
+
 .shadow-2 {
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
 }
+.shadow-2-hover:hover {
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+}
+
 .shadow-3 {
-  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
+.shadow-3-hover:hover {
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
 .shadow-4 {
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
+.shadow-4-hover:hover {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 .shadow-5 {
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+.shadow-5-hover:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 .pre {
   overflow-x: auto;
   overflow-y: hidden;
