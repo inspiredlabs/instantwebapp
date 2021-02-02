@@ -1,4 +1,4 @@
-baseurl = "//instantwebapp.it/" #`https:` #`./`
+baseurl = "//instantwebapp.com/" #`https:` #`./`
 languageCode = "en-gb" #lang="it-IT" #format numbers, dates and semantics
 languageLang = "en" #lang="it"
 title = "InstantWebapp"
