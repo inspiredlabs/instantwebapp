@@ -236,10 +236,11 @@
 			<!-- /measure -->
 		</div>
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
-				<div class="aspect-ratio--object cover" style="background:url(images/iwa-pablowoodward-01.jpg) center;"></div>
-			</figure>
-			<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://pablowoodward.netlify.app/" target="_blank">PabloWoodward.com</a>
+			<div class="sticky w-100 top-0 mt3 mb5">
+				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-pablowoodward-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://pablowoodward.netlify.app/" target="_blank">PabloWoodward.com</a>
+			</div>
 		</aside>
 	</section>
 
@@ -266,17 +267,19 @@
 			<!-- /measure -->
 		</div>
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
-				<div class="aspect-ratio--object cover" style="background:url(images/iwa-tdb-01.jpg) center;"></div>
-			</figure>
-			<a class="pointer tc ttu fw3 f7 tracked-mega hover-white silver pv2 ph3 db mb3 link" href="https://thediscobunny.com/" target="_blank">TheDiscoBunny.com</a>
+			<div class="sticky w-100 top-0 mt3 mb5">
+				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-tdb-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white silver pv2 ph3 db mb3 link" href="https://thediscobunny.com/" target="_blank">TheDiscoBunny.com</a>
+			</div>
+
 		</aside>
 	</section>
 
 	<section class="w-100 bg-soccorso pv3 " id="soccorso">
 		<article class="mw5 center bg-white pa3 pa4-ns mv3 tc br4 shadow-5-hover transition" id="profile">
 			<!-- br3 ba b--black-10 -->
-			<img src="images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+			<img src="{{ .Site.BaseURL }}images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
 			<h1 class="f3 mb2">Scott Phillips</h1>
 			<h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
 			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Inspired Labs</a>
@@ -308,12 +311,15 @@
 			</article>
 			<!-- /measure -->
 		</div>
-		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc order-2 bg-white">
-			<figure class=" tc pa4 pt0 mv6">
-				<img class="w-80" src="images/blurred.shadow.tandem.svg" alt="alt" />
-				<!-- src="images/localitysite.svg" -->
-			</figure>
-			<a class="pointer tc ttu fw3 f7 tracked-mega hover-black transition charcoal pv2 ph3 db mb3 link" href="https://www.facebook.com/tandemfestival/" target="_blank">Tandem Festival</a>
+
+
+		<!-- src="images/localitysite.svg" -->
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#383838">
+			<div class="sticky w-80 w-50-ns w-two-thirds-m w-two-thirds-l top-2 center mt3 mb5">
+				<img class="" src="{{ .Site.BaseURL }}images/blurred.shadow.tandem.svg" />
+
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white silver pv2 ph3 db mb3 link" href="https://tandemfestival.com/" target="_blank">Tandem&nbsp;Festival</a>
+			</div>
 
 		</aside>
 	</section>
@@ -354,14 +360,15 @@
 				</main>
 			</article>
 		</div>
-		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc" style="background-color:#1a1a1a">
-			<figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
-				<div class="aspect-ratio--object cover " style="background:url(images/iwa-alessandroronca-01.jpg) center;">
-				</div>
-			</figure>
-			<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="http://alessandroronca.it/" target="_blank">AlessandroRonca.IT</a>
 
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
+			<div class="sticky w-100 top-0 mt3 mb5">
+				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-alessandroronca-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="http://alessandroronca.it/" target="_blank">AlessandroRonca.IT</a>
+			</div>
 		</aside>
+
 	</section>
 
 	<section class="w-100 flex flex-row-ns flex-column bg-raspberry white" id="structure">
@@ -393,21 +400,27 @@
 			</article>
 			<!-- /measure -->
 		</div>
+
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<figure class="aspect-ratio aspect-ratio--1x1 top0 ma0">
-				<div class="aspect-ratio--object cover " style="background:url(images/iwa-per-01.jpg) center;"></div>
-			</figure>
-			<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://umbria.netlify.app/" target="_blank" title="Il Parco dell' Energia Rinnovabile">Sustability
-				Research Center</a>
+			<div class="sticky w-100 top-0 mt3 mb5">
+				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-per-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://umbria.netlify.app/" target="_blank">Sustability Research Center</a>
+			</div>
 		</aside>
 	</section>
 
 
 
+
+
 	<section class="w-100 bg-plum pv3 " id="contact">
-		<article class="mw5 center bg-white pa3 pa4-ns mv3 tc br4 shadow-5-hover transition" id="profile">
+		<article class="mw5 center bg-white pa3 pa4-ns mv3 tc br4 shadow-5-hover transition">
 			<!-- br3 ba b--black-10 -->
-			<img src="images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+			<!--
+    id="profile"
+    -->
+			<img src="{{ .Site.BaseURL }}images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
 			<h1 class="f3 mb2">Scott Phillips</h1>
 			<h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
 			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Inspired Labs</a>
@@ -416,9 +429,6 @@
 		</article>
 	</section>
 
-	</main>
-	</div>
-	</div>
 
 
 
