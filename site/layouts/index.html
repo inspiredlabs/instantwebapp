@@ -141,6 +141,17 @@
 		}
 	</style>
 
+	<style>
+		/******* SUPPORTED *****/
+		/*
+	https://caniuse.com/?search=position%3Asticky
+	*/
+		.sticky {
+			position: -webkit-sticky;
+			position: sticky;
+		}
+	</style>
+
 	<svg class="dn">
 		<defs>
 			<g id="instantwebapp">
@@ -165,32 +176,40 @@
 
 <body class="pa0 ma0 bg-black" id="top">
 	<div class="z-999 fixed bg-black w-100">
-		<!--nav class="flex justify-between w-80 mr-auto ml-auto pv3">
-    <a class="link no-underline white flex items-center" href="#home">
-        <svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp"><use xlink:href="#instantwebapp"></use></svg>
-        <span class="dn dn-ns dn-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
-      </a>
-    <ul id="scrollSpy" class="list ttu tracked flex-grow flex items-center">
-      <li>
-        <a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#design">Design</a>
-      </li>
-      <li>
-        <a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#features">Features</a>
-      </li>
-      <li>
-        <a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#reviews">Reviews</a>
-      </li>
-      <li class="dn dn-ns dn-m dib-l">
-        <a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#about">About</a>
-      </li>
-      <li class="dn dn-ns dn-m dib-l">
-        <a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#contact">Contact</a>
-      </li>
-    </ul>
-    <div class="flex items-center">
-      <a class="f6 link dib black fw7 bg-mexicano grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2" href="#buy">Buy<span class="dn dn-ns dn-m dib-l ">&nbsp;Now</span></a>
-    </div>
-  </nav-->
+		<nav class="flex justify-between ph6 mr-auto ml-auto pv3">
+			<a class="link no-underline white flex items-center" href="#home">
+				<svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp">
+					<use xlink:href="#instantwebapp"></use>
+				</svg>
+				<span class="dn dn-ns dn-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
+			</a>
+			<ul id="scrollSpy" class="list ttu tracked flex-grow flex items-center">
+				<li>
+					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#launch">Launch</a>
+				</li>
+				<li>
+					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#visibility">Visibility</a>
+				</li>
+				<li>
+					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#identity">Identity</a>
+				</li>
+				<li class="dn dn-ns dn-m dib-l">
+					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#relevance">Relevance</a>
+				</li>
+				<li class="dn dn-ns dn-m dib-l">
+					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#structure">Structure</a>
+				</li>
+				<!--li class="dn dn-ns dn-m dib-l">
+					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#contact">Contact</a>
+				</li-->
+			</ul>
+			<div class="flex items-center">
+				<!-- bg-light-silver -->
+				<a class="f6 link dib black fw8 bg-moon-gray grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2" href="#contact">Contact
+					<!-- Buy<span class="dn dn-ns dn-m dib-l ">&nbsp;Now</span> -->
+				</a>
+			</div>
+		</nav>
 	</div>
 
 	<div class="fixed bottom-0 pa3">
@@ -198,6 +217,13 @@
 			<a data-scroll href="#top" class="pointer link b underline o-30 glow charcoal">Top</a>
 		</p>
 	</div>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-cobalt" id="home">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+		</div>
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
+		</aside>
+	</section>
 
 	<section class="w-100 flex flex-row-ns flex-column bg-caribbean" id="launch">
 		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
@@ -236,7 +262,8 @@
 			<!-- /measure -->
 		</div>
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<div class="sticky w-100 top-0 mt3 mb5">
+			<div class="sticky w-100 top-0 pt5 mb5">
+				<!-- pt4 -->
 				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-pablowoodward-01.jpg) center;">
 				</div>
 				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://pablowoodward.netlify.app/" target="_blank">PabloWoodward.com</a>
@@ -267,7 +294,8 @@
 			<!-- /measure -->
 		</div>
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<div class="sticky w-100 top-0 mt3 mb5">
+			<div class="sticky w-100 top-0 pt5 mb5">
+				<!-- pt4 -->
 				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-tdb-01.jpg) center;">
 				</div>
 				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white silver pv2 ph3 db mb3 link" href="https://thediscobunny.com/" target="_blank">TheDiscoBunny.com</a>
@@ -315,7 +343,7 @@
 
 		<!-- src="images/localitysite.svg" -->
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#383838">
-			<div class="sticky w-80 w-50-ns w-two-thirds-m w-two-thirds-l top-2 center mt3 mb5">
+			<div class="sticky w-80 w-50-ns w-two-thirds-m w-two-thirds-l top-2 center pt5 mb5">
 				<img class="" src="{{ .Site.BaseURL }}images/blurred.shadow.tandem.svg" />
 
 				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white silver pv2 ph3 db mb3 link" href="https://tandemfestival.com/" target="_blank">Tandem&nbsp;Festival</a>
@@ -326,7 +354,7 @@
 
 
 
-	<section class="w-100 flex flex-row-ns flex-column bg-pumpkin" id="relevant">
+	<section class="w-100 flex flex-row-ns flex-column bg-pumpkin" id="relevance">
 		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1  ">
 			<article class="ml-auto mr-auto measure ">
 				<header class=" pv4 tc ">
@@ -362,7 +390,8 @@
 		</div>
 
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<div class="sticky w-100 top-0 mt3 mb5">
+			<div class="sticky w-100 top-0 pt5 mb5">
+				<!-- pt4 -->
 				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-alessandroronca-01.jpg) center;">
 				</div>
 				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="http://alessandroronca.it/" target="_blank">AlessandroRonca.IT</a>
@@ -402,7 +431,8 @@
 		</div>
 
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<div class="sticky w-100 top-0 mt3 mb5">
+			<div class="sticky w-100 top-0 pt5 mb5">
+				<!-- pt4 -->
 				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-per-01.jpg) center;">
 				</div>
 				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://umbria.netlify.app/" target="_blank">Sustability Research Center</a>
