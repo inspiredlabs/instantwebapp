@@ -144,11 +144,132 @@
 	<style>
 		/******* SUPPORTED *****/
 		/*
-	https://caniuse.com/?search=position%3Asticky
-	*/
+https://caniuse.com/?search=position%3Asticky
+*/
 		.sticky {
 			position: -webkit-sticky;
 			position: sticky;
+		}
+
+		/* cycling content typewriter effect */
+
+		.part4 {
+			animation: text4
+		}
+
+		.part3 {
+			animation: text3
+		}
+
+		.part2 {
+			animation: text2
+		}
+
+		.part1 {
+			animation: text1
+		}
+
+		.part4,
+		.part3,
+		.part2,
+		.part1 {
+			overflow: hidden;
+			white-space: nowrap;
+			display: inline-block;
+			position: relative;
+			animation-duration: 12s;
+			animation-timing-function: steps(25, end);
+			animation-iteration-count: infinite;
+			height: 10vh;
+			/* Prevent clipping scaled text */
+		}
+
+		.part4::after,
+		.part3::after,
+		.part2::after,
+		.part1::after {
+			content: "|";
+			position: absolute;
+			right: 0;
+			animation: caret infinite;
+			animation-duration: 1s;
+			animation-timing-function: steps(1, end);
+		}
+
+		@keyframes text4 {
+
+			0%,
+			25%,
+			50%,
+			75%,
+			100% {
+				width: 0;
+			}
+
+			80%,
+			95% {
+				width: 7.4em;
+			}
+		}
+
+		@keyframes text3 {
+
+			0%,
+			25%,
+			50%,
+			75%,
+			100% {
+				width: 0;
+			}
+
+			55%,
+			70% {
+				width: 7.3em;
+			}
+		}
+
+		@keyframes text2 {
+
+			0%,
+			25%,
+			50%,
+			75%,
+			100% {
+				width: 0;
+			}
+
+			30%,
+			45% {
+				width: 9.8em;
+			}
+		}
+
+		@keyframes text1 {
+
+			0%,
+			25%,
+			50%,
+			75%,
+			100% {
+				width: 0;
+			}
+
+			5%,
+			20% {
+				width: 11.1em;
+			}
+		}
+
+		@keyframes caret {
+
+			0%,
+			100% {
+				opacity: 0;
+			}
+
+			50% {
+				opacity: 0.7;
+			}
 		}
 	</style>
 
@@ -185,6 +306,9 @@
 			</a>
 			<ul id="scrollSpy" class="list ttu tracked flex-grow flex items-center">
 				<li>
+					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#about">About</a>
+				</li>
+				<li>
 					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#design">Design</a>
 				</li>
 				<li>
@@ -193,16 +317,10 @@
 				<li>
 					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#reviews">Reviews</a>
 				</li>
-				<li class="dn dn-ns dn-m dib-l">
-					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#about">About</a>
-				</li>
-				<!--li class="dn dn-ns dn-m dib-l">
-					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#contact">Contact</a>
-				</li-->
 			</ul>
 			<div class="flex items-center">
 				<!-- bg-light-silver -->
-				<a class="f6 link dib black fw8 bg-moon-gray grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2" href="#contact">Contact
+				<a class="f6 link dib fw8 hover-cobalt white bg-cobalt grow grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2" href="#contact">Contact
 					<!-- Buy<span class="dn dn-ns dn-m dib-l ">&nbsp;Now</span> -->
 				</a>
 			</div>
@@ -257,14 +375,11 @@
 	<section class="w-100 flex flex-row-ns flex-column bg-cobalt white" id="home">
 		<header class="flex vh-100 w-100 ph6 mr-auto ml-auto">
 			<div class="flex flex-column flex-grow-1 mt6">
-				<h2 class="flex-auto f6 f6-m f4-l fs-8vmin fs-5vmax lh-8vh fw2">
-					<!-- fw9 flex bottom -->
-					<span>Strategic Digitial Asset Management</span>
-				</h2>
+				<h2 class="flex-auto f6 f6-m f4-l fs-8vmin fs-5vmax lh-8vh fw2"><span class="part1">Digital Asset Management</span><span class="part2">Product/Service Hybrid</span><span class="part3">Branded Content</span><span class="part4">Revenue Capture</span></h2>
 				<h1 class="flex-auto ma0 o-100 f2 f-subheadline-m f-headline-l fs-14vmin fs-12vmax ts1-dark-gray">
 					<span>Start. Run. Grow.</span>
 				</h1>
-				<h3 class="flex-auto f5 f2-l fw3 o-80 fs-8vmin fs-5vmax lh-8vh">
+				<h3 class="flex-auto f5 f2-l fw3 fs-8vmin fs-5vmax lh-8vh">
 					<span>Your online business</span>
 				</h3>
 			</div>
@@ -275,34 +390,87 @@
 
 
 	<section class="w-100 flex flex-row-ns flex-column bg-meadow" id="about">
-		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover" style="background:url({{ .Site.BaseURL }}images/profile.jpg) center;">
-		</aside>
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover" style="background-color:#383838;">
+		</aside><!-- background:url({{ .Site.BaseURL }}images/IMG_3195.JPG) center; || profile.jpg -->
 		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
 			<article class="ml-auto mr-auto measure ">
 				<header class=" pv4 tc">
 					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">About</h3>
-					<h4 class="f5 fw4 lh-title mt0 ttu tracked">Strategic Digitial Asset Management</h4>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked">Product/Service&nbsp;Outline</h4>
 				</header>
 				<hr class="bt bb b--black-10 mb5" />
 				<main class="serif lh-copy f4">
-
 					<!-- DESCRIPTION LIST: //code-boxx.com/html-description-list/ -->
 					<!-- <span class="ttn tracked-none"><b>Instant</b>Webapp</span> -->
-					<!--dl>
+					<dl class="w-100 debug">
+						<dt class="b">
+							<dfn>What is InstantWebapp?</dfn>
+						</dt>
+						<dd class="ml0 ">
+							<h1 class="f4">A product/service hybrid for lean entreprenures</h1>
+							<p class="">The <b>product</b> is a modular system based on proven formula to focus online business activity.</p>
+							<p>The <b>service</b> aims to understand and correctly serve your unique business niche.</p>
+							<p class=""><b>Lean entrepreneurs</b> look for ways to make better decisions whilst executing on improving their idea.</p>
+						</dd>
 
 						<dt class="b">
-							What is InstantWebapp?
+							<dfn>Who invented InstantWebapp?</dfn>
 						</dt>
-						<dd class="ml0 debug">
-							<ul class="ml0 pa0 w-50">
-								<li class="b w-50 ">A product/service hybrid for lean entreprenures</li>
-								<li class="w-50">x</li>
-							</ul>
+						<dd class="ml0 ">
+							<h1 class="f4"><a href="https://twitter.com/inspiredlabs">Scott Phillips</a>, of <a href="https://inspiredlabs.co.uk">InspiredLabs</a>.</h1>
+							<p>The right technology requires knowledgable, experienced developers. And, I know first-hand how problematic working with software, developers and new-ideas can be.</p>
 						</dd>
-					</dl-->
 
-					<p>...</p>
+						<dt class="b">
+							<dfn>Why was InstantWebapp created?</dfn>
+						</dt>
+						<dd class="ml0 ">
+							<h1 class="f4">To deliver custom design work on mobile.</h1>
+							<p class="">My niche is designing high-performance business assets.
+								<!-- such as logo designs, a and written content --> Through my work, I noticed there are <i>few</i> limited patterns that influence success. Over a ten-year period, I developed a design-system to expediate pattern-fitting
+								<!-- – available to you -->.</p>
+						</dd>
 
+						<dt class="b">
+							<dfn>What are alternatives to InstantWebapp?</dfn>
+						</dt>
+						<dd class="ml0 ">
+							<h1 class="f4">There are hundreds of <a href="https://alternativeto.net/browse/search/?q=free%20Website%20builder&platform=online">alternative products</a>, so don't limit yourself to Wordpress or Squarespace</h1>
+							<p class="">If you don't want to start with an online product and you need a high-degree of control – you will need an agency or freelancer. They will be able to help avoid common pitfalls such as diciphering <a href="https://duckduckgo.com/?q=web+design+terminology+for+beginners">terminology</a>, having to solve technical problems and writing code.</p>
+						</dd>
+
+						<dt class="b">
+							<dfn>Is InstantWebapp better than a DIY solution?</dfn>
+						</dt>
+						<dd class="ml0 ">
+							<h1 class="f4">The right technology requires knowledgable, expereienced developers.</h1>
+							<p class="">This product has been refined using proven criteria with trial-and-error to produce better business outcomes.</p>
+							<p class="">If you have the time and resources to clear the pitfalls – then DIY could be the way to go.</p>
+						</dd>
+
+
+
+						<dt class="b">
+							<dfn>Is InstantWebapp right for me?</dfn>
+						</dt>
+						<dd class="ml0 ">
+							<h1 class="f4">Lean entreprenures <i>are</i> a good-fit</h1>
+							<p class="">Customers who bought InstantWebapp tend to focus on <i>good&nbsp;value</i> investments. Several of them have repeat purchases.</p>
+						</dd>
+
+						<dt class="b">
+							<!--dfn>Are there InstantWebapp alternatives?</dfn-->
+							<dfn>Can you suggest product alternatives?</dfn>
+						</dt>
+						<dd class="ml0 ">
+							<h1 class="f4">In some ways this is an<a href="https://alternativeto.net/software/instantwebapp/">alternative to</a> Squarespace, Wordpress &amp; other online platforms.</h1>
+							</h1>
+							<p class="">
+								It is not possible to have an all-in-one solution that fits every business. By their nature, an organisation will serve a unique niche. This is especially true, if you're looking to achive better future earning results.
+							</p>
+
+						</dd>
+					</dl>
 					<p>Word.</p>
 				</main>
 			</article>
