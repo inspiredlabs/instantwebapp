@@ -48,14 +48,16 @@
 		#scrollSpy li.active a:after {
 			width: 100%;
 		}
+
 	</style>
 
 	<style>
-		/* body{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          } */
+	/*
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	} */
 
 		@supports(-webkit-appearance: none) or (-moz-appearance: none) {
 
@@ -208,7 +210,7 @@ https://caniuse.com/?search=position%3Asticky
 
 			80%,
 			95% {
-				width: 7.4em;
+				width: 8.5em;
 			}
 		}
 
@@ -240,7 +242,7 @@ https://caniuse.com/?search=position%3Asticky
 
 			30%,
 			45% {
-				width: 9.8em;
+				width: 8.3em;
 			}
 		}
 
@@ -256,7 +258,7 @@ https://caniuse.com/?search=position%3Asticky
 
 			5%,
 			20% {
-				width: 11.1em;
+				width: 10.8em;
 			}
 		}
 
@@ -297,41 +299,44 @@ https://caniuse.com/?search=position%3Asticky
 
 <body class="pa0 ma0 bg-black" id="top">
 	<div class="z-999 fixed bg-black w-100">
-		<nav class="flex justify-between ph6 mr-auto ml-auto pv3">
+		<nav class="
+			flex justify-between pv3
+			mr-auto ml-auto
+			ph4 ph2-ns ph4-m ph6-l
+			">
 			<a class="link no-underline white flex items-center" href="#home">
 				<svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp">
 					<use xlink:href="#instantwebapp"></use>
 				</svg>
-				<span class="dn dn-ns dn-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
+				<span class="dn dn-ns dib-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
 			</a>
-			<!--ul id="scrollSpy" class="list ttu tracked flex-grow flex items-center">
+
+			<!--ul id="scrollSpy" class="pa0 ma0 list flex-grow flex items-center dn dn-ns dib-m dib-l">
 				<li>
-					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#about">About</a>
+					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#design">Design</a>
 				</li>
 				<li>
-					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#design">Design</a>
+					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#features">Features</a>
 				</li>
 				<li>
-					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#features">Features</a>
-				</li>
-				<li>
-					<a class="f6 link pointer no-underline o-50 glow white transition pv4 ma0 mr4-ns" href="#reviews">Reviews</a>
+					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#reviews">Reviews</a>
 				</li>
 			</ul-->
+
 			<div class="flex items-center">
 				<!-- bg-light-silver -->
-				<a class="f6 link dib fw8 hover-cobalt white bg-cobalt grow grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2" href="#contact">Contact
+				<a class="f7 f6-ns link dib dib fw8 hover-cobalt white bg-cobalt grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2 pointer" href="#contact">Contact
 					<!-- Buy<span class="dn dn-ns dn-m dib-l ">&nbsp;Now</span> -->
 				</a>
 			</div>
 		</nav>
 	</div>
 
-	<div class="fixed bottom-0 right-0 pa3">
+	<!--div class="fixed bottom-0 right-0 pa3 z-max">
 		<p>
-			<a data-scroll href="#top" class="pointer link b underline o-30 glow charcoal">Top</a>
+			<a data-scroll href="#top" class="pointer link b no-underline o-30 glow white transition">Top</a>
 		</p>
-	</div>
+	</div-->
 
 
 
@@ -372,15 +377,48 @@ https://caniuse.com/?search=position%3Asticky
 		egyptian
 	</section> -->
 
+	<!--
+		InstantWebapp is a Product/Service Hybrid designed to:
+	- Generate Revenue from your own branded mobile app
+	- Get you seen on search engines
+	- Control the look-and-feel of your app
+
+	- Designed to prioritise what is important to you:
+		- price lists
+		- contact forms
+		- written content to spread your idea
+		- Premium, Granular Control
+	- Fixed price components for controlling costs
+	- just concentrate on running your business!
+
+
+	Explain the benefits:
+	- Digital Asset Management
+		- CMS
+		- x
+	- Increased Visibility
+		- SEO
+		- get more likes &amp; shares
+		- bring your online efforts into one place
+	- Bespoke Mobile App Design
+		- control the
+	- Generate Revenue
+-->
 	<section class="w-100 flex flex-row-ns flex-column bg-cobalt white" id="home">
-		<header class="flex vh-100 w-100 ph6 mr-auto ml-auto">
-			<div class="flex flex-column flex-grow-1 mt6">
-				<h2 class="flex-auto f6 f6-m f4-l fs-8vmin fs-5vmax lh-8vh fw2"><span class="part1">Digital Asset Management</span><span class="part2">Product/Service Hybrid</span><span class="part3">Branded Content</span><span class="part4">Revenue Capture</span></h2>
+		<header class="flex vh-100 w-100
+			mr-auto ml-auto
+			ph4 ph2-ns ph4-m ph6-l
+			">
+		<div class="flex flex-column flex-grow-1 mt6">
+			<h2 class="flex-auto fs-8vmin fs-5vmax  lh-8vh fw2"><span class="part1">Digital&thinsp;Asset&thinsp;Management</span><span class="part2">Better SEO Visibility</span><span class="part3">Strategic Delivery</span><span class="part4">Generating Revenue</span></h2>
 				<h1 class="flex-auto ma0 o-100 f2 f-subheadline-m f-headline-l fs-14vmin fs-12vmax ts1-dark-gray">
-					<span>Start. Run. Grow.</span>
+					<span class="dn db-ns db-m db-l">Start. Run. Grow.</span>
+					<span class="db dn-ns dn-m dn-l">Start</span>
+					<span class="db dn-ns dn-m dn-l">Run</span>
+					<span class="db dn-ns dn-m dn-l">Grow</span>
 				</h1>
-				<h3 class="flex-auto f5 f2-l fw3 fs-8vmin fs-5vmax lh-8vh">
-					<span>Your online business</span>
+				<h3 class="flex-auto fs-8vmin fs-5vmax lh-8vh ">
+					<span class="fw3">&hellip;Your Online Business</span>
 				</h3>
 			</div>
 		</header><!-- fl w-100 -->
@@ -509,27 +547,22 @@ https://caniuse.com/?search=position%3Asticky
 				<hr class="bt bb b--black-10 mb5" />
 				<main class="serif lh-copy f4">
 					<!-- InstantWebapp is a product developed -->
-					<p>Developed to help entreprenures&nbsp;ship – no&nbsp;configuration, no&nbsp;meetings: just&nbsp;launch!
-					</p>
-					<p>A "bare-bones" webapp can be ready for a fixed-price deposit. Following an initial&nbsp;consultation we
-						will track your priorities, so you'll always know what to&nbsp;expect.</p>
+					<p>Developed to help entreprenures&nbsp;<b>ship!</b></p>
+
+					<p>A "bare-bones" webapp can be released using a <i>fixed-price</i>&nbsp;model. Following an initial&nbsp;consultation we will track your priorities, so you know what to&nbsp;expect.</p>
+
 					<b>What do we need to launch?</b>
-					<p>Perfect is the enemy&nbsp;of&nbsp;good, complex&nbsp;the curse of
-						<i>real artists that ship!</i>
-					</p>
-					<p>There's no complicated procedure. Although, some help may be required to confirm key detail about
-						your&nbsp;idea. Each
-						<i>iteration</i>
-						serves to stress-test the business&nbsp;benefit for best ROI&nbsp;(return on investment).</p>
-					<!-- you're
-                         The schedule should focus on where you'll be confident
-                         you might not even need a domain&nbsp;
-                            name with each priority and for peace-of-mind,
-                            aims to scale your business idea risk-free. business&nbsp;
-                            grow the principle of how can X with basic content and add to your venture,
-                            with y This x helps you focus on gathering your thoughts and to avoid repetative meetings,
-                            complicated presentations and x. business value compatability: to work on your customer's devices
-                         is tested for substance focus -->
+					<!-- <p>Perfect is the enemy&nbsp;of&nbsp;good.</p> -->
+					<p>Just confirm the key details about your initial&nbsp;idea, then, we can stress-test each <i>iteration</i> to earn you the best ROI&nbsp;(return on investment).</p>
+					<!--
+						The schedule should focus on where you'll be confident
+						you might not even need a domain&nbsp;
+							name with each priority and for peace-of-mind,
+							aims to scale your business idea risk-free. business&nbsp;
+							grow the principle of how can X with basic content and add to your venture,
+							with y This x helps you focus on gathering your thoughts and to avoid repetative meetings,
+							complicated presentations and x. business value compatability: to work on your customer's devices
+						is tested for substance focus -->
 					<p>Boom.</p>
 				</main>
 			</article>
@@ -554,14 +587,16 @@ https://caniuse.com/?search=position%3Asticky
 				</header>
 				<hr class="bt bb b--black-10 mb5" />
 				<main class="serif lh-copy f4">
-					<p>Why don't agencies write your&nbsp;content from the very&nbsp;beginning?</p>
-					<p>Writing is&nbsp;hard.
-					</p>
-					<p>To focus entirely on your customer needs, you should consider a <i>content&nbsp;strategy</i>.Effective,
-						does&nbsp;not need to be&nbsp;complicated.</p>
-					<b>Want to develop a more comprehensive SEO&nbsp;strategy?</b>
-					<p>As part of the process, we can develop content that will continue to be found on search engines. Then we
-						can fine-tune things to make sure it's acted upon by your&nbsp;audience.</p>
+
+					<p><b>Writing is&nbsp;hard.</b></p>
+					<p>That's why agencies don't usually write your&nbsp;content from the beginning and simply sell blank&nbsp;templates.</p>
+
+					<p>With this platform, <i>Content&nbsp;Strategy</i> comes as standard.</p>
+
+					<!-- <p>Effective, does&nbsp;not need to be&nbsp;complicated!</p> -->
+
+					<p><b>Want to develop a more comprehensive SEO&nbsp;strategy?</b></p>
+					If you want to focus entirely on your customer needs, we can develop content that will continue to be found on search engines. Then fine-tune things to make sure it's acted&nbsp;upon.</p>
 					<p>Perfect.</p>
 				</main>
 			</article>
@@ -604,9 +639,7 @@ https://caniuse.com/?search=position%3Asticky
 					</p>
 					<b>Prefer a brand of&nbsp;distinction?</b>
 					<p>For&nbsp;more granular control, <i>Graphic&nbsp;Design Consultancy</i>&nbsp;could be the way to go.</p>
-					<p>You&nbsp;can choose to add this, anytime – for as long as you need. This&nbsp;will always be a
-						fixed&nbsp;day&#8209;rate.
-					</p>
+					<p>You&nbsp;can choose to add this – for as long as you need, and&nbsp;it will always be a fixed&nbsp;rate.</p>
 					<p>Easy.</p>
 					<!--p>The perception of your brand Identity Package with</p-->
 				</main>
@@ -638,21 +671,16 @@ https://caniuse.com/?search=position%3Asticky
 				</header>
 				<hr class="bt bb b--black-10 mb5 " />
 				<main class="serif lh-copy f4 ">
-					<p>Business without borders.</p>
-					<p>Customers from the European Union
-						<!-- and beyond --> are open minded about where their suppliers are&nbsp;based.
+					<p><b>Business without borders!</b></p>
+					<p>Customers can be very specific about where their suppliers are&nbsp;based.
 						<!-- Why miss out on&nbsp;potential by restricting yourself to only one&nbsp;geography? -->
 					</p>
-					<p>Find common ground with your target market by using <i>content&nbsp;translation</i>&nbsp;and
-						<!-- auto&#8209;re -->direct visitors to the correct&nbsp;language pages based on their&nbsp;browser.</p>
-					<b>Need advanced content writing&nbsp;
-						services?</b>
+					<p>Find common ground with your target market by using <i>translation</i>&nbsp;and <!-- auto&#8209;re -->direct visitors to the correct&nbsp;language pages based on their&nbsp;browser.</p>
+					<b>Need advanced content writing&nbsp;services?</b>
 					<p>To maxise cultural relevance,
 						<a href="https://inspiredlabs.co.uk " class="link pointer charcoal dim underline transition ">Inspired
-							Labs</a>&nbsp;offers fixed&#8209;rate </i>translation, localisation &amp; transcreation&nbsp;services</i>.
-						And, as a premium client we understand you want the flexability to translate your own ideas –&nbsp;no
-						problem. We have a lean, reliable&nbsp;CMS ready to fit into your choice of&nbsp;workflow.
-					</p>
+							Labs</a>&nbsp;offers fixed&#8209;rate <i>localisation &amp; transcreation</i>&nbsp;services.</p>
+							<p>As a premium client, we understand you want the flexability to write your own ideas –&nbsp;no problem. We have a lean, reliable&nbsp;CMS ready to fit into your choice of&nbsp;workflow.</p>
 					<!-- <p>Carte blanche!</p>-->
 					<!-- <p>cordon bleu</p>-->
 					<!-- <p>Piece de résistance</p>-->
@@ -686,15 +714,16 @@ https://caniuse.com/?search=position%3Asticky
 				<main class="serif lh-copy f4 ">
 					<p>Everyone knows <i>data</i>&nbsp;is the most valuable&nbsp;asset.</p>
 					<!-- <p>What&nbsp;is the most valuable asset&nbsp;today? <b>Data</b>.</p>-->
-					<p>Individuals&nbsp;appreciate the benefits of modern ways of&nbsp;working, but often, those same people don't
-						know how to unlock the value of thier own&nbsp;data!
+
+					<p><b>Do you know how to unlock the value of your business&nbsp;data?</b></p>
 						<!-- Profits are lost when they continue unable to benefit from thier own data. -->
-					</p>
 					<p>
-						<!-- For a modern business,  --><i>Information&nbsp;Architecture</i>&nbsp;is a powerful tool to help
-						businesses release&nbsp;profit.</p>
-					<b>Want to invest in Information&nbsp;Architecture?</b>
-					<p>Planning, and small changes can unlock benefits that were invisible beforehand.
+						<!-- For a modern business,  --><i>Information&nbsp;Architecture</i>&nbsp;is a powerful tool to help release&nbsp;profit.</p>
+
+
+
+					<p>Investing here can be as easy as collecting and organising data you already possess to quickly unlock benefits that were invisible beforehand!</p>
+					<p>
 						<a href="https://inspiredlabs.co.uk " class="link pointer white-80 dim underline transition ">Book a
 							consultation</a> <!-- if you want -->to immediately boost your&nbsp;productivity.
 					</p>
