@@ -1,13 +1,55 @@
-<!doctype html>
 <html lang="en" class="system overflow-y-auto smooth-scroll">
 
 <head>
 	<meta charset="utf-8">
-	<title>▶InstantWebapp | Web design for a world of apps</title><!--  | A design service for boutique businesses -->
+	<!-- non-breaking-hyphen: &#8209; -->
+	<title>▶InstantWebapp | Web design for a world of apps</title><!-- &#9658; | A design service for boutique businesses -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--link rel="stylesheet" type="text/css" href="./css/tmp.css"-->
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/tachyon.shower.css">
 
+<style>
+.jetblack { color: #1a1a1a; }
+.bg-jetblack { background-color: #1a1a1a; }
+.b--jetblack { border-color: #1a1a1a; }
+
+.hover-jetblack:hover,
+.hover-jetblack:focus { color: #1a1a1a; }
+
+.hover-bg-jetblack:hover,
+.hover-bg-jetblack:focus { background-color: #1a1a1a; }
+</style>
+	<style>
+	::selection {background: #FF6D00}
+	::-moz-selection {background: #FF6D00}
+	</style>
+	<style>
+	.min-vh-50 {
+		min-height: 50vh;
+
+	}
+
+	@media screen and (min-width: 30em) {
+		.min-vh-50-ns {
+			min-height: 50vh;
+
+		}
+	}
+
+	@media screen and (min-width: 30em) and (max-width: 60em) {
+		.min-vh-50-m {
+			min-height: 50vh;
+
+		}
+	}
+
+	@media screen and (min-width: 60em) {
+		.min-vh-50-l {
+			min-height: 50vh;
+
+		}
+	}
+	</style>
 	<style>
 		#scrollSpy a,
 		li {
@@ -275,6 +317,56 @@ https://caniuse.com/?search=position%3Asticky
 		}
 	</style>
 
+	<style>
+	/* Cycle inspiration: https://codepen.io/lardnicus/pen/dPwRzq */
+	@-webkit-keyframes colours {
+		0% {background-color: var(--electric-lime)}
+		1% {background-color: var(--soccorso)}
+		8% {background-color: var(--mandarino)}
+		16% {background-color: var(--pumpkin)}
+		24% {background-color: var(--raspberry)}
+		32% {background-color: var(--grape)}
+		40% {background-color: var(--plum)}
+		48% {background-color: var(--prussia)}
+
+		64% {background-color: var(--egyptian)}
+
+		80% {background-color: var(--cobalt)}
+		88% {background-color: var(--meadow)}
+		96% {background-color: var(--caribbean)}
+		100% {background-color: var(--electric-lime)}
+	}
+	@-moz-keyframes colours {
+		0% {background-color: var(--electric-lime)}
+		1% {background-color: var(--soccorso)}
+		8% {background-color: var(--mandarino)}
+		16% {background-color: var(--pumpkin)}
+		24% {background-color: var(--raspberry)}
+		32% {background-color: var(--grape)}
+		40% {background-color: var(--plum)}
+		48% {background-color: var(--prussia)}
+
+		64% {background-color: var(--egyptian)}
+
+		80% {background-color: var(--cobalt)}
+		88% {background-color: var(--meadow)}
+		96% {background-color: var(--caribbean)}
+		100% {background-color: var(--electric-lime)}
+	}
+	.bg-cycle {
+			-webkit-animation-direction: normal;
+			-webkit-animation-duration: 48s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-name: colours;
+			-webkit-animation-timing-function: ease;
+			-moz-animation-direction: normal;
+			-moz-animation-duration: 48s;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-name: colours;
+			-moz-animation-timing-function: ease;
+	}
+	</style>
+
 	<svg class="dn">
 		<defs>
 			<g id="instantwebapp">
@@ -302,7 +394,7 @@ https://caniuse.com/?search=position%3Asticky
 		<nav class="
 			flex justify-between pv3
 			mr-auto ml-auto
-			ph4 ph2-ns ph4-m ph6-l
+			ph2 ph2-ns ph4-m ph6-l
 			">
 			<a class="link no-underline white flex items-center" href="#home">
 				<svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp">
@@ -311,21 +403,21 @@ https://caniuse.com/?search=position%3Asticky
 				<span class="dn dn-ns dib-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
 			</a>
 
-			<!--ul id="scrollSpy" class="pa0 ma0 list flex-grow flex items-center dn dn-ns dib-m dib-l">
+			<ul id="scrollSpy" class="pa0 ma0 list flex-grow flex items-center dn dn-ns dib-m dib-l">
+				<li>
+					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#about">About</a>
+				</li>
 				<li>
 					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#design">Design</a>
 				</li>
 				<li>
 					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#features">Features</a>
 				</li>
-				<li>
-					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#reviews">Reviews</a>
-				</li>
-			</ul-->
+			</ul>
 
 			<div class="flex items-center">
 				<!-- bg-light-silver -->
-				<a class="f7 f6-ns link dib dib fw8 hover-cobalt white bg-cobalt grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2 pointer" href="#contact">Contact
+				<a class="f7 f6-ns link dib dib fw8 hover-cobalt white bg-cobalt grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2 pointer" href="#start">Start
 					<!-- Buy<span class="dn dn-ns dn-m dib-l ">&nbsp;Now</span> -->
 				</a>
 			</div>
@@ -340,77 +432,16 @@ https://caniuse.com/?search=position%3Asticky
 
 
 
-	<!-- <section class="w-100 flex flex-row-ns flex-column bg-cobalt white" id="cobalt">
-		cobalt
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-meadow white" id="meadow">
-		meadow
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-caribbean white" id="caribbean">
-		caribbean
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-electric-lime white" id="electric-lime">
-		electric-lime
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-soccorso white" id="soccorso">
-		soccorso
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-mandarino white" id="mandarino">
-		mandarino
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-pumpkin white" id="pumpkin">
-		pumpkin
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-mexicano white" id="mexicano">
-		mexicano
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-raspberry white" id="raspberry">
-		raspberry
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-grape white" id="grape">
-		grape
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-prussia white" id="prussia">
-		prussia
-	</section>
-	<section class="w-100 flex flex-row-ns flex-column bg-egyptian white" id="egyptian">
-		egyptian
-	</section> -->
-
-	<!--
-		InstantWebapp is a Product/Service Hybrid designed to:
-	- Generate Revenue from your own branded mobile app
-	- Get you seen on search engines
-	- Control the look-and-feel of your app
-
-	- Designed to prioritise what is important to you:
-		- price lists
-		- contact forms
-		- written content to spread your idea
-		- Premium, Granular Control
-	- Fixed price components for controlling costs
-	- just concentrate on running your business!
 
 
-	Explain the benefits:
-	- Digital Asset Management
-		- CMS
-		- x
-	- Increased Visibility
-		- SEO
-		- get more likes &amp; shares
-		- bring your online efforts into one place
-	- Bespoke Mobile App Design
-		- control the
-	- Generate Revenue
--->
-	<section class="w-100 flex flex-row-ns flex-column bg-cobalt white" id="home">
+
+	<section class="w-100 flex flex-row-ns flex-column bg-cobalt bg-cycle white" id="home">
 		<header class="flex vh-100 w-100
 			mr-auto ml-auto
 			ph4 ph2-ns ph4-m ph6-l
 			">
 		<div class="flex flex-column flex-grow-1 mt6">
-			<h2 class="flex-auto fs-8vmin fs-5vmax  lh-8vh fw2"><span class="part1">Digital&thinsp;Asset&thinsp;Management</span><span class="part2">Better SEO Visibility</span><span class="part3">Strategic Delivery</span><span class="part4">Generating Revenue</span></h2>
+			<h2 class="flex-auto fs-8vmin fs-5vmax lh-8vh fw2"><span class="part1">Digital&thinsp;Asset&thinsp;Management</span><span class="part2">Better SEO Visibility</span><span class="part3">Strategic Delivery</span><span class="part4">Generating Revenue</span></h2>
 				<h1 class="flex-auto ma0 o-100 f2 f-subheadline-m f-headline-l fs-14vmin fs-12vmax ts1-dark-gray">
 					<span class="dn db-ns db-m db-l">Start. Run. Grow.</span>
 					<span class="db dn-ns dn-m dn-l">Start</span>
@@ -418,214 +449,222 @@ https://caniuse.com/?search=position%3Asticky
 					<span class="db dn-ns dn-m dn-l">Grow</span>
 				</h1>
 				<h3 class="flex-auto fs-8vmin fs-5vmax lh-8vh ">
-					<span class="fw3">&hellip;Your Online Business</span>
+					<!-- <span class="fw3">&hellip;Your Online Business</span> -->
+					<!-- <span class="fw3">A business from your&nbsp;own&nbsp;<b>app</b></span> -->
+					<span class="fw3">Your Online Business</span>
 				</h3>
 			</div>
 		</header><!-- fl w-100 -->
 	</section>
 
+<div id="about" class="bg-white" ><!-- bg-jetblack -->
+		<hr class="w-100 w-50-ns ma0 bn pt5 bg-meadow" >
 
-	<script>/*
-
-<section class="w-100 flex flex-row-ns flex-column bg-meadow" id="about">
-<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover" style="background-color:#383838;">
-</aside><!-- background:url({{ .Site.BaseURL }}images/IMG_3195.JPG) center; || profile.jpg -->
-<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
- <article class="ml-auto mr-auto measure ">
-	 <header class=" pv4 tc">
-		 <h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">About</h3>
-		 <h4 class="f5 fw4 lh-title mt0 ttu tracked">Product/Service&nbsp;Outline</h4>
-	 </header>
-	 <hr class="bt bb b--black-10 mb5" />
-	 <main class="serif lh-copy f4">
-		 <!-- DESCRIPTION LIST: //code-boxx.com/html-description-list/ -->
-		 <!-- <span class="ttn tracked-none"><b>Instant</b>Webapp</span> -->
-		 <dl class="w-100 debug">
-			 <dt class="b">
-				 <dfn>What is InstantWebapp?</dfn>
-			 </dt>
-			 <dd class="ml0 ">
-				 <h1 class="f4">A product/service hybrid for lean entreprenures</h1>
-				 <p class="">The <b>product</b> is a modular system based on proven formula to focus online business activity.</p>
-				 <p>The <b>service</b> aims to understand and correctly serve your unique business niche.</p>
-				 <p class=""><b>Lean entrepreneurs</b> look for ways to make better decisions whilst executing on improving their idea.</p>
-				 allocate their resources more efficiency
-				 it is about testing and learning faster than your competitors
-				 BUILD your product or service
-				 MEASURE your customer reaction and other metrics
-				 LEARN about idea validation. and HOW you should adapt.
-
-				 What to look out for:
-				 - a clear signal customers are getting their a product/market fit.
-
-				 What are your TWO or THREE key assumptions that can determine your success?
-				 - how to test these assumptions quickly and cheaply?
-				 - build a minimum viable product
-					 - it has test criteria that you're looking to prove/enhance
-					 - an MVP needs critical features to get test data from your potential market (this must equate to meaningful results).
-					 How to measure:
-					 - you need to be aware that you're looking to avoid bias.
-					 - c
-			 </dd>
-
-			 <dt class="b">
-				 <dfn>Who invented InstantWebapp?</dfn>
-			 </dt>
-			 <dd class="ml0 ">
-				 <h1 class="f4"><a href="https://twitter.com/inspiredlabs">Scott Phillips</a>, of <a href="https://inspiredlabs.co.uk">InspiredLabs</a>.</h1>
-				 <p>The right technology requires knowledgable, experienced developers. And, I know first-hand how problematic working with software, developers and new-ideas can be.</p>
-			 </dd>
-
-			 <dt class="b">
-				 <dfn>Why was InstantWebapp created?</dfn>
-			 </dt>
-			 <dd class="ml0 ">
-				 <h1 class="f4">To deliver custom design work on mobile.</h1>
-				 <p class="">My niche is designing high-performance business assets.
-					 <!-- such as logo designs, a and written content --> Through my work, I noticed there are <i>few</i> limited patterns that influence success. Over a ten-year period, I developed a design-system to expediate pattern-fitting
-					 <!-- – available to you -->.</p>
-			 </dd>
-
-			 <dt class="b">
-				 <dfn>What are alternatives to InstantWebapp?</dfn>
-			 </dt>
-			 <dd class="ml0 ">
-				 <h1 class="f4">There are hundreds of <a href="https://alternativeto.net/browse/search/?q=free%20Website%20builder&platform=online">alternative products</a>, so don't limit yourself to Wordpress or Squarespace</h1>
-				 <p class="">If you don't want to start with an online product and you need a high-degree of control – you will need an agency or freelancer. They will be able to help avoid common pitfalls such as diciphering <a href="https://duckduckgo.com/?q=web+design+terminology+for+beginners">terminology</a>, having to solve technical problems and writing code.</p>
-			 </dd>
-
-			 <dt class="b">
-				 <dfn>Is InstantWebapp better than a DIY solution?</dfn>
-			 </dt>
-			 <dd class="ml0 ">
-				 <h1 class="f4">The right technology requires knowledgable, expereienced developers.</h1>
-				 <p class="">This product has been refined using proven criteria with trial-and-error to produce better business outcomes.</p>
-				 <p class="">If you have the time and resources to clear the pitfalls – then DIY could be the way to go.</p>
-			 </dd>
-
-
-
-			 <dt class="b">
-				 <dfn>Is InstantWebapp right for me?</dfn>
-			 </dt>
-			 <dd class="ml0 ">
-				 <h1 class="f4">Lean entreprenures <i>are</i> a good-fit</h1>
-				 <p class="">Customers who bought InstantWebapp tend to focus on <i>good&nbsp;value</i> investments. Several of them have repeat purchases.</p>
-			 </dd>
-
-			 <dt class="b">
-				 <!--dfn>Are there InstantWebapp alternatives?</dfn-->
-				 <dfn>Can you suggest product alternatives?</dfn>
-			 </dt>
-			 <dd class="ml0 ">
-				 <h1 class="f4">In some ways this is an<a href="https://alternativeto.net/software/instantwebapp/">alternative to</a> Squarespace, Wordpress &amp; other online platforms.</h1>
-				 </h1>
-				 <p class="">
-					 It is not possible to have an all-in-one solution that fits every business. By their nature, an organisation will serve a unique niche. This is especially true, if you're looking to achive better future earning results.
-				 </p>
-
-			 </dd>
-		 </dl>
-		 <p>Word.</p>
-	 </main>
- </article>
-
-</div>
-
-</section>
-*/</script>
-
-
-
-	<section class="w-100 flex flex-row-ns flex-column bg-caribbean" id="launch">
+	<section class="w-100 flex flex-row-ns flex-column bg-meadow" >
 		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">About</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked">Award Winning Origins</h4>
+				</header>
+				<hr class="bt bb b--black-10 mb5" />
+				<div class="serif lh-copy f4 ">
+					<!-- DESCRIPTION LIST: //code-boxx.com/html-description-list/ -->
+					<dl class="w-100 ">
+						<dt class="b">
+						What is <dfn>InstantWebapp</dfn>?
+						</dt>
+						<dd class="ml0 ">
+							<h1 class="f4"><i>InstantWebapp</i> is a launch-pad for bespoke <i>design &amp; development</i> services</h1>
+							<p class="">When building an online&nbsp;business, a <b>Lean&nbsp;Entrepreneur</b> has to compromise between: <i>an expensive agency</i> or <i>adapt an existing solution</i> (such as
+							<a class="link pointer black o-60 hover-o-100 underline transition " href="https://alternativeto.net/software/instantwebapp/about/">Wordpress, Squarespace or Wix</a>).
+						</p>
+
+						<blockquote class="ma0 pl0 ">&hellip;I developed <i>InstantWebapp</i> because I faced a similar choice – <cite>Scott&nbsp;Phillips, <a class="link pointer black o-60 hover-o-100 underline transition " href="https://inspiredlabs.co.uk/#email">InspiredLabs</a></cite></blockquote>
+					</dd>
+					<!-- D+SaaS -->
+					<dd class="ml0 "><h2 class="f4"><i>InstantWebapp</i> is SaaS by <a class="link pointer black o-60 hover-o-100 underline transition " href="https://inspiredlabs.co.uk/museums-heritage-awards-winner/">Award&nbsp;Winning</a> design contributor, Scott&nbsp;Phillips.<!-- to help satisfy your unique niche and attain excellence in the marketplace via your customer's&nbsp;mobile.--></h2></dd>
+					<!-- Mallinson's: https://www.mallinsonae.com/cairo-childrens-museum -->
+				</dl>
+				</div>
+			</article>
+			<!-- /measure -->
+		</div>
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/2012-museum-heritage-award-winner.jpg) center;">
+		</aside>
+	</section>
+	<section class="w-100 flex flex-row-ns flex-column bg-meadow">
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/startup-next.png) center;">
+		</aside>
+	<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
+		<a class="pointer transition link" href="https://www.facebook.com/vaultarch/">
+			<article class="w-100 w-100-ns w-two-thirds-m w-two-thirds-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+				<!-- mw5 mw2-ns mw5-m mw5-l -->
+			<img src="{{ .Site.BaseURL }}images/vaultarch-photo-thumb-02.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="Andrew&nbsp;Buchanan">
+			<blockquote class="ma0 pv3 pb0">
+				<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+					Scott displayed energy,&nbsp;resource&shy;fulness <!-- He has good networking skills  -->&amp; an eye for the commercial factor
+
+				</span>
+				<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+					- <span class="b">Andrew&nbsp;Buchanan,</span> Vaultarch, Hong&nbsp;Kong</cite>
+				</blockquote>
+			</article>
+		</a>
+		</div>
+	</section>
+	<section class="w-100 flex flex-row-ns flex-column bg-meadow">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
+			<a class="pointer transition link" href="http://www.sebsmith.com/">
+				<!-- CONFIRM URL: https://uk.linkedin.com/in/urbanaut -->
+				<article class="w-100 w-100-ns w-two-thirds-m w-two-thirds-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+					<!-- mw5 mw2-ns mw5-m mw5-l -->
+					<img src="{{ .Site.BaseURL }}images/sebsmith.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="Seb&nbsp;Smith, Fashion Photographer, NYC"><!-- https://codepen.io/inspiredlabs/pen/BgYooY -->
+					<blockquote class="ma0 pv3 pb0">
+						<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+							I trust&nbsp;Scott's judgement to perform complex&nbsp;revisions over shoots for important&nbsp;clients</span>
+						<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+							- <span class="b">Seb&nbsp;Smith</span> Fashion Photographer, NYC</cite>
+						</blockquote>
+					</article>
+				</a>
+			</div>
+			<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/seb-smith-photo-00.jpg) center;">
+			</aside>
+		</section>
+</div><!-- /about -->
+<div id="design" class="bg-jetblack" >
+	<hr class="w-100 w-50-ns ma0 bn pt5 bg-caribbean" >
+	<section class="w-100 flex flex-row-ns flex-column bg-caribbean">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc ">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Design</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Within reach</h4>
+					</h4>
+				</header>
+				<hr class="bt bb b--black-10 mb5"/>
+				<div class="serif lh-copy f4">
+					<!-- <p>About award winning origins.</p> -->
+					<p><i>InstantWebapp</i> helps tailor business for&nbsp;success.</p>
+					<p>Created with the web's simplest building blocks: HTML &amp; CSS: <i>InstantWebapp</i> can derisk delivery onto your customer's favourite&nbsp;devices and&nbsp;beyond.</p>
+
+					<!-- For Tech Entreprenurs: -->
+					<p>Intended for serious entreprenurs that want to deliver something technically polished, <i>InstantWebapp</i> can jumpstart multi&#8209;channel, multi&#8209;device&nbsp;development.</p>
+
+					<!-- For SME:
+					<p>Intended for entreprenurs that want to punch&#8209;above&#8209;thier&#8209;weight, <i>InstantWebapp</i> is a cost&#8209;effective way to develop your mobile&nbsp;app or business&nbsp;website.</p>
+					-->
+
+					<p>With a decade of <a href="#feedback" class="link pointer black o-60 hover-o-100 underline transition ">feedback</a> from emperical&nbsp;testing, <i>InstantWebapp</i> is a loose design-system to leverage other integrations as a valuable part of the&nbsp;frontend.</p>
+					<p>Nice.</p>
+				</div>
+			</article>
+			<!-- /measure -->
+		</div>
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
+			<div class="sticky w-100 top-0 pt4 mb5">
+				<!-- pt4 -->
+				<div class="min-vh-50 h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-pablowoodward-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="https://pablowoodward.netlify.app/" target="_blank">PabloWoodward.com</a>
+			</div>
+		</aside>
+	</section>
+</div><!-- /design -->
+
+<div id="features" class="bg-jetblack" >
+	<hr class="w-100 w-50-ns ma0 bn pt5 bg-electric-lime" >
+	<section class="w-100 flex flex-row-ns flex-column bg-electric-lime" id="visibility">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1  ">
 			<article class="ml-auto mr-auto measure ">
 				<header class=" pv4 tc">
 					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Launch</h3>
 					<h4 class="f5 fw4 lh-title mt0 ttu tracked">Fast in every dimension</h4>
 				</header>
 				<hr class="bt bb b--black-10 mb5" />
-				<main class="serif lh-copy f4">
+				<div class="serif lh-copy f4 ">
 					<!-- InstantWebapp is a product developed -->
-					<p>Developed to help entreprenures&nbsp;<b>ship!</b></p>
+					<p><i>InstantWebapp</i> is for entreprenures that&nbsp;<b>ship!</b></p>
 
-					<p>A "bare-bones" webapp can be released using a <i>fixed-price</i>&nbsp;model. Following an initial&nbsp;consultation we will track your priorities, so you know what to&nbsp;expect.</p>
+					<p>A "bare-bones" project can be released immediately upon agreeing a <i>fixed-price</i>&nbsp;schedule. This comes with everything you need to track your priorities, so you know what to&nbsp;expect<!-- , every step of the&nbsp;way -->.</p>
 
 					<b>What do we need to launch?</b>
 					<!-- <p>Perfect is the enemy&nbsp;of&nbsp;good.</p> -->
-					<p>Just confirm the key details about your initial&nbsp;idea, then, we can stress-test each <i>iteration</i> to earn you the best ROI&nbsp;(return on investment).</p>
-					<!--
-						The schedule should focus on where you'll be confident
-						you might not even need a domain&nbsp;
-							name with each priority and for peace-of-mind,
-							aims to scale your business idea risk-free. business&nbsp;
-							grow the principle of how can X with basic content and add to your venture,
-							with y This x helps you focus on gathering your thoughts and to avoid repetative meetings,
-							complicated presentations and x. business value compatability: to work on your customer's devices
-						is tested for substance focus -->
+					<p><a class="link pointer black o-60 hover-o-100 underline transition " href="#start">Start</a> by entering a few key details and following an initial&nbsp;consultation, the rest is&nbsp;automatic.</p>
 					<p>Boom.</p>
-				</main>
+				</div>
 			</article>
 			<!-- /measure -->
 		</div>
-		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<div class="sticky w-100 top-0 pt5 mb5">
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
+			<div class="sticky w-100 top-0 pt4 mb5">
 				<!-- pt4 -->
-				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-pablowoodward-01.jpg) center;">
+				<div class="min-vh-50 h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-tdb-01.jpg) center;">
 				</div>
-				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://pablowoodward.netlify.app/" target="_blank">PabloWoodward.com</a>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="https://thediscobunny.com/" target="_blank">TheDiscoBunny.com</a>
+				<!-- pv2 pv3-ns pv4-m pv4-l -->
 			</div>
+
 		</aside>
 	</section>
 
-	<section class="w-100 flex flex-row-ns flex-column bg-electric-lime" id="visibility">
-		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1  ">
+	<!-- <hr class="w-100 w-50-ns ma0 bn pt5 bg-electric-lime" > -->
+
+	<section class="w-100 flex flex-row-ns flex-column bg-soccorso">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
 			<article class="ml-auto mr-auto measure ">
-				<header class=" pv4 tc">
-					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Visibility</h3>
-					<h4 class="f5 fw4 lh-title mt0 ttu tracked">Get seen on search engines</h4>
+				<header class=" pv4 tc ">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Visibility</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Seen beyond search engines</h4>
+					</h4>
 				</header>
-				<hr class="bt bb b--black-10 mb5" />
-				<main class="serif lh-copy f4">
-
+				<hr class="bt bb b--black-10 mb5"/>
+				<div class="serif lh-copy f4">
 					<p><b>Writing is&nbsp;hard.</b></p>
-					<p>That's why agencies don't usually write your&nbsp;content from the beginning and simply sell blank&nbsp;templates.</p>
-
-					<p>With this platform, <i>Content&nbsp;Strategy</i> comes as standard.</p>
+					<p>That's why agencies don't write your&nbsp;content, but sell blank&nbsp;templates.</p>
+					<!-- joined-up thinking -->
+					<p><i>Content&nbsp;Strategy</i> comes as&nbsp;standard to support your cross&#8209;platform&nbsp;campaign through video or&nbsp;print.</p>
 
 					<!-- <p>Effective, does&nbsp;not need to be&nbsp;complicated!</p> -->
+					<p><b>Want better SEO visibility?</b></p>
+					<p>If you want to focus entirely on your customer needs, you might need a more comprehensive writing&nbsp;strategy. For example, by publishing regularly you can <i>continue</i> to get found via search&nbsp;engines.</p>
 
-					<p><b>Want to develop a more comprehensive SEO&nbsp;strategy?</b></p>
-					If you want to focus entirely on your customer needs, we can develop content that will continue to be found on search engines. Then fine-tune things to make sure it's acted&nbsp;upon.</p>
 					<p>Perfect.</p>
-				</main>
-			</article>
-			<!-- /measure -->
-		</div>
-		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<div class="sticky w-100 top-0 pt5 mb5">
-				<!-- pt4 -->
-				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-tdb-01.jpg) center;">
 				</div>
-				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white silver pv2 ph3 db mb3 link" href="https://thediscobunny.com/" target="_blank">TheDiscoBunny.com</a>
+			</article>
+		</div>
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
+			<div class="sticky w-100 top-0 pt4 mb5">
+				<!-- pt4 -->
+				<div class="min-vh-50 h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-multitool-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="https://inspiredlabs.co.uk/alteredfeast.co.uk/" target="_blank">Tom&nbsp;Clutterbuck</a>
 			</div>
-
+			<!-- https://twitter.com/TomClutterbuck -->
 		</aside>
-	</section>
 
-	<section class="w-100 bg-soccorso pv3 " id="soccorso">
-		<article class="mw5 center bg-white pa3 pa4-ns mv3 tc br4 shadow-5-hover transition" id="profile">
-			<!-- br3 ba b--black-10 -->
-			<img src="{{ .Site.BaseURL }}images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
-			<h1 class="f3 mb2">Scott Phillips</h1>
-			<h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
-			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Inspired Labs</a>
-			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://github.com/inspiredlabs/" target="_blank">Github</a>
-			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://twitter.com/inspiredlabs/" target="_blank">Twitter</a>
-		</article>
+		<!-- <aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/IMG_3195.JPG) center; || profile.jpg">
+		</aside> -->
 	</section>
+	<section class="w-100 flex flex-row-ns flex-column bg-soccorso">
 
-	<section class="w-100 flex flex-row-ns flex-column bg-mandarino" id="identity">
+		<div class="pa4 w-100 w-third-ns pa2-ns pv4-ns  flex-grow-1">
+			<a class="pointer transition link" href="https://inspiredlabs.co.uk/alteredfeast.co.uk">
+				<article class="mw5 mw2-ns mw5-m mw5-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+					<img src="{{ .Site.BaseURL }}images/alteredfeast.png" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="Tom&nbsp;Clutterbuck">
+					<blockquote class="ma0 pv3 pb0">
+						<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+							Scott made me a shiny app that created the perfect illusion that I knew what I was doing!
+						</span>
+						<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+							- <span class="b">Tom&nbsp;Clutterbuck,</span> Comedian &amp;&nbsp;Entrepreneur, South East,&nbsp;UK</cite>
+						</blockquote>
+					</article>
+				</a>
+			</div>
+	</section>
+	<section class="w-100 flex flex-row-ns flex-column bg-mandarino">
 		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
 			<article class="ml-auto mr-auto measure ">
 				<header class=" pv4 tc">
@@ -633,16 +672,14 @@ https://caniuse.com/?search=position%3Asticky
 					<h4 class="f5 fw4 lh-title mt0 ttu tracked">Create the right first impression</h4>
 				</header>
 				<hr class="bt bb b--black-10 mb5" />
-				<main class="serif lh-copy f4">
-					<p>The&nbsp;right look-and-feel is essential for your aspiring brand. Give your new venture a distinctive logo
-						mark and <i>two</i>&nbsp;iterations of changes for peace&#8209;of&#8209;mind.
-					</p>
+				<div class="serif lh-copy f4 ">
+					<p>The&nbsp;right look&#8209;and&#8209;feel is essential for your aspiring brand, so choose a distinctive logomark with <i>two</i>&nbsp;iterations.</p>
 					<b>Prefer a brand of&nbsp;distinction?</b>
-					<p>For&nbsp;more granular control, <i>Graphic&nbsp;Design Consultancy</i>&nbsp;could be the way to go.</p>
-					<p>You&nbsp;can choose to add this – for as long as you need, and&nbsp;it will always be a fixed&nbsp;rate.</p>
+					<p>For peace&#8209;of&#8209;mind, <!-- and&nbsp;more granular control,  --> <i>Graphic&nbsp;Design&nbsp;Consultancy</i> could&nbsp;be the way&nbsp;to&nbsp;go.</p>
+					<p>You&nbsp;can choose to add this – for as long as you need at fixed&nbsp;rate.</p>
 					<p>Easy.</p>
 					<!--p>The perception of your brand Identity Package with</p-->
-				</main>
+				</div>
 			</article>
 			<!-- /measure -->
 		</div>
@@ -652,16 +689,56 @@ https://caniuse.com/?search=position%3Asticky
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#383838">
 			<div class="sticky w-80 w-50-ns w-two-thirds-m w-two-thirds-l top-2 center pt5 mb5">
 				<img class="" src="{{ .Site.BaseURL }}images/blurred.shadow.tandem.svg" />
-
-				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white silver pv2 ph3 db mb3 link" href="https://tandemfestival.com/" target="_blank">Tandem&nbsp;Festival</a>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="https://tandemfestival.com/" target="_blank">Tandem&nbsp;Festival</a>
 			</div>
 
 		</aside>
 	</section>
 
+	<section class="w-100 flex flex-row-ns flex-column bg-mandarino">
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/tandem-a3-poster.jpg) center;">
+		</aside>
+	<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
+		<a class="pointer transition link" href="https://tandemfestival.com/">
+			<article class="w-100 w-100-ns w-two-thirds-m w-two-thirds-l mw5-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+				<img src="{{ .Site.BaseURL }}images/nina-and-nico.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="nina-and-nico">
+				<blockquote class="ma0 pv3 pb0">
+					<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+						&hellip;he aced it</br>– that poster is so tasty!
+					</span>
+					<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+						- <span class="b">Niko&nbsp;O’&nbsp;Brian,</span> Musician &amp; Festival&nbsp;Entrepreneur, Oxford</cite>
+					</blockquote>
+				</article>
+			</a>
+		</div>
+	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-mandarino">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
+			<a class="pointer transition link" href="https://www.trustpilot.com/review/inspiredlabs.co.uk">
+				<article class="w-100 w-100-ns w-two-thirds-m w-two-thirds-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+					<!-- mw5 mw2-ns mw5-m mw5-l -->
+					<img src="{{ .Site.BaseURL }}images/lomas.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="David&nbsp;Lomas">
+					<blockquote class="ma0 pv3 pb0">
+						<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+							Scott&nbsp;listened &amp; came up with the perfect solution that&nbsp;works. I really can't ask for&nbsp;more!
+							<!-- Scott is easy to work with, taking the brief for my concept &amp; turning it into an impressive, workable solution. -->
+						</span>
+						<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+							- <span class="b">David&nbsp;Lomas,</span> Marketeer, Manchester&nbsp;UK</cite>
+						</blockquote>
+					</article>
+				</a>
+		</div>
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/instantwebapp.png) center;"></aside>
+	</section>
 
 
-	<section class="w-100 flex flex-row-ns flex-column bg-pumpkin" id="relevant">
+
+
+
+	<section class="w-100 flex flex-row-ns flex-column bg-pumpkin" id="relevance">
 		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1  ">
 			<article class="ml-auto mr-auto measure ">
 				<header class=" pv4 tc ">
@@ -670,97 +747,410 @@ https://caniuse.com/?search=position%3Asticky
 					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Multilingual content management</h4>
 				</header>
 				<hr class="bt bb b--black-10 mb5 " />
-				<main class="serif lh-copy f4 ">
+				<div class="serif lh-copy f4 ">
 					<p><b>Business without borders!</b></p>
 					<p>Customers can be very specific about where their suppliers are&nbsp;based.
 						<!-- Why miss out on&nbsp;potential by restricting yourself to only one&nbsp;geography? -->
 					</p>
-					<p>Find common ground with your target market by using <i>translation</i>&nbsp;and <!-- auto&#8209;re -->direct visitors to the correct&nbsp;language pages based on their&nbsp;browser.</p>
+					<p>Find common ground with your target market by using <i>translation</i>&nbsp;and <!-- auto&#8209;re -->direct visitors to the correct&nbsp;language pages based on their preference or&nbsp;browser.</p>
 					<b>Need advanced content writing&nbsp;services?</b>
-					<p>To maxise cultural relevance,
-						<a href="https://inspiredlabs.co.uk " class="link pointer charcoal dim underline transition ">Inspired
-							Labs</a>&nbsp;offers fixed&#8209;rate <i>localisation &amp; transcreation</i>&nbsp;services.</p>
-							<p>As a premium client, we understand you want the flexability to write your own ideas –&nbsp;no problem. We have a lean, reliable&nbsp;CMS ready to fit into your choice of&nbsp;workflow.</p>
+					<p>To maximise cultural relevance, <a class="link pointer black o-60 hover-o-100 underline transition " href="https://inspiredlabs.co.uk/#email">InspiredLabs</a>&nbsp;offers fixed&#8209;rate <i>localisation &amp; transcreation</i>&nbsp;services.</p>
+					<p>As a premium client, we understand you want the flexability to develop any idea –&nbsp;no problem. We have a lean, reliable&nbsp;CMS ready to fit your choice of&nbsp;workflow.</p>
 					<!-- <p>Carte blanche!</p>-->
 					<!-- <p>cordon bleu</p>-->
 					<!-- <p>Piece de résistance</p>-->
 					<!-- <p>Savvy</p>-->
 					<!-- <p>Sans-restriction!</p>-->
 					<p>Bravo.</p>
-				</main>
+				</div>
 			</article>
 		</div>
 
-		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<div class="sticky w-100 top-0 pt5 mb5">
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
+			<div class="sticky w-100 top-0 pt4 mb5">
 				<!-- pt4 -->
-				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-alessandroronca-01.jpg) center;">
+				<div class="min-vh-50 h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-alessandroronca-01.jpg) center;">
 				</div>
-				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="http://alessandroronca.it/" target="_blank">AlessandroRonca.IT</a>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="http://alessandroronca.it/" target="_blank">AlessandroRonca.IT</a>
 			</div>
 		</aside>
-
 	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-pumpkin">
+	<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/il-parco-dell-energia-rinnovabile-x2.jpg) center;">
+	</aside>
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
+			<a class="pointer transition link" href="https://uk.linkedin.com/in/urbanaut">
+				<article class="w-100 w-100-ns w-two-thirds-m w-two-thirds-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+					<!-- mw5 mw2-ns mw5-m mw5-l -->
+					<img src="{{ .Site.BaseURL }}images/alessandro-ronca.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="Alessandro&nbsp;Ronca">
+					<blockquote class="ma0 pv3 pb0">
+						<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+							<!-- Scott&nbsp;was hired to produce a series of custom&nbsp;webapps as a designer, programmer and&nbsp;writer. -->
+							&hellip;with his vision and analytical ability Scott contributed enormously &amp; intelligently to our Renewable Energy&nbsp;Park
+						</span>
+						<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+							- <span class="b">Alessandro&nbsp;Ronca,</span> Scientific Director, Umbria&nbsp;Italy</cite>
+						</blockquote>
+					</article>
+				</a>
+			</div>
+		</section>
 
 	<section class="w-100 flex flex-row-ns flex-column bg-raspberry white" id="structure">
 		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
 			<article class="ml-auto mr-auto measure ">
 				<header class=" pv4 tc ">
 					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Structure</h3>
-					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Organise&nbsp;business at an information&nbsp;level
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">
+						Organised&nbsp;at the information&nbsp;level
+						<!-- Organise&nbsp;business at an information&nbsp;level -->
 					</h4>
 				</header>
 				<hr class="bt bb b--white-80 mb5 " />
-				<main class="serif lh-copy f4 ">
+				<div class="serif lh-copy f4 ">
 					<p>Everyone knows <i>data</i>&nbsp;is the most valuable&nbsp;asset.</p>
 					<!-- <p>What&nbsp;is the most valuable asset&nbsp;today? <b>Data</b>.</p>-->
 
-					<p><b>Do you know how to unlock the value of your business&nbsp;data?</b></p>
+					<p><b>Do you know how to unlock the value of <i>your</i>&nbsp;data?</b></p>
 						<!-- Profits are lost when they continue unable to benefit from thier own data. -->
-					<p>
-						<!-- For a modern business,  --><i>Information&nbsp;Architecture</i>&nbsp;is a powerful tool to help release&nbsp;profit.</p>
+					<p><!-- For a modern business,  --><i>Information&nbsp;Architecture</i>&nbsp;is a powerful tool to help release&nbsp;profit. Whatever the scale of the campaign, <a class="link pointer white o-80 hover-o-100 underline transition " href="https://inspiredlabs.co.uk/#email" >InspiredLabs</a> can immediately boost your&nbsp;productivity.</p>
+					<p>Make an impact with information you already&nbsp;have.</p>
+					<!-- <a class="link pointer white o-80 hover-o-100 underline transition " href="https://duckduckgo.com/?q=information+architecture&iax=images&ia=images" >Information&nbsp;Architecture</a> -->
+					<!-- <i>email addresses and price lists</i> to complete <i>organisational restructures</i>  -->
+					<!-- <p><a class="link pointer white o-80 hover-o-100 underline transition " href="https://inspiredlabs.co.uk/#email" >Book a
+						consultation</a> to immediately boost your&nbsp;productivity.</p> -->
+					<!-- To really unlock unforseen&nbsp;benefits -->
+					<!-- <p>Impressive.</p> -->
+					<p>Ideal.</p>
 
-
-
-					<p>Investing here can be as easy as collecting and organising data you already possess to quickly unlock benefits that were invisible beforehand!</p>
-					<p>
-						<a href="https://inspiredlabs.co.uk " class="link pointer white-80 dim underline transition ">Book a
-							consultation</a> <!-- if you want -->to immediately boost your&nbsp;productivity.
-					</p>
-					<p>Impressive.</p>
-				</main>
+				</div>
 			</article>
 			<!-- /measure -->
 		</div>
 
-		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
-			<div class="sticky w-100 top-0 pt5 mb5">
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
+			<div class="sticky w-100 top-0 pt4 mb5">
 				<!-- pt4 -->
-				<div class="h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-per-01.jpg) center;">
+				<div class="min-vh-50 h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-per-01.jpg) center;">
 				</div>
-				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://umbria.netlify.app/" target="_blank">Sustability Research Center</a>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="https://umbria.netlify.app/" target="_blank">Sustability Research Center</a>
+			</div>
+		</aside>
+	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-raspberry white">
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/greekfoods-01.jpg) center;">
+		</aside>
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
+		<a class="pointer transition link" href="https://greekfoods.co.uk/">
+			<article class="w-100 w-100-ns w-two-thirds-m w-two-thirds-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+				<!-- mw5 mw2-ns mw5-m mw5-l -->
+				<img src="{{ .Site.BaseURL }}images/miliotis.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="Mel&nbsp;Miliotis">
+				<blockquote class="ma0 pv3 pb0">
+					<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+						I used to think apps were out of reach for small businesses like ours… especially tailored to our&nbsp;customers
+					</span>
+					<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+						- <span class="b">Mel&nbsp;Miliotis,</span> Gourmet&nbsp;Supplier, South East &amp; Central&nbsp;England</cite>
+					</blockquote>
+				</article>
+			</a>
+		</div>
+	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-plum white" id="unity">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc ">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Unity</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Clarity &amp; Cohesion</h4>
+					</h4>
+				</header>
+				<hr class="bt bb b--white-80 mb5"/>
+				<div class="serif lh-copy f4">
+					<p><i>InstantWebapp</i> is for when you need a fresh perspective, whilst honouring what's in use – but, cross-platform delivery can be even more&nbsp;powerful.</p>
+					<p><b>The true <i>Virtuoso</i> needs a platform.</b></p>
+					<p>From screen to print, social media to billboard: <i>InstantWebapp</i> can help you build a movement.
+						<!-- turns your idea into a&nbsp;movement -->
+						<!-- , or the next-big thing -->
+					</p><p>
+						Spread the value of your idea through jargon-free messaging, rich-visuals &amp; thoughtful&nbsp;interactions.</p>
+					<!-- even <i>Augmented&nbsp;Reality</i>.</p> -->
+					<p>Just don't limit your next campaign&hellip;</p>
+					<p>Inspire.</p>
+				</div>
+			</article>
+			<!-- /measure -->
+		</div>
+
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
+			<div class="sticky w-100 top-0 pt4 mb5">
+				<!-- pt4 -->
+				<div class="min-vh-50 h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-3-si.com-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="https://inspiredlabs.co.uk/3-si.com/" target="_blank">3Si, CRM solutions</a>
+			</div>
+		</aside>
+	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-plum">
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/marketing-material-01.jpg) center;"></aside>
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
+			<a class="pointer transition link" href="https://inspiredlabs.co.uk/3-si.com">
+				<article class="mw5 mw2-ns mw5-m mw5-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+					<img src="{{ .Site.BaseURL }}images/chris.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="Chris&nbsp;Sinclair, Director,&nbsp;3Si">
+
+					<!-- <img src="{{ .Site.BaseURL }}images/3-si.png" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="Chris&nbsp;Sinclair, Director,&nbsp;3Si" style="filter: drop-shadow(0px 0.125rem 0.125rem #ccc);"> -->
+
+					<blockquote class="ma0 pv3 pb0">
+						<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+						Scott fully understands&nbsp;design, how things&nbsp;flow&nbsp;&amp; the way the message is conveyed to the&nbsp;user</span>
+						<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+							- <span class="b">Chris&nbsp;Sinclair</span> Director,&nbsp;3Si</cite>
+						</blockquote>
+					</article>
+				</a>
+		</div>
+	</section>
+
+
+
+	<section class="w-100 flex flex-row-ns flex-column bg-prussia white" id="useful">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc ">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Useful</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Value productivity</h4>
+					</h4>
+				</header>
+				<hr class="bt bb b--white-80 mb5"/>
+				<div class="serif lh-copy f4">
+					<p>Your&nbsp;business-goals are destined to fail without joined-up&nbsp;thinking.</p>
+					<p><b>Does your business create enough value?</b></p>
+					<p><i>Design</i>, gives you a competitive advantage showing you understand your customer&nbsp;niche. One method, is <i>Swift&nbsp;interactions</i>, that respect "time&nbsp;challenged" customers looking to complete&nbsp;tasks.</p>
+					<!-- <p><i>Design</i>, gives you a competitive advantage showing you understand your customer&nbsp;niche.</p>
+					<p>An effective method of demonstrating this is with <i>Swift&nbsp;interactions</i> respecting "time&nbsp;challenged" customers looking to complete a&nbsp;task.</p> -->
+					<!-- or extract value on repeat&nbsp;visits -->
+					<p><b>Swift&thinsp;interactions&thinsp;encourage&thinsp;<i>customer lock&#8209;in</i></b> –&nbsp;by&nbsp;valuing&nbsp;productivity you are both&nbsp;rewarded!</p>
+
+
+
+					<p>Brilliant.</p>
+				</div>
+			</article>
+			<!-- /measure -->
+		</div>
+
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
+			<div class="sticky w-100 top-0 pt4 mb5">
+				<!-- pt4 -->
+				<div class="min-vh-50 h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-national-geographic-expeditions-02.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="https://codepen.io/inspiredlabs/pen/BgYooY" target="_blank">National&nbsp;Geographic Expeditions</a>
+			</div>
+		</aside>
+	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-prussia">
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/lion-1024-512.jpg) center;">
+		</aside>
+	<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
+		<a class="pointer transition link" href="https://uk.linkedin.com/in/urbanaut">
+			<article class="w-100 w-100-ns w-two-thirds-m w-two-thirds-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+				<!-- mw5 mw2-ns mw5-m mw5-l -->
+				<img src="{{ .Site.BaseURL }}images/national-geographic-expeditions.gif" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="National&nbsp;Geographic Expeditions"><!-- https://codepen.io/inspiredlabs/pen/BgYooY -->
+				<blockquote class="ma0 pv3 pb0">
+					<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+					<!-- &hellip;he -->Scott revolutionized the whole way of communicating with our&nbsp;clients</span>
+					<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+						- <span class="b">Stefano&nbsp;M.</span> Lead&nbsp;Programmer, National&nbsp;Geographic Expeditions</cite>
+					</blockquote>
+				</article>
+			</a>
+		</div>
+	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-egyptian white" id="experience">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc ">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Feedback</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Empirical Testing</h4>
+					</h4>
+				</header>
+				<hr class="bt bb b--white-80 mb5"/>
+				<div class="serif lh-copy f4">
+					<p><i>Design and Development</i> go hand&#8209;in&#8209;hand, but&nbsp;are rarely performed as one&nbsp;function, with some priority given to <i>User Acceptance&nbsp;Testing</i> –&nbsp;or&nbsp;not.</p>
+					<p><b>Just how integral are these&nbsp;touch&#8209;points?</b></p>
+
+
+					<p>Rethinking silos of Design, Development and&nbsp;UAT, <i>InstantWebapp</i> is a holistic customer&nbsp;champion.</p>
+					<!-- <p><i>InstantWebapp</i> champions customer&nbsp;concerns by fusing Design, Development &amp;&nbsp;UAT silos&nbsp;holistically.</p> -->
+
+					<p>Your project can benefit from this decade of built&#8209;in empirical&thinsp;testing&thinsp;and,&thinsp;trying&thinsp;new touch&#8209;points, we&thinsp;can test&nbsp;early and test&nbsp;often.</p>
+
+
+					<!-- <p>Rethinking the&nbsp;silos of Design, Development &amp;&nbsp;UAT, championing customer&nbsp;concerns is built&#8209;in to <i>InstantWebapp</i>.</p> -->
+
+
+					<p>Suave.</p>
+				</div>
+			</article>
+			<!-- /measure -->
+		</div>
+
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
+			<div class="sticky w-100 top-0 pt4 mb5">
+				<!-- pt4 -->
+				<div class="min-vh-50 h5 mt4 cover" style="background:url({{ .Site.BaseURL }}images/iwa-national-geographic-expeditions-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="https://codepen.io/inspiredlabs/pen/BgYooY" target="_blank">National&nbsp;Geographic Expeditions</a>
 			</div>
 		</aside>
 	</section>
 
 
 
+<section class="w-100 flex flex-row-ns flex-column bg-egyptian">
+	<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/teaser-02.jpg) center;">
+	</aside>
+	<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
+		<a class="pointer transition link" href="https://tandemfestival.com/">
+			<article class="w-100 w-100-ns w-two-thirds-m w-two-thirds-l mw5 center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+				<!-- mw5 mw2-ns mw5-m mw5-l -->
+				<img src="{{ .Site.BaseURL }}images/nina-and-nico.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="nina-and-nico">
+				<blockquote class="ma0 pv3 pb0">
+					<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+					&hellip;an outstanding work&nbsp;ethic
+					</span>
+					<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+						- <span class="b">Nina&nbsp;Brown,</span> Festival&nbsp;Entrepreneur, Oxford</cite>
+				</blockquote>
+			</article>
+		</a>
+	</div>
+</section>
+
+<section class="w-100 flex flex-row-ns flex-column bg-egyptian">
+
+	<div class="pa4 w-100 w-third-ns pa2-ns pv4-ns  flex-grow-1">
+	<a class="pointer transition link" href="https://uk.linkedin.com/in/tanguyfautre">
+		<article class="mw5 mw2-ns mw5-m mw5-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+			<img src="{{ .Site.BaseURL }}images/spartans-thumb.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="Tanguy&nbsp;Fautré">
+			<blockquote class="ma0 pv3 pb0">
+				<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+					&hellip;a particularly talented&nbsp;designer
+				</span>
+				<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+					- <span class="b">Tanguy&nbsp;Fautré,</span> Programmer, Aris Technologies</cite>
+				</blockquote>
+			</article>
+		</a>
+	</div>
+	<div class="pa4 w-100 w-third-ns pa2-ns pv4-ns  flex-grow-1">
+		<a class="pointer transition link" href="https://vimeo.com/124144694">
+			<article class="mw5 mw2-ns mw5-m mw5-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+				<img src="{{ .Site.BaseURL }}images/bowers-wilkins-thumb-01.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="Thomas&nbsp;Manns">
+				<blockquote class="ma0 pv3 pb0">
+					<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+						The conference started with Scott's animation, to rapturous applause
+					</span>
+					<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+						- <span class="b">Thomas&nbsp;Manns,</span> Creative&nbsp;Director, Thomas&nbsp;Manss &amp; Company&nbsp;London</cite>
+					</blockquote>
+				</article>
+			</a>
+		</div>
+	<div class="pa4 w-100 w-third-ns pa2-ns pv4-ns  flex-grow-1">
+		<a class="pointer transition link" href="https://www.npowersoftware.com/">
+			<article class="mw5 mw2-ns mw5-m mw5-l center bg-white pb1-l pa3 pa4-ns pa3-m pa4-l ph3-l mv3 tc br4 shadow-5-hover transition">
+				<img src="{{ .Site.BaseURL }}images/siemens-napier.jpg" class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib" title="nPower Booleans">
+				<blockquote class="ma0 pv3 pb0">
+					<span class="db f4 mb2 dark-gray i serif fw5 pb2">
+						&hellip;a cut above the&nbsp;rest
+					</span>
+					<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
+						- <span class="b">Advertisement feat. nPower Booleans,</span> Autodesk</cite>
+					</blockquote>
+				</article>
+			</a>
+		</div>
+</section>
+</div><!-- /features -->
 
 
-	<section class="w-100 bg-plum pv3 " id="contact">
-		<article class="mw5 center bg-white pa3 pa4-ns mv3 tc br4 shadow-5-hover transition">
-			<!-- br3 ba b--black-10 -->
-			<!--
-    id="profile"
-    -->
-			<img src="{{ .Site.BaseURL }}images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
-			<h1 class="f3 mb2">Scott Phillips</h1>
-			<h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
-			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Inspired Labs</a>
-			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://github.com/inspiredlabs/" target="_blank">Github</a>
-			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://twitter.com/inspiredlabs/" target="_blank">Twitter</a>
-		</article>
+<footer id="start" class="bg-jetblack" >
+	<hr class="w-100 w-50-ns ma0 bn pt5 bg-cobalt" >
+
+	<section class="w-100 flex flex-row-ns flex-column bg-cobalt white">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc ">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Start</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Tailoring business for success</h4>
+					</h4>
+				</header>
+				<hr class="bt bb b--white-80 mb5"/>
+				<div class="serif lh-copy f4">
+					<p><a class="link pointer white o-80 hover-o-100 underline transition " href="http://inspiredlabs.co.uk/#email">Start</a> by entering a few key details and following an initial consultation, the rest is&nbsp;automatic.</p>
+					<blockquote class="ma0 pl0 ">I look forward to hearing from you – <cite>Scott&nbsp;Phillips, <a class="link pointer white o-80 hover-o-100 underline transition " href="https://inspiredlabs.co.uk/#email">InspiredLabs</a></cite></blockquote>
+
+					<!-- github.com/danbocain/Avocado-Ipsum
+					<p>Synchronise formation&hellip;</p>
+					<ipsum>Avocado tortilla chicken. Ground beef taco spicy jalapeno sauce sour cream. Chimichanga avocado empanadas tortilla jalapenos. Red pepper guacamole spicy corn taco beef.  Avocado jalapeno tomato lime tacos. Mashed hass Avocado guacamole salsa dip. Carnitas tacos.</ipsum>
+
+					<ipsum>Peach salsa nachos habanero peppers. Enchilada jalapeno sauce. Red pepper guacamole spicy corn taco beef. Refried bean avocado jalapeno lime zest. Mashed hass Avocado guacamole salsa dip. Nacho sour cream salsa avocado bean dip jalapeno. Tequila-lime, chicken quesadilla black beans. Creamy avocado chili chimichangas.</ipsum>
+
+					<ipsum>Refried bean avocado jalapeno lime zest. Taco pork enchiladas. Creamy avocado chili chimichangas. Peach salsa nachos habanero peppers. Baked avocado mango peach salsa tostadas. Peach salsa nachos habanero peppers. Chicken bean hot tamales chili sauce lime burrito. Red pepper guacamole spicy corn taco beef.</ipsum>
+
+					<ipsum>Gordita avocado habanero Tamale tortilla nacho beef. Hot beef cheese tamales. Gooey zesty guacamole baked burrito. Avocado tequila chili. Chicken pork cheese tacos. Nacho beef chimichanga tortilla Avocado.</ipsum>
+
+					<ipsum>Ground beef taco spicy jalapeno sour cream. Avocado jalapeno tomato lime tacos. Taco burrito jalapeno avocado. Salsa enchiladas beans big green skin avocado. Mashed hass Avocado guacamole salsa dip. Carnitas tacos. Baked avocado mango peach salsa tostadas. Peach salsa nachos habanero peppers.</ipsum>
+					-->
+
+
+
+				</div>
+			</article>
+			<!-- /measure -->
+		</div>
+
+
+			<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
+				<div class="sticky w-100 top-0 pt4 mb5">
+					<!--
+					I develop trust. Entrepreneurs use my design work 15+ years later to fulfil their mission, serve their community & communicate excellence. How can I help?
+					-->
+
+					<article class="mw5 center bg-white pa3 pa4-ns mv3 tc br4 shadow-5-hover transition">
+						<img src="{{ .Site.BaseURL }}images/base64-386x386.jpg" class="br-100 h4 w4 h2-ns w2-ns h3-m w3-m h4-l w4-l dib" title="Scott Phillips">
+						<h1 class="f3 mb2 dark-gray">Scott Phillips</h1>
+						<h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+						<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://inspiredlabs.co.uk/#email" target="_blank">email</a>
+						<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://twitter.com/inspiredlabs/" target="_blank">Twitter</a>
+						<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="skype:theurbanaut?chat">Skype</a>
+					</article>
+
+					<!-- <a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://github.com/inspiredlabs/" target="_blank">Github</a> -->
+				</div>
+			</aside>
+
+
+
 	</section>
+
+
+	<nav id="footer-nav">
+		<section class="h5 bg-dark-gray"></section>
+		<section class="h5 bg-near-black"></section>
+		<section class="h5 bg-black"></section>
+	</nav>
+</footer>
+
+
+
+
 
 
 
@@ -773,3 +1163,40 @@ https://caniuse.com/?search=position%3Asticky
 </body>
 
 </html>
+
+<!-- <section class="w-100 flex flex-row-ns flex-column bg-cobalt white" id="cobalt">
+	cobalt
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-meadow white" id="meadow">
+	meadow
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-caribbean white" id="caribbean">
+	caribbean
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-electric-lime white" id="electric-lime">
+	electric-lime
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-soccorso white" id="soccorso">
+	soccorso
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-mandarino white" id="mandarino">
+	mandarino
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-pumpkin white" id="pumpkin">
+	pumpkin
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-mexicano white" id="mexicano">
+	mexicano
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-raspberry white" id="raspberry">
+	raspberry
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-grape white" id="grape">
+	grape
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-prussia white" id="prussia">
+	prussia
+</section>
+<section class="w-100 flex flex-row-ns flex-column bg-egyptian white" id="egyptian">
+	egyptian
+</section> -->
