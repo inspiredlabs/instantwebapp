@@ -688,11 +688,7 @@ https://caniuse.com/?search=position%3Asticky
 		<!-- src="images/localitysite.svg" -->
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#383838">
 			<div class="sticky w-80 w-50-ns w-two-thirds-m w-two-thirds-l top-2 center pt5 mb5">
-				<object type="image/svg+xml" data="{{ .Site.BaseURL }}images/blurred.shadow.tandem.svg">
-					<!-- Fall back:
-					<img src="{{ .Site.BaseURL }}images/blurred.shadow.tandem.svg">
-					-->
-				</object>
+				<img class="" src="{{ .Site.BaseURL }}images/blurred.shadow.tandem.svg" />
 				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver  ph3 db mb3 link" href="https://tandemfestival.com/" target="_blank">Tandem&nbsp;Festival</a>
 			</div>
 
@@ -931,12 +927,12 @@ https://caniuse.com/?search=position%3Asticky
 				<hr class="bt bb b--white-80 mb5"/>
 				<div class="serif lh-copy f4">
 					<p>Your&nbsp;business-goals are destined to fail without joined-up&nbsp;thinking.</p>
-					<p><b>Does your business create enough&nbsp;value?</b></p>
+					<p><b>Does your business create enough value?</b></p>
 					<p><i>Design</i>, gives you a competitive advantage showing you understand your customer&nbsp;niche. One method, is <i>Swift&nbsp;interactions</i>, that respect "time&nbsp;challenged" customers looking to complete&nbsp;tasks.</p>
 					<!-- <p><i>Design</i>, gives you a competitive advantage showing you understand your customer&nbsp;niche.</p>
 					<p>An effective method of demonstrating this is with <i>Swift&nbsp;interactions</i> respecting "time&nbsp;challenged" customers looking to complete a&nbsp;task.</p> -->
 					<!-- or extract value on repeat&nbsp;visits -->
-					<p><b>Swift&thinsp;interactions&thinsp;encourage&thinsp;<i>customer lock&#8209;in</i></b> &#8209;&nbsp;by&nbsp;valuing&nbsp;productivity you are both&nbsp;rewarded!</p>
+					<p><b>Swift&thinsp;interactions&thinsp;encourage&thinsp;<i>customer lock&#8209;in</i></b> –&nbsp;by&nbsp;valuing&nbsp;productivity you are both&nbsp;rewarded!</p>
 
 
 
@@ -985,18 +981,20 @@ https://caniuse.com/?search=position%3Asticky
 				</header>
 				<hr class="bt bb b--white-80 mb5"/>
 				<div class="serif lh-copy f4">
-					<p><i>Design and Development</i> go hand&#8209;in&#8209;hand, but&nbsp;are rarely performed as one&nbsp;function, with some priority given to <i>User Acceptance&nbsp;Testing</i> &#8209;&nbsp;or&nbsp;not.</p>
-					<p><b>What do your customers say about&nbsp;you or&nbsp;your&nbsp;product?</b></p>
-					<p>Rethinking silos of Design, Development and&nbsp;UAT, <i>InstantWebapp</i> acts as a holistic customer&nbsp;champion.</p>
+					<p><i>Design and Development</i> go hand&#8209;in&#8209;hand, but&nbsp;are rarely performed as one&nbsp;function, with some priority given to <i>User Acceptance&nbsp;Testing</i> –&nbsp;or&nbsp;not.</p>
+					<p><b>Just how integral are these&nbsp;touch&#8209;points?</b></p>
 
 
-
-					<p>Your project will benefit from a decade of built&#8209;in empirical&thinsp;testing. Collecting customer&nbsp;centered&nbsp;design feedback is easy, simply test&nbsp;early and test&nbsp;often.</p>
-					<!-- <p><b>Just how integral are these&nbsp;touch&#8209;points?</b></p> -->
+					<p>Rethinking silos of Design, Development and&nbsp;UAT, <i>InstantWebapp</i> is a holistic customer&nbsp;champion.</p>
 					<!-- <p><i>InstantWebapp</i> champions customer&nbsp;concerns by fusing Design, Development &amp;&nbsp;UAT silos&nbsp;holistically.</p> -->
-					<!-- <p>Your project can benefit from this decade of built&#8209;in empirical&thinsp;testing&thinsp;and,&thinsp;trying&thinsp;new touch&#8209;points, we&thinsp;can test&nbsp;early and test&nbsp;often.</p> -->
+
+					<p>Your project can benefit from this decade of built&#8209;in empirical&thinsp;testing&thinsp;and,&thinsp;trying&thinsp;new touch&#8209;points, we&thinsp;can test&nbsp;early and test&nbsp;often.</p>
+
+
 					<!-- <p>Rethinking the&nbsp;silos of Design, Development &amp;&nbsp;UAT, championing customer&nbsp;concerns is built&#8209;in to <i>InstantWebapp</i>.</p> -->
-					<p>Shine.</p>
+
+
+					<p>Suave.</p>
 				</div>
 			</article>
 			<!-- /measure -->
@@ -1093,65 +1091,10 @@ https://caniuse.com/?search=position%3Asticky
 					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Tailoring business for success</h4>
 					</h4>
 				</header>
-				<hr class="bt bb b--white-80 mb4"/>
-				<div class="serif lh-copy f4 mb4">
-					<p>Enter your details for a consultation:</p>
-				</div>
-
-					<form
-					accept-charset=utf-8
-					method=POST enctype="application/x-www-form-urlencoded"
-					class="f5 f4-ns highlight system cf no-clutter"
-					name="contact"
-					action="/done.html"
-					netlify-honeypot="gotcha"
-					netlify>
-						<input name="subject" type="hidden" value="InstantWebapp inquiry">
-						<input name=gotcha class=dn />
-						<div class=mb4>
-							<label for=email class="f6 f5-ns ttu tracked-mega pl3">Address</label>
-							<input type=email name=email id=email class=" input-reset br0 bn mt3 pa3 w-100 bg-white-80" placeholder="your@email.com" pattern="[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
-						</div>
-
-						<!--div class="mb4">
-							<label for="business" class="f6 f5-ns ttu tracked-mega pl3">Tell me about yourself</label>
-							<select class="mr0 select-reset input-reset br0 bn mt3 pa3 w-100 bg-white-80" id="business" name="business"
-								onmouseover="onSite();" required="">
-								<option value="startup" selected="" class="system">Startup entrepreneur</option>
-								<option value="established" class="system">Established business</option>
-								<option value="recruiter" class="system">Recruiter</option>
-							</select>
-						</div>
-
-						<div class="mb4 dn db" id="opportunity">
-							<label for="reason" class="f6 f5-ns ttu tracked-mega pl3">Opportunity</label>
-							<select class="mr0 select-reset input-reset br0 bn mt3 pa3 w-100 bg-white-80" id="reason" name="reason"
-								onmouseover="onSite();" required="">
-								<option selected="" class="system">Consultancy</option>
-								<option class="system">Remote contractor</option>
-								<option class="system">In-house relocation package</option>
-							</select>
-						</div-->
-
-						<div class=mb4>
-							<label for=message class="f6 f5-ns ttu tracked-mega pl3">Message</label>
-							<textarea class="mw-100 input-reset br0 bn mt3 pa3 w-100 bg-white-80" id=message name=message rows=4 placeholder="Your name or business details&hellip;" style="min-width:100%;" required></textarea>
-							<!-- f5 f5-ns input-reset -->
-						</div>
-						<style>
-							.bg-test {
-								background-color:hsla(201, 75%, 36%, var(--eight) );
-							}
-						</style>
-						<div class="fr cb cf mb3 mb6-ns mb3-m mb3-l bg-black ma0">
-							<input class="transition input-reset pointer br0 f6 f5-ns b ph5 pv3 ba bw2-ns b--black white bg-test ttu tracked-mega hover-bg-near-black w-100 db b system"
-							type=submit value=Send>
-						</div>
-					</form>
-
-					<div class="serif lh-copy f4 mb6">
-						<blockquote class="ma0 pl0 ">I look forward to hearing from you – <cite>Scott&nbsp;Phillips, <a class="link pointer white o-80 hover-o-100 underline transition " href="https://inspiredlabs.co.uk/#email">InspiredLabs</a></cite></blockquote>
-					</div>
+				<hr class="bt bb b--white-80 mb5"/>
+				<div class="serif lh-copy f4">
+					<p><a class="link pointer white o-80 hover-o-100 underline transition " href="http://inspiredlabs.co.uk/#email">Start</a> by entering a few key details and following an initial consultation, the rest is&nbsp;automatic.</p>
+					<blockquote class="ma0 pl0 ">I look forward to hearing from you – <cite>Scott&nbsp;Phillips, <a class="link pointer white o-80 hover-o-100 underline transition " href="https://inspiredlabs.co.uk/#email">InspiredLabs</a></cite></blockquote>
 
 					<!-- github.com/danbocain/Avocado-Ipsum
 					<p>Synchronise formation&hellip;</p>
@@ -1168,13 +1111,14 @@ https://caniuse.com/?search=position%3Asticky
 
 
 
+				</div>
 			</article>
 			<!-- /measure -->
 		</div>
 
 
 			<aside class="w-100 w-50-ns flex-column flex-grow-1 tc bg-jetblack" >
-				<div class="sticky w-100 top-0 pt4 pt5-l mb5">
+				<div class="sticky w-100 top-0 pt4 mb5">
 					<!--
 					I develop trust. Entrepreneurs use my design work 15+ years later to fulfil their mission, serve their community & communicate excellence. How can I help?
 					-->
@@ -1182,7 +1126,7 @@ https://caniuse.com/?search=position%3Asticky
 					<article class="mw5 center bg-white pa3 pa4-ns mv3 tc br4 shadow-5-hover transition">
 						<img src="{{ .Site.BaseURL }}images/base64-386x386.jpg" class="br-100 h4 w4 h2-ns w2-ns h3-m w3-m h4-l w4-l dib" title="Scott Phillips">
 						<h1 class="f3 mb2 dark-gray">Scott Phillips</h1>
-						<h2 class="f5 fw4 gray mt0"><!-- Creator, -->Designer &amp;&nbsp;Developer,<br><b>InspiredLabs</b></h2>
+						<h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
 						<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://inspiredlabs.co.uk/#email" target="_blank">email</a>
 						<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://twitter.com/inspiredlabs/" target="_blank">Twitter</a>
 						<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="skype:theurbanaut?chat">Skype</a>

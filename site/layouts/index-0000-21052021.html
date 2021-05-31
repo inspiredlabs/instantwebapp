@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en" class="system overflow-y-auto smooth-scroll">
+
+<head>
+	<meta name="generator" content="Hugo 0.59.1" />
+	<meta charset="utf-8">
+	<title>▶InstantWebapp | Web design for a world of apps</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="//instantwebapp.com/css/tachyon.shower.css">
+
+	<style>
+		#scrollSpy a,
+		li {
+			position: relative
+		}
+
+		li {
+			display: table-cell
+		}
+
+		#scrollSpy a:after {
+			top: 0;
+			background: white;
+			content: "";
+			display: block;
+			height: 4px;
+			height: 0.2rem;
+			left: 0;
+			position: absolute;
+			transition: width 0.3s ease 0s, left 0.3s ease 0s;
+			width: 0
+		}
+
+		#scrollSpy #buy li.active a:after,
+		#scrollSpy #buy li.hover a:after {
+			background: transparent !important;
+		}
+
+		#scrollSpy a:hover:after {
+			width: 100%;
+			left: 0;
+		}
+
+		#scrollSpy li.active {
+
+		}
+
+		#scrollSpy li.active a:after {
+			width: 100%;
+		}
+
+	</style>
+
+	<style>
+
+
+		@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+
+			input[type='checkbox'],
+			input[type='radio'] {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+			}
+		}
+
+		input[type='checkbox'] {
+			height: 0;
+			width: 0;
+		}
+
+		input[type='checkbox']+label {
+			position: relative;
+			display: flex;
+			margin: .6rem 0;
+			align-items: center;
+			color: #9e9e9e;
+
+		}
+
+		input[type='checkbox']+label>span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 1em;
+			width: 1em;
+			height: 1em;
+			background: transparent;
+			border: .5rem solid grey;
+			cursor: pointer;
+			transition: all 250ms cubic-bezier(.4, .0, .23, 1);
+		}
+
+		input[type='checkbox']:checked+label {
+			color: var(--caribbean);
+		}
+
+		input[type='checkbox']:checked+label>span {
+			background-color: var(--meadow);
+			border: .5rem solid var(--caribbean);
+			animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+		}
+
+		input[type='checkbox']:checked+label>span:before {
+			content: "";
+			position: absolute;
+			top: .86em;
+
+			left: .36em;
+
+			border-right: .3rem solid transparent;
+			border-bottom: .3rem solid transparent;
+			transform: rotate(45deg);
+			transform-origin: 0% 100%;
+			animation: checkbox-check 125ms 250ms cubic-bezier(.4, .0, .23, 1) forwards;
+		}
+
+		@keyframes checkbox-check {
+			0% {
+				width: 0;
+				height: 0;
+				border-color: transparent;
+				transform: translate3d(0, 0, 0) rotate(45deg);
+			}
+
+			33% {
+				width: .2em;
+				height: 0;
+				border-color: white;
+				transform: translate3d(0, 0, 0) rotate(45deg);
+			}
+
+			100% {
+				width: .2em;
+				height: 1em;
+				border-color: white;
+				transform: translate3d(0, -1em, 0) rotate(45deg);
+			}
+		}
+	</style>
+
+	<style>
+
+
+		.sticky {
+			position: -webkit-sticky;
+			position: sticky;
+		}
+
+
+
+		.part4 {
+			animation: text4
+		}
+
+		.part3 {
+			animation: text3
+		}
+
+		.part2 {
+			animation: text2
+		}
+
+		.part1 {
+			animation: text1
+		}
+
+		.part4,
+		.part3,
+		.part2,
+		.part1 {
+			overflow: hidden;
+			white-space: nowrap;
+			display: inline-block;
+			position: relative;
+			animation-duration: 12s;
+			animation-timing-function: steps(25, end);
+			animation-iteration-count: infinite;
+			height: 10vh;
+
+		}
+
+		.part4::after,
+		.part3::after,
+		.part2::after,
+		.part1::after {
+			content: "|";
+			position: absolute;
+			right: 0;
+			animation: caret infinite;
+			animation-duration: 1s;
+			animation-timing-function: steps(1, end);
+		}
+
+		@keyframes text4 {
+
+			0%,
+			25%,
+			50%,
+			75%,
+			100% {
+				width: 0;
+			}
+
+			80%,
+			95% {
+				width: 8.5em;
+			}
+		}
+
+		@keyframes text3 {
+
+			0%,
+			25%,
+			50%,
+			75%,
+			100% {
+				width: 0;
+			}
+
+			55%,
+			70% {
+				width: 7.3em;
+			}
+		}
+
+		@keyframes text2 {
+
+			0%,
+			25%,
+			50%,
+			75%,
+			100% {
+				width: 0;
+			}
+
+			30%,
+			45% {
+				width: 8.3em;
+			}
+		}
+
+		@keyframes text1 {
+
+			0%,
+			25%,
+			50%,
+			75%,
+			100% {
+				width: 0;
+			}
+
+			5%,
+			20% {
+				width: 10.8em;
+			}
+		}
+
+		@keyframes caret {
+
+			0%,
+			100% {
+				opacity: 0;
+			}
+
+			50% {
+				opacity: 0.7;
+			}
+		}
+	</style>
+
+	<svg class="dn">
+		<defs>
+			<g id="instantwebapp">
+
+				<rect class="mexicano" x="293.5" y="165.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -68.5484 346.5097)" width="181" height="181" />
+				<rect class="meadow" x="37.5" y="165.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -143.529 165.4903)" width="181" height="181" />
+				<rect class="prussia" x="165.5" y="293.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -196.5484 293.4903)" width="181" height="181" />
+				<polygon class="caribbean" points="0,0 128,128 0,256 " />
+				<polygon class="cobalt" points="0,256 128,384 0,512 " />
+				<polygon class="raspberry" points="512,512 384,384 512,256 " />
+				<polygon class="electric-lime" points="256,0 128,128 0,0 " />
+				<polygon class="grape" points="256,512 384,384 512,512 " />
+				<polygon class="egyptian" points="0,512 128,384 256,512 " />
+				<rect class="mandarino" x="165.5" y="37.5" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -15.529 218.5097)" width="181" height="181" />
+				<polygon class="soccorso" points="512,0 384,128 256,0 " />
+				<polygon class="pumpkin" points="512,256 384,128 512,0 " />
+			</g>
+		</defs>
+	</svg>
+
+</head>
+
+<body class="pa0 ma0 bg-black" id="top">
+	<div class="z-999 fixed bg-black w-100">
+		<nav class="
+			flex justify-between pv3
+			mr-auto ml-auto
+			ph4 ph2-ns ph4-m ph6-l
+			">
+			<a class="link no-underline white flex items-center" href="#home">
+				<svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp">
+					<use xlink:href="#instantwebapp"></use>
+				</svg>
+				<span class="dn dn-ns dib-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
+			</a>
+
+
+
+			<div class="flex items-center">
+
+				<a class="f7 f6-ns link dib dib fw8 hover-cobalt white bg-cobalt grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2 pointer" href="#contact">Contact
+
+				</a>
+			</div>
+		</nav>
+	</div>
+
+
+
+
+
+
+
+
+	<section class="w-100 flex flex-row-ns flex-column bg-cobalt white" id="home">
+		<header class="flex vh-100 w-100
+			mr-auto ml-auto
+			ph4 ph2-ns ph4-m ph6-l
+			">
+		<div class="flex flex-column flex-grow-1 mt6">
+			<h2 class="flex-auto fs-8vmin fs-5vmax  lh-8vh fw2"><span class="part1">Digital&thinsp;Asset&thinsp;Management</span><span class="part2">Better SEO Visibility</span><span class="part3">Strategic Delivery</span><span class="part4">Generating Revenue</span></h2>
+				<h1 class="flex-auto ma0 o-100 f2 f-subheadline-m f-headline-l fs-14vmin fs-12vmax ts1-dark-gray">
+					<span class="dn db-ns db-m db-l">Start. Run. Grow.</span>
+					<span class="db dn-ns dn-m dn-l">Start</span>
+					<span class="db dn-ns dn-m dn-l">Run</span>
+					<span class="db dn-ns dn-m dn-l">Grow</span>
+				</h1>
+				<h3 class="flex-auto fs-8vmin fs-5vmax lh-8vh ">
+					<span class="fw3">&hellip;Your Online Business</span>
+				</h3>
+			</div>
+		</header>
+	</section>
+
+
+	<script>
+
+</script>
+
+
+
+	<section class="w-100 flex flex-row-ns flex-column bg-caribbean" id="launch">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Launch</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked">Fast in every dimension</h4>
+				</header>
+				<hr class="bt bb b--black-10 mb5" />
+				<main class="serif lh-copy f4">
+
+					<p>Developed to help entreprenures&nbsp;<b>ship!</b></p>
+
+					<p>A "bare-bones" webapp can be released using a <i>fixed-price</i>&nbsp;model. Following an initial&nbsp;consultation we will track your priorities, so you know what to&nbsp;expect.</p>
+
+					<b>What do we need to launch?</b>
+
+					<p>Just confirm the key details about your initial&nbsp;idea, then, we can stress-test each <i>iteration</i> to earn you the best ROI&nbsp;(return on investment).</p>
+
+					<p>Boom.</p>
+				</main>
+			</article>
+
+		</div>
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
+			<div class="sticky w-100 top-0 pt5 mb5">
+
+				<div class="h5 mt4 cover" style="background:url(//instantwebapp.com/images/iwa-pablowoodward-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://pablowoodward.netlify.app/" target="_blank">PabloWoodward.com</a>
+			</div>
+		</aside>
+	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-electric-lime" id="visibility">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1  ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Visibility</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked">Get seen on search engines</h4>
+				</header>
+				<hr class="bt bb b--black-10 mb5" />
+				<main class="serif lh-copy f4">
+
+					<p><b>Writing is&nbsp;hard.</b></p>
+					<p>That's why agencies don't usually write your&nbsp;content from the beginning and simply sell blank&nbsp;templates.</p>
+
+					<p>With this platform, <i>Content&nbsp;Strategy</i> comes as standard.</p>
+
+
+
+					<p><b>Want to develop a more comprehensive SEO&nbsp;strategy?</b></p>
+					If you want to focus entirely on your customer needs, we can develop content that will continue to be found on search engines. Then fine-tune things to make sure it's acted&nbsp;upon.</p>
+					<p>Perfect.</p>
+				</main>
+			</article>
+
+		</div>
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
+			<div class="sticky w-100 top-0 pt5 mb5">
+
+				<div class="h5 mt4 cover" style="background:url(//instantwebapp.com/images/iwa-tdb-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white silver pv2 ph3 db mb3 link" href="https://thediscobunny.com/" target="_blank">TheDiscoBunny.com</a>
+			</div>
+
+		</aside>
+	</section>
+
+	<section class="w-100 bg-soccorso pv3 " id="soccorso">
+		<article class="mw5 center bg-white pa3 pa4-ns mv3 tc br4 shadow-5-hover transition" id="profile">
+
+			<img src="//instantwebapp.com/images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+			<h1 class="f3 mb2">Scott Phillips</h1>
+			<h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Inspired Labs</a>
+			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://github.com/inspiredlabs/" target="_blank">Github</a>
+			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://twitter.com/inspiredlabs/" target="_blank">Twitter</a>
+		</article>
+	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-mandarino" id="identity">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir">Identity</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked">Create the right first impression</h4>
+				</header>
+				<hr class="bt bb b--black-10 mb5" />
+				<main class="serif lh-copy f4">
+					<p>The&nbsp;right look-and-feel is essential for your aspiring brand. Give your new venture a distinctive logo
+						mark and <i>two</i>&nbsp;iterations of changes for peace&#8209;of&#8209;mind.
+					</p>
+					<b>Prefer a brand of&nbsp;distinction?</b>
+					<p>For&nbsp;more granular control, <i>Graphic&nbsp;Design Consultancy</i>&nbsp;could be the way to go.</p>
+					<p>You&nbsp;can choose to add this – for as long as you need, and&nbsp;it will always be a fixed&nbsp;rate.</p>
+					<p>Easy.</p>
+
+				</main>
+			</article>
+
+		</div>
+
+
+
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#383838">
+			<div class="sticky w-80 w-50-ns w-two-thirds-m w-two-thirds-l top-2 center pt5 mb5">
+				<img class="" src="//instantwebapp.com/images/blurred.shadow.tandem.svg" />
+
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white silver pv2 ph3 db mb3 link" href="https://tandemfestival.com/" target="_blank">Tandem&nbsp;Festival</a>
+			</div>
+
+		</aside>
+	</section>
+
+
+
+	<section class="w-100 flex flex-row-ns flex-column bg-pumpkin" id="relevant">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1  ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc ">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Relevance</h3>
+
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Multilingual content management</h4>
+				</header>
+				<hr class="bt bb b--black-10 mb5 " />
+				<main class="serif lh-copy f4 ">
+					<p><b>Business without borders!</b></p>
+					<p>Customers can be very specific about where their suppliers are&nbsp;based.
+
+					</p>
+					<p>Find common ground with your target market by using <i>translation</i>&nbsp;and direct visitors to the correct&nbsp;language pages based on their&nbsp;browser.</p>
+					<b>Need advanced content writing&nbsp;services?</b>
+					<p>To maxise cultural relevance,
+						<a href="https://inspiredlabs.co.uk " class="link pointer charcoal dim underline transition ">Inspired
+							Labs</a>&nbsp;offers fixed&#8209;rate <i>localisation &amp; transcreation</i>&nbsp;services.</p>
+							<p>As a premium client, we understand you want the flexability to write your own ideas –&nbsp;no problem. We have a lean, reliable&nbsp;CMS ready to fit into your choice of&nbsp;workflow.</p>
+
+
+
+
+
+					<p>Bravo.</p>
+				</main>
+			</article>
+		</div>
+
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
+			<div class="sticky w-100 top-0 pt5 mb5">
+
+				<div class="h5 mt4 cover" style="background:url(//instantwebapp.com/images/iwa-alessandroronca-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="http://alessandroronca.it/" target="_blank">AlessandroRonca.IT</a>
+			</div>
+		</aside>
+
+	</section>
+
+	<section class="w-100 flex flex-row-ns flex-column bg-raspberry white" id="structure">
+		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1 ">
+			<article class="ml-auto mr-auto measure ">
+				<header class=" pv4 tc ">
+					<h3 class="f2 fw7 ttu tracked lh-title mt0 mb3 avenir ">Structure</h3>
+					<h4 class="f5 fw4 lh-title mt0 ttu tracked ">Organise&nbsp;business at an information&nbsp;level
+					</h4>
+				</header>
+				<hr class="bt bb b--white-80 mb5 " />
+				<main class="serif lh-copy f4 ">
+					<p>Everyone knows <i>data</i>&nbsp;is the most valuable&nbsp;asset.</p>
+
+
+					<p><b>Do you know how to unlock the value of your business&nbsp;data?</b></p>
+
+					<p>
+						<i>Information&nbsp;Architecture</i>&nbsp;is a powerful tool to help release&nbsp;profit.</p>
+
+
+
+					<p>Investing here can be as easy as collecting and organising data you already possess to quickly unlock benefits that were invisible beforehand!</p>
+					<p>
+						<a href="https://inspiredlabs.co.uk " class="link pointer white-80 dim underline transition ">Book a
+							consultation</a> to immediately boost your&nbsp;productivity.
+					</p>
+					<p>Impressive.</p>
+				</main>
+			</article>
+
+		</div>
+
+		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc " style="background-color:#1a1a1a">
+			<div class="sticky w-100 top-0 pt5 mb5">
+
+				<div class="h5 mt4 cover" style="background:url(//instantwebapp.com/images/iwa-per-01.jpg) center;">
+				</div>
+				<a class="pointer tc ttu fw3 f7 tracked-mega hover-white transition silver pv2 ph3 db mb3 link" href="https://umbria.netlify.app/" target="_blank">Sustability Research Center</a>
+			</div>
+		</aside>
+	</section>
+
+
+
+
+
+	<section class="w-100 bg-plum pv3 " id="contact">
+		<article class="mw5 center bg-white pa3 pa4-ns mv3 tc br4 shadow-5-hover transition">
+
+
+			<img src="//instantwebapp.com/images/base64-386x386.jpg" class="br-100 h4 w4 dib" title="Scott Phillips">
+			<h1 class="f3 mb2">Scott Phillips</h1>
+			<h2 class="f5 fw4 gray mt0">Design &amp; Development</h2>
+			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://inspiredlabs.co.uk/" target="_blank">Inspired Labs</a>
+			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://github.com/inspiredlabs/" target="_blank">Github</a>
+			<a class="pointer f8 fw4 tracked-mega ttu gray hover-black-80 transition link underline pv2 ph3 db" href="https://twitter.com/inspiredlabs/" target="_blank">Twitter</a>
+		</article>
+	</section>
+
+
+
+
+
+	<script src="//instantwebapp.com/js/smooth-scroll.min.js "></script>
+	<script src="//instantwebapp.com/js/gumshoe.js "></script>
+	<script>var scroll = new SmoothScroll('a[href*="# "]');
+		var spy = new Gumshoe('#scrollSpy a');</script>
+</body>
+
+</html>
