@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--link rel="stylesheet" type="text/css" href="./css/tmp.css"-->
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/tachyon.shower.css">
+	<script type="text/javascript">var _paq=window._paq||[];_paq.push(['trackPageView']);_paq.push(['enableLinkTracking']);(function(){var u="//analytics.inspiredlabs.co.uk/";_paq.push(['setTrackerUrl',u+'matomo.php']);_paq.push(['setSiteId','11']);var d=document,g=d.createElement('script'),s=d.getElementsByTagName('script')[0];g.type='text/javascript';g.async=true;g.defer=true;g.src=u+'matomo.js';s.parentNode.insertBefore(g,s)})();</script>
 
 <style>
 .jetblack { color: #1a1a1a; }
@@ -898,7 +899,7 @@ https://caniuse.com/?search=position%3Asticky
 		</aside>
 	</section>
 
-	<section class="w-100 flex flex-row-ns flex-column bg-plum">
+	<section class="w-100 flex flex-row-ns flex-column bg-plum" id="3si">
 		<aside class="w-100 w-50-ns flex-column flex-grow-1 tc cover min-vh-50" style="background-color:#383838;background:url({{ .Site.BaseURL }}images/marketing-material-01.jpg) center;"></aside>
 		<div class="pa4 w-100 w-50-ns pa2-ns pv4-ns flex-grow-1">
 			<a class="pointer transition link" href="https://inspiredlabs.co.uk/3-si.com">
@@ -968,7 +969,7 @@ https://caniuse.com/?search=position%3Asticky
 					<span class="db f4 mb2 dark-gray i serif fw5 pb2">
 					<!-- &hellip;he -->Scott revolutionized the whole way of communicating with our&nbsp;clients</span>
 					<cite class="db f5 fw4 gray mt0 fs-normal sans-serif">
-						- <span class="b">Stefano&nbsp;M.</span> Lead&nbsp;Programmer, National&nbsp;Geographic Expeditions</cite>
+						- <span class="b">Stefano&nbsp;Murrau</span> Lead&nbsp;Programmer, National&nbsp;Geographic Expeditions</cite>
 					</blockquote>
 				</article>
 			</a>
@@ -1098,16 +1099,17 @@ https://caniuse.com/?search=position%3Asticky
 					<p>Enter your details for a consultation:</p>
 				</div>
 
+
 					<form
 					accept-charset=utf-8
 					method=POST enctype="application/x-www-form-urlencoded"
 					class="f5 f4-ns highlight system cf no-clutter"
-					name="contact"
+					name="Contact"
 					action="/done.html"
 					netlify-honeypot="gotcha"
 					netlify>
-						<input name="subject" type="hidden" value="InstantWebapp inquiry">
-						<input name=gotcha class=dn />
+						<input name="subject" type="hidden" value="InstantWebapp inquiry" />
+						<input name="gotcha" class="visually-hidden" />
 						<div class=mb4>
 							<label for=email class="f6 f5-ns ttu tracked-mega pl3">Address</label>
 							<input type=email name=email id=email class=" input-reset br0 bn mt3 pa3 w-100 bg-white-80" placeholder="your@email.com" pattern="[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
@@ -1139,12 +1141,35 @@ https://caniuse.com/?search=position%3Asticky
 							<!-- f5 f5-ns input-reset -->
 						</div>
 						<style>
-							.bg-test {
+							/* NOT Inclusively Hidden: css-tricks.com/inclusively-hidden/ */
+							.visually-hidden {
+								clip: rect(0 0 0 0);
+								clip-path: inset(50%);
+								height: 1px;
+								overflow: hidden;
+								position: absolute;
+								white-space: nowrap;
+								width: 1px;
+							}
+
+							.bg-cobalt-10 {
+								background-color:hsla(201, 75%, 36%, var(--one) );
+							}
+							.bg-cobalt-20 {
+								background-color:hsla(201, 75%, 36%, var(--two) );
+							}
+							.bg-cobalt-80 {
 								background-color:hsla(201, 75%, 36%, var(--eight) );
+							}
+							.bg-cobalt-90 {
+								background-color:hsla(201, 75%, 36%, var(--nine) );
+							}
+							.bg-cobalt {
+								background-color:hsla(201, 75%, 36%, var(--ten) );
 							}
 						</style>
 						<div class="fr cb cf mb3 mb6-ns mb3-m mb3-l bg-black ma0">
-							<input class="transition input-reset pointer br0 f6 f5-ns b ph5 pv3 ba bw2-ns b--black white bg-test ttu tracked-mega hover-bg-near-black w-100 db b system"
+							<input class="transition input-reset pointer br0 f6 f5-ns b ph5 pv3 ba bw2-ns b--black white bg-cobalt-80 ttu tracked-mega hover-bg-near-black w-100 db b system"
 							type=submit value=Send>
 						</div>
 					</form>
