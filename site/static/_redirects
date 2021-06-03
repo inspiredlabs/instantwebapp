@@ -1,2 +1,7 @@
-/* /it/index.html 404 Language=it
-/* /index.html 404 Language=en
+/* /it/index.html 302 Language=it
+/* /it/index.html 302 Language=ch
+/* /index.html 302 Language=en
+
+
+/* /it/404.html 404 Language=it
+/* /404.html 404 Language=en
