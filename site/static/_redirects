@@ -1,8 +1,0 @@
-/post ./
-/en/* /en/ 404
-/it/* /it/ 404
-index.html /en/ 404
-
-
-# https://www.netlify.com/docs/redirects/
-# https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-#configure-redirects-for-your-static-site/ 

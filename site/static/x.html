@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<!-- {{ .Site.BaseURL }} -->
+
+<img class="b-lazy"
+	src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+	data-src="images/vaultarch-photo-thumb-02.jpg|images/vaultarch-photo-thumb-02-x2.jpg"
+	alt="Andrew&nbsp;Buchanan"
+	title="Andrew&nbsp;Buchanan"
+	class="br-100 h4 w4 h3-ns w3-ns h4-m w4-m h4-l w4-l dib"
+/>
+<!-- 26byte: https://stackoverflow.com/questions/6018611/smallest-data-uri-image-possible-for-a-transparent-image -->
+
+
+<script src="js/blazy.min.js"></script>
+<script>
+	var bLazy = new Blazy({
+	breakpoints: [{
+	width: 420 // Max-width
+		, src: 'data-src-small'
+	}]
+	, success: function(element){
+		setTimeout(function(){
+			var parent = element.parentNode;
+			parent.className = parent.className.replace(/\bloading\b/,'');
+			}, 200);
+		}
+	});
+</script>
+</body>
+</html>
