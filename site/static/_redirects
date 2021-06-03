@@ -1,21 +1,3 @@
-# Redirect English browsers `/* /en/index.html 200  Language=en`
 /* /index.html 200  Language=en
-
-# Redirect Italian browsers
 /* /it/index.html 302 Language=it
-/* /it/index.html 302 Language=ch
-
-# If browser-specific language preference is not available,
-# redirect by default to the English site
-/* /en/index.html 200
-
-
-/post ./
-/en/* /en/ 404
-/it/* /it/ 404
-index.html /en/ 404
-
-# https://answers.netlify.com/t/language-based-redirect-only-works-when-1-browser-language-set/4252/19
-# https://www.leonelngande.com/netlify-redirect-users-by-country-or-language/
-# https://www.netlify.com/docs/redirects/
-# https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-#configure-redirects-for-your-static-site/
+/* /index.html 302 Language=en

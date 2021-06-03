@@ -1,5 +1,5 @@
 const SUPPORTED_LANGS = {
-    "en": "/en",
+    "en": "/",
     "it": "/it",
     "ch": "/it",
 };
