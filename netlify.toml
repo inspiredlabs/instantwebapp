@@ -6,6 +6,7 @@
 [build]
   command = "yarn build"
   publish = "dist"
+  functions = "functions" # https://www.youtube.com/watch?v=n_KASTN0gUE
 
 [context.deploy-preview]
   command = "yarn build:preview"
