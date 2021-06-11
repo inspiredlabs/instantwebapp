@@ -1,4 +1,5 @@
 baseurl = "//instantwebapp.com/" #`https:` #`./`
+relativeUrls = true
 
 languageCode = "en-gb" #lang="it-IT" #format numbers, dates and semantics
 languageLang = "en" #lang="it"
