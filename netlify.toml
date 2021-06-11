@@ -27,18 +27,20 @@
 #   conditions = {Language = ["ch", "CH", "it", "IT"]}
 # https://answers.netlify.com/t/redirect-by-browser-language/4849/29
 
-
+# `/ /it/:splat 302 Language=it` from: play.netlify.com/redirects
+[[redirects]]
+from = "/"
+to = "/it/:splat"
+status = 302
+force = false
+conditions = {Language = "it"}
 
 [[redirects]]
-  from = "/*"
-  to = "/it/:splat 1"
-  status = 301
-#  force = true
-  force = false
-#  query = {path = ":path"} #  apply this rule for /old-path?path=example
-  conditions = {Language = ["ch", "CH", "it", "IT"]}
-  # conditions = {Country = ["ch", "CH", "it", "IT"]}
-
+from = "/"
+to = "/it/:splat"
+status = 302
+force = false
+conditions = {Language = "ch"}
 
 
   # [[redirects]]
