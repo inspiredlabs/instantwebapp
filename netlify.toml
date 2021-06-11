@@ -28,11 +28,6 @@
 # https://answers.netlify.com/t/redirect-by-browser-language/4849/29
 
 [[redirects]]
-  from = "*"
-  to = "/"
-  status = 404
-
-[[redirects]]
   from = "/*"
   to = "/it"
   status = 302
