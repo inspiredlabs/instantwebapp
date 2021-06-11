@@ -1,0 +1,8 @@
+# docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
+
+/*  /it/:splat  302  Language=it
+/*  /it/:splat  302  Language=ch
+
+
+/* /it/ 404
+/* / 404
