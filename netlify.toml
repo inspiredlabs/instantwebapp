@@ -27,7 +27,11 @@
 #   conditions = {Language = ["ch", "CH", "it", "IT"]}
 # https://answers.netlify.com/t/redirect-by-browser-language/4849/29
 
-
+[[redirects]]
+  from = "/en/*"
+  to = "/index.html"
+  status = 302
+  force = false
 
 [[redirects]]
   from = "/*"
