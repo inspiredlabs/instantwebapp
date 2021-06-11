@@ -29,7 +29,7 @@
 
 [[redirects]]
   from = "/*"
-  to = "it/:splat"
+  to = "/it"
   status = 302
   force = true
   conditions = {Language = ["ch", "CH", "it", "IT"]}
