@@ -11,12 +11,29 @@
 [context.deploy-preview]
   command = "yarn build:preview"
 
-  #https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
+# https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
+
+
+# [[redirects]]
+#   from = "*"
+#   to = "/"
+#   status = 404
+
+# [[redirects]]
+#   from = "/*"
+#   to = "/it"
+#   status = 302
+#   force = true
+#   conditions = {Language = ["ch", "CH", "it", "IT"]}
+# https://answers.netlify.com/t/redirect-by-browser-language/4849/29
 
 [[redirects]]
-  from = "*"
-  to = "/"
-  status = 404
+  from = "/*"
+  to = "it/:splat"
+  status = 302
+  force = true
+  conditions = {Language = ["ch", "CH", "it", "IT"]}
+
 
   # [[redirects]]
   #   from = "/principle"

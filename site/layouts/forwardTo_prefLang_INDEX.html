@@ -1,0 +1,23 @@
+<!-- header -->
+<!-- SEO frag -->
+<!-- No-JS content -->
+<script type="text/javascript">
+	const log = console.log;
+	const navUserLang = navigator.language.toLowerCase().substr(0, 2) || navigator.userLanguage.toLowerCase().substr(0, 2);
+	var prefLang = localStorage.getItem('inputLang');
+	localStorage.setItem('defaultLang', navUserLang);
+	if (!prefLang) {
+		var prefLang = navUserLang;
+		forwardTo(prefLang);
+	};
+	function forwardTo(prefLang) {
+		var href = window.location.href;
+		window.location.assign('/' + prefLang)
+	};
+	(function () {
+		if (window.location.href.substr(-3, 2) != prefLang) {
+			//log('not the same = ' + window.location.href.substr(-3, 2));
+			window.location.assign('/' + prefLang);
+		}
+	}()); //onload
+</script>
