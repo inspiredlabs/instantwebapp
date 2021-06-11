@@ -36,7 +36,7 @@
 #  force = true
   force = false
 #  query = {path = ":path"} #  apply this rule for /old-path?path=example
-  conditions = {Country = ["ch", "CH", "it", "IT"]}
+  conditions = {Language = ["ch", "CH", "it", "IT"]}
   # conditions = {Country = ["ch", "CH", "it", "IT"]}
 
 

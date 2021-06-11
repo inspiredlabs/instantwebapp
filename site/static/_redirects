@@ -1,8 +1,0 @@
-# docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
-
-/*  /it/:splat  302  Country=it
-/*  /it/:splat  302  Country=ch
-
-
-/* /it/ 404
-/* / 404
