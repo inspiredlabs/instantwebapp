@@ -14,10 +14,10 @@
 # https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
 
 
-# [[redirects]]
-#   from = "*"
-#   to = "/"
-#   status = 404
+[[redirects]]
+  from = "*"
+  to = "/"
+  status = 404
 
 # [[redirects]]
 #   from = "/*"
@@ -28,8 +28,8 @@
 # https://answers.netlify.com/t/redirect-by-browser-language/4849/29
 
 [[redirects]]
-  from = "/en"
-  to = "/"
+  from = "/en/*"
+  to = "/:splat"
   status = 302
 # force = true
 

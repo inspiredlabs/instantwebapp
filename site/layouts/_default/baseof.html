@@ -1,7 +1,7 @@
-{{ if eq .Params.region "it" }}
-	{{ .Render "it" }}
+{{ if ne .Params.region "it" }}
+	{{ .Render "en" }}
 {{ end }}
 
-{{ if eq .Params.region "en" }}
-	{{ .Render "en" }}
+{{ if eq .Params.region "it" }}
+	{{ .Render "it" }}
 {{ end }}
