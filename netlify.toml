@@ -11,4 +11,6 @@
   command = "yarn build:preview"
 
 [functions]
-  directory = "functions" # https://www.youtube.com/watch?v=n_KASTN0gUE
+  directory = "functions"
+# https://www.youtube.com/watch?v=n_KASTN0gUE
+# https://docs.netlify.com/functions/configure-and-deploy/#configure-the-functions-folder

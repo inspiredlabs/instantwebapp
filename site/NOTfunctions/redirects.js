@@ -1,7 +1,7 @@
 // We had to hook the function to: `/redirect/*`: https://answers.netlify.com/t/language-based-redirect-only-works-when-1-browser-language-set/4252/19
 // Originally: https://github.com/mozmeao/pocket-marketing-pages/blob/master/functions/redirect.js
 const SUPPORTED_LANGS = {
-    "en": "/",
+    "en": "/en",
     "it": "/it",
     "ch": "/it",
 // "en": "/en",

@@ -1,4 +1,4 @@
-<html lang="en" class="system overflow-y-auto smooth-scroll">
+<html lang='{{ .Params.region | default $.Site.LanguageCode }}' class="system overflow-y-auto smooth-scroll">
 <head>
 	<meta charset="utf-8">
 	<!-- non-breaking-hyphen: &#8209; -->
@@ -390,38 +390,37 @@ https://caniuse.com/?search=position%3Asticky
 
 <body class="pa0 ma0 bg-black" id="top">
 	<div class="z-999 fixed bg-black w-100">
-		<nav class="
-			flex justify-between pv3
-			mr-auto ml-auto
-			ph2 ph2-ns ph4-m ph6-l
-			">
-			<a class="link no-underline white flex items-center" href="#home">
-				<svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp">
-					<use xlink:href="#instantwebapp"></use>
-				</svg>
-				<span class="dn dn-ns dib-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
-			</a>
-
-			<ul id="scrollSpy" class="pa0 ma0 list flex-grow flex items-center dn dn-ns dib-m dib-l">
-				<li>
-					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#about">About</a>
-				</li>
-				<li>
-					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#design">Design</a>
-				</li>
-				<li>
-					<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#features">Features</a>
-				</li>
-			</ul>
-
-			<div class="flex items-center">
-				<!-- bg-light-silver -->
-				<a class="f7 f6-ns link dib dib fw8 hover-cobalt white bg-cobalt grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2 pointer" href="#start">Start
-					<!-- Buy<span class="dn dn-ns dn-m dib-l ">&nbsp;Now</span> -->
+			<nav class="
+				flex justify-between pv3
+				mr-auto ml-auto
+				ph2 ph2-ns ph4-m ph6-l
+				">
+				<a class="link no-underline white flex items-center" href="#home">
+					<svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp">
+						<use xlink:href="#instantwebapp"></use>
+					</svg>
+					<span class="dn dn-ns dib-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
 				</a>
-			</div>
-		</nav>
-	</div>
+
+				<ul id="scrollSpy" class="pa0 ma0 list flex-grow flex items-center dn dn-ns dib-m dib-l">
+					<li>
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#about">About</a>
+					</li>
+					<li>
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#design">Design</a>
+					</li>
+					<li class="">
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#features">Features</a>
+					</li>
+
+				</ul>
+
+				<div class="flex items-center mw4">
+					<a class="f7 f6-ns link dib fw8 hover-cobalt white bg-cobalt grow transition hover-bg-white no-underline ph3 br-pill ttu tracked pv2 pointer" href="#start">Start
+					</a>
+				</div>
+			</nav>
+		</div>
 
 	<!--div class="fixed bottom-0 right-0 pa3 z-max">
 		<p>
@@ -1221,11 +1220,45 @@ https://caniuse.com/?search=position%3Asticky
 
 
 	<nav id="footer-nav">
-		<section class="h5 bg-dark-gray"></section>
+		<section class="h5 bg-dark-gray">
+
+			<div class="flex justify-between pv3 mr-auto ml-auto ph2 ph2-ns ph4-m ph6-l">
+
+				<a class="link no-underline white flex items-center" href="#home">
+					<svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp">
+						<use xlink:href="#instantwebapp"></use>
+					</svg>
+					<span class="dn dn-ns dib-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
+				</a>
+
+				<!-- <ul id="scrollSpy" class="pa0 ma0 list flex-grow flex items-center dn dn-ns dib-m dib-l">
+					<li>
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#about">About</a>
+					</li>
+					<li>
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#design">Design</a>
+					</li>
+					<li class="">
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#features">Features</a>
+					</li>
+				</ul> -->
+				{{ partial "preferenceLanguage" . }}
+
+
+			</div>
+
+		</section>
 		<section class="h5 bg-near-black"></section>
 		<section class="h5 bg-black"></section>
 	</nav>
+
+
+
 </footer>
+
+
+
+
 
 
 

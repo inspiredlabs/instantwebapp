@@ -1,4 +1,4 @@
-<html lang="it" class="system overflow-y-auto smooth-scroll">
+<html lang='{{ .Params.region | default $.Site.LanguageCode }}' class="system overflow-y-auto smooth-scroll">
 <head>
 	<meta charset="utf-8">
 	<!-- non-breaking-hyphen: &#8209; -->
@@ -1155,10 +1155,38 @@ https://caniuse.com/?search=position%3Asticky
 
 
 	<nav id="footer-nav">
-		<section class="h5 bg-dark-gray"></section>
+		<section class="h5 bg-dark-gray">
+
+			<div class="flex justify-between pv3 mr-auto ml-auto ph2 ph2-ns ph4-m ph6-l">
+
+				<a class="link no-underline white flex items-center" href="#home">
+					<svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp">
+						<use xlink:href="#instantwebapp"></use>
+					</svg>
+					<span class="dn dn-ns dib-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
+				</a>
+
+				<!-- <ul id="scrollSpy" class="pa0 ma0 list flex-grow flex items-center dn dn-ns dib-m dib-l">
+					<li>
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#about">About</a>
+					</li>
+					<li>
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#design">Design</a>
+					</li>
+					<li class="">
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#features">Features</a>
+					</li>
+				</ul> -->
+				{{ partial "preferenceLanguage" . }}
+
+
+			</div>
+
+		</section>
 		<section class="h5 bg-near-black"></section>
 		<section class="h5 bg-black"></section>
 	</nav>
+	
 </footer>
 
 

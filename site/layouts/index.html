@@ -5,8 +5,6 @@
 	<!-- non-breaking-hyphen: &#8209; -->
 	<title>▶InstantWebapp | Web design for a world of apps</title><!-- &#9658; | A design service for boutique businesses -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type="text/javascript">const navUserLang=navigator.language.toLowerCase().substr(0,2)||navigator.userLanguage.toLowerCase().substr(0,2);var prefLang=localStorage.getItem('inputLang');localStorage.setItem('defaultLang',navUserLang);if(!prefLang){var prefLang=navUserLang;forwardTo(prefLang)};function forwardTo(prefLang){var href=window.location.href;window.location.assign('/'+prefLang)};(function(){if(window.location.href.substr(-3,2)!=prefLang){window.location.assign('/'+prefLang)}}());
-	</script>
 	<link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/tachyon.shower.css">
 	<script type="text/javascript">var _paq=window._paq||[];_paq.push(['trackPageView']);_paq.push(['enableLinkTracking']);(function(){var u="//analytics.inspiredlabs.co.uk/";_paq.push(['setTrackerUrl',u+'matomo.php']);_paq.push(['setSiteId','11']);var d=document,g=d.createElement('script'),s=d.getElementsByTagName('script')[0];g.type='text/javascript';g.async=true;g.defer=true;g.src=u+'matomo.js';s.parentNode.insertBefore(g,s)})();</script>
 
@@ -1224,11 +1222,37 @@ https://caniuse.com/?search=position%3Asticky
 
 
 	<nav id="footer-nav">
-		<section class="h5 bg-dark-gray"></section>
+		<section class="h5 bg-dark-gray">
+
+			<div class="flex justify-between pv3 mr-auto ml-auto ph2 ph2-ns ph4-m ph6-l">
+
+				<a class="link no-underline white flex items-center" href="#home">
+					<svg style="-webkit-transform: translate3d(0,0,0);" viewBox="0 0 512 512" class="dib  w1 h1 no-select" title="InstantWebapp">
+						<use xlink:href="#instantwebapp"></use>
+					</svg>
+					<span class="dn dn-ns dib-m dib-l ttn tracked-none pr0 f5 f7-m ml2"><b>Instant</b>Webapp</span>
+				</a>
+
+				<!-- <ul id="scrollSpy" class="pa0 ma0 list flex-grow flex items-center dn dn-ns dib-m dib-l">
+					<li>
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#about">About</a>
+					</li>
+					<li>
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#design">Design</a>
+					</li>
+					<li class="">
+						<a class="f7 f6-ns link dib dib o-50 glow white transition no-underline ph1 ph1-ns ph2-m ph3-l ttu tracked pv2" href="#features">Features</a>
+					</li>
+				</ul> -->
+				{{ partial "preferenceLanguage" . }}
+
+
+			</div>
+
+		</section>
 		<section class="h5 bg-near-black"></section>
 		<section class="h5 bg-black"></section>
 	</nav>
-</footer>
 
 
 
