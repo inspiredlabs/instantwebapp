@@ -1,12 +1,14 @@
-<script type="text/javascript">const navUserLang=navigator.language.toLowerCase().substr(0,2)||navigator.userLanguage.toLowerCase().substr(0,2);var prefLang=localStorage.getItem('inputLang');localStorage.setItem('defaultLang',navUserLang);if(!prefLang){var prefLang=navUserLang;forwardTo(prefLang)};function forwardTo(prefLang){var href=window.location.href;window.location.assign('/'+prefLang)};(function(){if(window.location.href.substr(-3,2)!=prefLang){window.location.assign('/'+prefLang)}}());
-</script>
-  <!--script type="text/javascript">
+<script type="text/javascript">
 
     //const DEBUG_MODE = true; if (DEBUG_MODE) {debugger;}
     const log = console.log;
 
     // Interrogate browser:
     const nativeNavLang = navigator.language.toLowerCase().substr(0, 2) || navigator.userLanguage.toLowerCase().substr(0, 2);
+
+		// Store default:
+		localStorage.setItem('defaultLang', nativeNavLang);
+
     // View: localStorage.setItem('nativeNavLang', nativeNavLang);
     if (nativeNavLang == 'it') {
       var navUserLang = 'it'
@@ -17,7 +19,6 @@
 
 
     // Name `select`:
-    const inputLang = document.querySelector("#inputLang");
     const inputLanguage = document.querySelector("#inputLanguage");
     var prefLang = localStorage.getItem('inputLang');
 
@@ -32,11 +33,10 @@
 
     if (prefLang) {
       //sync across `option` inputs
-      inputLang.value = prefLang;
       inputLanguage.value = prefLang;
     };
 
-    inputLang.onchange = function () {
+    inputLanguage.onchange = function () {
       prefLang = inputLang.options[inputLang.selectedIndex].value;
       localStorage.setItem('inputLang', prefLang);
       forwardTo(prefLang);
@@ -72,4 +72,4 @@
 
   }()); //onload
 
-</script-->
+</script>
